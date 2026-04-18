@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Git &amp; GitHub Cheat Sheet – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Version Control with Git &amp; GitHub&lt;/span&gt;</title>
+<title>Session 7: AI in Research Practice – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Practical Skills: Git, GitHub &amp; AI&lt;/span&gt;</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,61 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-87f7908b905bb60864be3ee8ff803566.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1bacbde4b63e150433a774eb88bf29aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-87f7908b905bb60864be3ee8ff803566.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1bacbde4b63e150433a774eb88bf29aa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -118,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cheatsheet.html">Cheat Sheet</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session7.html">Session 7: AI in Research Practice</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./"><span class="course-code">AEM 7010</span><span class="course-title">Version Control with Git &amp; GitHub</span></a> 
+      <a href="../"><span class="course-code">AEM 7010</span><span class="course-title">Practical Skills: Git, GitHub &amp; AI</span></a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -145,14 +110,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preliminaries</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./session1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Session 1 — Git Fundamentals</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Version Control</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -160,100 +125,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#why-version-control" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why version control?</span></a>
+  <a href="../version-control/session4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 4: Git Fundamentals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#yourself-over-time" class="sidebar-item-text sidebar-link">
- <span class="menu-text">· Yourself over time</span></a>
+  <a href="../version-control/session4.html#why-version-control" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Why version control?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#you-and-ai-coding-tools" class="sidebar-item-text sidebar-link">
- <span class="menu-text">· AI coding tools</span></a>
+  <a href="../version-control/session4.html#what-is-git" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· What is Git?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#you-and-co-authors" class="sidebar-item-text sidebar-link">
- <span class="menu-text">· Co-authors</span></a>
+  <a href="../version-control/session4.html#setup" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#what-is-git" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is Git?</span></a>
+  <a href="../version-control/session4.html#the-three-areas-of-git" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· The three areas</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#setup" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setup</span></a>
+  <a href="../version-control/session4.html#your-first-repository" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Your first repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#the-three-areas-of-git" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The three areas</span></a>
+  <a href="../version-control/session4.html#staging-and-committing" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Staging and committing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#your-first-repository" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Your first repository</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session1.html#staging-and-committing" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Staging and committing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session1.html#writing-good-commits" class="sidebar-item-text sidebar-link">
+  <a href="../version-control/session4.html#writing-good-commits" class="sidebar-item-text sidebar-link">
  <span class="menu-text">· Writing good commits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#exercise-1-create-a-project-and-make-commits" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 1</span></a>
+  <a href="../version-control/session4.html#exercise-1-create-a-project-and-make-commits" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Exercise 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#viewing-history" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Viewing history</span></a>
+  <a href="../version-control/session4.html#viewing-history" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Viewing history</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#gitignore" class="sidebar-item-text sidebar-link">
- <span class="menu-text">.gitignore</span></a>
+  <a href="../version-control/session4.html#gitignore" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· .gitignore</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#undoing-mistakes" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Undoing mistakes</span></a>
+  <a href="../version-control/session4.html#undoing-mistakes" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Undoing mistakes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session1.html#exercise-2-full-workflow-practice" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 2</span></a>
+  <a href="../version-control/session4.html#exercise-2-full-workflow-practice" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Exercise 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 5: GitHub &amp; Collaboration</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#what-is-github" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· What is GitHub?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#keep-your-email-private" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Keep your email private</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#connect-to-github-ssh-keys" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· SSH keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#remotes-push-and-pull" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">  · Remotes: push &amp; pull</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#cloning-a-repository" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Cloning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#exercise-3-push-to-github" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Exercise 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#branches" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Branches</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#pull-requests" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Pull requests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#handling-merge-conflicts" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Merge conflicts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#exercise-4-branches-and-pull-requests" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Exercise 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#tags-for-reproducibility" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">· Tags for reproducibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/cheatsheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git cheat sheet</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./session2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Session 2 — GitHub &amp; Collaboration</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">AI Tools</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -261,84 +292,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session2.html#quick-recap" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quick recap</span></a>
+  <a href="../ai-tools/session6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 6: AI Foundations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session2.html#what-is-github" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is GitHub?</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#keep-your-email-private" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Keep your email private</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#connect-to-github-ssh-keys" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SSH keys</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#remotes-push-and-pull" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remotes: push &amp; pull</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#cloning-a-repository" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cloning</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#exercise-3-push-to-github" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 3</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#branches" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Branches</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#pull-requests" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pull requests</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#handling-merge-conflicts" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Merge conflicts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#exercise-4-branches-and-pull-requests" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./session2.html#tags-for-reproducibility" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tags for reproducibility</span></a>
+  <a href="../ai-tools/session7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Session 7: AI in Research Practice</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./cheatsheet.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Cheat Sheet</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -348,10 +313,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session7.html">Session 7: AI in Research Practice</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Git &amp; GitHub Cheat Sheet</h1>
-<p class="subtitle lead">Quick reference for all commands covered in this workshop</p>
+<h1 class="title">Session 7: AI in Research Practice</h1>
+<p class="subtitle lead">Disclosure, replication, and ethical use of AI tools in economics research</p>
 </div>
 
 
@@ -368,243 +333,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git config --global user.name "Name"</code></td>
-<td>Set your name for commits</td>
-</tr>
-<tr class="even">
-<td><code>git config --global user.email "email"</code></td>
-<td>Set your email for commits</td>
-</tr>
-<tr class="odd">
-<td><code>git init</code></td>
-<td>Create a new repository in the current folder</td>
-</tr>
-<tr class="even">
-<td><code>git clone &lt;url&gt;</code></td>
-<td>Download a remote repository to your computer</td>
-</tr>
-</tbody>
-</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>This session is under development
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Content for this session will be added before <strong>April 29, 2026</strong>. The outline below reflects the planned structure.</p>
+</div>
+</div>
+<section id="planned-content" class="level2">
+<h2 class="anchored" data-anchor-id="planned-content">Planned content</h2>
+<section id="ai-for-academic-writing" class="level3">
+<h3 class="anchored" data-anchor-id="ai-for-academic-writing">AI for academic writing (~15 min)</h3>
+<ul>
+<li>Using LLMs to draft, edit, and restructure prose.</li>
+<li>Limitations: generic phrasing, hallucinated citations, loss of voice.</li>
+<li>Demo: paste a rough paragraph, ask for revision, compare.</li>
+</ul>
 </section>
-<section id="daily-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="daily-workflow">Daily Workflow</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git status</code></td>
-<td>Show which files are modified, staged, or untracked</td>
-</tr>
-<tr class="even">
-<td><code>git add &lt;file&gt;</code></td>
-<td>Stage a file for the next commit</td>
-</tr>
-<tr class="odd">
-<td><code>git add .</code></td>
-<td>Stage all changed files</td>
-</tr>
-<tr class="even">
-<td><code>git commit -m "message"</code></td>
-<td>Save a snapshot with a descriptive message</td>
-</tr>
-<tr class="odd">
-<td><code>git diff</code></td>
-<td>Show unstaged changes</td>
-</tr>
-<tr class="even">
-<td><code>git diff --staged</code></td>
-<td>Show staged changes (what will be committed)</td>
-</tr>
-<tr class="odd">
-<td><code>git log --oneline</code></td>
-<td>View commit history (compact)</td>
-</tr>
-<tr class="even">
-<td><code>git log</code></td>
-<td>View commit history (detailed)</td>
-</tr>
-</tbody>
-</table>
+<section id="ai-for-literature-review" class="level3">
+<h3 class="anchored" data-anchor-id="ai-for-literature-review">AI for literature review and discovery (~15 min)</h3>
+<ul>
+<li>Tools for searching and summarizing papers: Semantic Scholar, Elicit, Connected Papers, Consensus.</li>
+<li>Demo: find papers on a topic, generate a summary table.</li>
+<li>Caveat: always verify the citations exist.</li>
+</ul>
 </section>
-<section id="undoing-things" class="level2">
-<h2 class="anchored" data-anchor-id="undoing-things">Undoing Things</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 40%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git restore --staged &lt;file&gt;</code></td>
-<td>Unstage a file (keep edits)</td>
-</tr>
-<tr class="even">
-<td><code>git restore &lt;file&gt;</code></td>
-<td>Discard edits, revert to last commit (<strong>destructive</strong>)</td>
-</tr>
-<tr class="odd">
-<td><code>git reset --soft HEAD~1</code></td>
-<td>Undo last commit (keep files staged)</td>
-</tr>
-</tbody>
-</table>
+<section id="journal-policies" class="level3">
+<h3 class="anchored" data-anchor-id="journal-policies">Journal and university policies (~10 min)</h3>
+<ul>
+<li>AEA, Nature, Science, PNAS disclosure requirements.</li>
+<li>Cornell’s academic integrity policies as they apply to AI use.</li>
+<li>Your responsibility as the author: AI-generated content does not transfer authorship responsibility.</li>
+</ul>
 </section>
-<section id="remotes-github" class="level2">
-<h2 class="anchored" data-anchor-id="remotes-github">Remotes (GitHub)</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git remote add origin &lt;url&gt;</code></td>
-<td>Link local repo to GitHub</td>
-</tr>
-<tr class="even">
-<td><code>git push -u origin main</code></td>
-<td>Push commits to GitHub (first time)</td>
-</tr>
-<tr class="odd">
-<td><code>git push</code></td>
-<td>Push commits (after <code>-u</code> is set)</td>
-</tr>
-<tr class="even">
-<td><code>git pull origin main</code></td>
-<td>Download new commits from GitHub</td>
-</tr>
-</tbody>
-</table>
+<section id="research-transparency" class="level3">
+<h3 class="anchored" data-anchor-id="research-transparency">Research transparency in the AI era (~10 min)</h3>
+<ul>
+<li>How to document AI use in your research workflow.</li>
+<li>Logging prompts and outputs as part of a replication package.</li>
+<li>Reproducibility challenges when AI tools change over time.</li>
+<li>Connection to <a href="../version-control/session5.html#tags-for-reproducibility">Sessions 4–5</a>: tagged Git releases as replication snapshots that include AI-assisted code.</li>
+</ul>
 </section>
-<section id="branches" class="level2">
-<h2 class="anchored" data-anchor-id="branches">Branches</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git branch &lt;name&gt;</code></td>
-<td>Create a new branch</td>
-</tr>
-<tr class="even">
-<td><code>git checkout &lt;branch&gt;</code></td>
-<td>Switch to a branch</td>
-</tr>
-<tr class="odd">
-<td><code>git checkout -b &lt;name&gt;</code></td>
-<td>Create and switch in one step</td>
-</tr>
-<tr class="even">
-<td><code>git merge &lt;branch&gt;</code></td>
-<td>Merge a branch into the current branch</td>
-</tr>
-<tr class="odd">
-<td><code>git branch -d &lt;name&gt;</code></td>
-<td>Delete a branch (after merging)</td>
-</tr>
-</tbody>
-</table>
+<section id="discussion-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="discussion-exercise">Discussion and practical exercise (~20 min)</h3>
+<ul>
+<li>Ethical scenarios: When is AI use appropriate? When does it cross a line?</li>
+<li>Cases: using AI to write a referee report, generate code for a replication package, draft an abstract.</li>
+</ul>
 </section>
-<section id="tags-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="tags-reproducibility">Tags (Reproducibility)</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git tag -a v1.0 -m "msg"</code></td>
-<td>Create an annotated tag</td>
-</tr>
-<tr class="even">
-<td><code>git push --tags</code></td>
-<td>Push all tags to GitHub</td>
-</tr>
-<tr class="odd">
-<td><code>git checkout v1.0</code></td>
-<td>Check out a specific tagged version</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="ssh-setup-one-time" class="level2">
-<h2 class="anchored" data-anchor-id="ssh-setup-one-time">SSH Setup (One-Time)</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate key</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"you@email.com"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Start agent and add key</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy public key (paste into GitHub Settings &gt; SSH Keys)</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connection</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="gitignore-template-for-r-projects" class="level2">
-<h2 class="anchored" data-anchor-id="gitignore-template-for-r-projects">.gitignore Template for R Projects</h2>
-<pre><code># Data files
-*.csv
-*.dta
-*.rds
-*.xlsx
-data/
-
-# R artifacts
-.Rhistory
-.RData
-.Rproj.user/
-
-# Output (can be regenerated)
-*.pdf
-*.html
-output/
-
-# System files
-.DS_Store
-Thumbs.db</code></pre>
+<section id="wrap-up" class="level3">
+<h3 class="anchored" data-anchor-id="wrap-up">Wrap-up (~5 min)</h3>
+<ul>
+<li>Synthesis of the module.</li>
+<li>Key takeaways for working with AI in research over your career.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -763,7 +555,7 @@ Thumbs.db</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ArielOrtizBobea\.github\.io\/aem7010-practical-skills\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
