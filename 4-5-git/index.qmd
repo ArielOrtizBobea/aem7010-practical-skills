@@ -1,0 +1,48 @@
+---
+title: "Version Control with Git & GitHub"
+subtitle: "AEM 7010: Doing Applied Economics Research: Practical Skills. Prof. Ariel Ortiz-Bobea"
+---
+
+## Overview
+
+This two-session workshop introduces version control using Git and GitHub. The target audience is PhD students in applied economics with no prior experience with the command line or Git.
+
+By the end of these sessions you will be able to:
+
+- Track changes to your R scripts and research code using Git
+- Undo mistakes and compare versions of your work
+- Back up your code on GitHub
+- Collaborate with co-authors using branches and pull requests
+- Tag specific versions of your code for reproducibility
+
+## Sessions
+
+**Session 1: Git Fundamentals.** Learn the core Git workflow on your own computer: `init`, `add`, `commit`, `log`, `diff`, `.gitignore`, and undoing mistakes.
+
+**Session 2: GitHub & Collaboration.** Connect to GitHub, push and pull code, create branches, open pull requests, and tag releases for reproducibility.
+
+## Before You Begin
+
+Please complete the following before the first session:
+
+1. **Install Git** on your laptop
+    - Mac: `brew install git` (if you have Homebrew) or download from [git-scm.com](https://git-scm.com)
+    - Windows: download the installer from [git-scm.com](https://git-scm.com)
+2. **Open a terminal**
+    - Mac: open the Terminal app (search for "Terminal" in Spotlight)
+    - Windows: open Git Bash (installed with Git)
+3. **Verify the installation** by running:
+
+```bash
+git --version
+```
+
+You should see something like `git version 2.39.0`.
+
+Before Session 2, also **create a free GitHub account** at [github.com](https://github.com).
+
+## Companion Materials
+
+- [Session 1 slides (PowerPoint)](session1_git_fundamentals.pptx)
+- [Session 2 slides (PowerPoint)](session2_github_collaboration.pptx)
+- [Exercise R scripts](exercises/)

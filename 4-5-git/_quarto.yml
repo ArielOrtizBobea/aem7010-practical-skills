@@ -1,0 +1,91 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Version Control with Git & GitHub"
+  description: "AEM 7010: Doing Applied Economics Research — Practical Skills"
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - section: "Session 1 — Git Fundamentals"
+        href: session1.qmd
+        contents:
+          - text: "Why version control?"
+            href: session1.qmd#why-version-control
+          - text: "  · Yourself over time"
+            href: session1.qmd#yourself-over-time
+          - text: "  · AI coding tools"
+            href: session1.qmd#you-and-ai-coding-tools
+          - text: "  · Co-authors"
+            href: session1.qmd#you-and-co-authors
+          - text: "What is Git?"
+            href: session1.qmd#what-is-git
+          - text: "Setup"
+            href: session1.qmd#setup-install-and-configure
+          - text: "The three areas"
+            href: session1.qmd#the-three-areas-of-git
+          - text: "Your first repository"
+            href: session1.qmd#your-first-repository
+          - text: "Staging and committing"
+            href: session1.qmd#staging-and-committing
+          - text: "Exercise 1"
+            href: session1.qmd#exercise-1-create-a-project-and-make-commits
+          - text: "Viewing history"
+            href: session1.qmd#viewing-history
+          - text: ".gitignore"
+            href: session1.qmd#gitignore
+          - text: "Undoing mistakes"
+            href: session1.qmd#undoing-mistakes
+          - text: "Exercise 2"
+            href: session1.qmd#exercise-2-full-workflow-practice
+      - section: "Session 2 — GitHub & Collaboration"
+        href: session2.qmd
+        contents:
+          - text: "Quick recap"
+            href: session2.qmd#quick-recap
+          - text: "What is GitHub?"
+            href: session2.qmd#what-is-github
+          - text: "SSH keys"
+            href: session2.qmd#connect-to-github-ssh-keys
+          - text: "Remotes: push & pull"
+            href: session2.qmd#remotes-push-and-pull
+          - text: "Cloning"
+            href: session2.qmd#cloning-a-repository
+          - text: "Exercise 3"
+            href: session2.qmd#exercise-3-push-to-github
+          - text: "Branches"
+            href: session2.qmd#branches
+          - text: "Pull requests"
+            href: session2.qmd#pull-requests
+          - text: "Merge conflicts"
+            href: session2.qmd#handling-merge-conflicts
+          - text: "Exercise 4"
+            href: session2.qmd#exercise-4-branches-and-pull-requests
+          - text: "Tags for reproducibility"
+            href: session2.qmd#tags-for-reproducibility
+      - text: "Cheat Sheet"
+        href: cheatsheet.qmd
+  page-footer:
+    left: "Prof. Ariel Ortiz-Bobea — Cornell Dyson School"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - cornell.scss
+    toc: false
+    code-copy: true
+    code-overflow: wrap
+    code-block-bg: true
+    link-external-newwindow: true
+    grid:
+      sidebar-width: 280px
+      body-width: 820px
+      margin-width: 0px
+      gutter-width: 1.5rem

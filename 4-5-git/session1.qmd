@@ -1,0 +1,428 @@
+---
+title: "Session 1: Git Fundamentals"
+subtitle: "Tracking your own work"
+---
+
+## Why Version Control?
+
+Version control is a systematic record of how your code changes. It matters in three situations every applied economist now faces.
+
+### Yourself over time
+
+If your project folder has ever looked like this:
+
+```
+analysis_v1.R
+analysis_v2.R
+analysis_FINAL.R
+analysis_FINAL_v2.R
+analysis_REALLY_FINAL.R
+analysis_FINAL_USE_THIS.R
+```
+
+...then you already know the cost. You made choices you cannot reconstruct. You changed something that worked and cannot remember what.
+
+Git replaces this chaos with a clean history of **snapshots**. Each snapshot (called a **commit**) records exactly what changed, when, and why. You can return to any previous version at any time.
+
+### You and AI coding tools
+
+Increasingly you will write research code alongside AI coding assistants: **Claude Code**, **GitHub Copilot**, **Cursor**, **Codex**, and similar tools. These systems produce dozens of lines in seconds. Most of it is useful; some of it is subtly wrong in ways you will not catch on first read.
+
+Version control is what makes this workflow safe. Every AI-assisted change becomes a commit you can review before accepting, revert cleanly when a test breaks three hours later, or roll back selectively while keeping the parts that worked. It also produces a written record of what came from a model and what you wrote yourself. That record is increasingly expected by journal disclosure policies and by AEA replication review.
+
+### You and co-authors
+
+Applied economics papers increasingly have two, three, or four co-authors writing code together. Someone edits the cleaning script on Monday; someone else reworks the regression specification on Tuesday. Without version control, the only way to combine those edits is to email files back and forth. That process silently destroys work.
+
+Git (and GitHub, which we cover next session) makes collaboration explicit. Every change is attributed to a specific author, every conflict between edits is surfaced rather than overwritten, and every co-author sees the same history.
+
+::: {.callout-note}
+## These three motivations connect the whole course
+**Yourself over time** is the reproducibility theme (Sessions 2–3 with Lars). **AI tools** are Sessions 6–7. **Co-authors** are Session 2 (GitHub). Version control is the connective infrastructure that makes all three workable.
+:::
+
+## What Is Git?
+
+Git is a **distributed version control system**. It takes a snapshot of your entire project every time you commit. Think of it as a timeline:
+
+```
+v1: Load data  →  v2: Clean variables  →  v3: Run regression
+```
+
+Each point on the timeline is a commit. Git stores the full history locally on your computer.
+
+::: {.callout-important}
+**Git ≠ GitHub.** Git is the tool that runs on your computer. GitHub is a cloud hosting service where you can store and share your Git repositories online. We cover GitHub in Session 2.
+:::
+
+## Setup: Install and Configure
+
+### Install Git
+
+**Mac** (via Homebrew):
+
+```bash
+brew install git
+```
+
+**Windows**: download from [git-scm.com](https://git-scm.com) and run the installer. Use the default options. This also installs **Git Bash**, a terminal you will use for all commands.
+
+### Verify
+
+```bash
+git --version
+```
+
+### Configure your identity
+
+Git attaches your name and email to every commit. Set these once:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+```
+
+Replace `"Your Name"` and `"you@email.com"` with your actual name and email.
+
+## The Three Areas of Git
+
+Every Git project has three areas. Understanding them is the key mental model:
+
+| Area | What it is | How you interact |
+|------|------------|------------------|
+| **Working Directory** | The files you see and edit | You edit files normally |
+| **Staging Area** | A holding zone for the next commit | `git add` moves files here |
+| **Repository** | The permanent history of commits | `git commit` saves a snapshot |
+
+The workflow is: **edit → stage → commit**.
+
+## Your First Repository
+
+### 1. Create a project folder
+
+```bash
+mkdir my-research
+cd my-research
+```
+
+### 2. Initialize Git
+
+```bash
+git init
+```
+
+This creates a hidden `.git/` folder inside your project. That folder stores all version history. You never need to touch it directly.
+
+### 3. Check the status
+
+```bash
+git status
+```
+
+Git will tell you that you are on branch `main` and there are no commits yet. This is your starting point.
+
+## Staging and Committing
+
+### Create a file
+
+Open your text editor and create a file called `clean_data.R` with the following content:
+
+```r
+# clean_data.R
+# Load and clean the wage dataset
+
+library(readr)
+
+wages <- read_csv("data/wages.csv")
+
+# Remove observations with missing wages
+wages <- wages[!is.na(wages$wage), ]
+
+# Log transformation
+wages$log_wage <- log(wages$wage)
+```
+
+Save the file in your `my-research` folder.
+
+### Stage the file
+
+::: {.callout-note collapse="false"}
+## Three interfaces, same Git
+From here on, command blocks appear in tabs: **Terminal**, **RStudio**, and **VS Code**. All three do exactly the same thing under the hood. Pick whichever you prefer day-to-day. In class we walk through the Terminal tab on the projector.
+:::
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+git add clean_data.R
+```
+
+## RStudio
+
+In the **Git** pane (top-right of the IDE by default) → tick the checkbox next to `clean_data.R` under the *Staged* column.
+
+If you do not see a Git pane: the project must be an RStudio Project (`.Rproj`) inside a Git repository. `Tools → Project Options → Git/SVN → Version control system: Git`, then restart RStudio.
+
+## VS Code
+
+Open the **Source Control** panel (branch icon in the left activity bar, or `⌃⇧G` / `Ctrl+Shift+G`). Under *Changes*, hover over `clean_data.R` and click the `+` icon. The file moves to *Staged Changes*.
+
+:::
+
+All three do the same thing: they tell Git *"include this file in the next commit."*
+
+### Check the status again
+
+```bash
+git status
+```
+
+You should see `clean_data.R` listed under "Changes to be committed."
+
+### Commit
+
+```bash
+git commit -m "Add data cleaning script"
+```
+
+The `-m` flag lets you write the commit message inline. Every commit needs a message that explains *why* you made the change.
+
+### Make another change and commit
+
+Edit `clean_data.R`. For example, add a new line:
+
+```r
+# Keep only full-time workers
+wages <- wages[wages$hours >= 35, ]
+```
+
+Then stage and commit:
+
+```bash
+git add clean_data.R
+git commit -m "Filter to full-time workers only"
+```
+
+::: {.callout-tip}
+## Writing good commit messages
+Be specific. "Fix bug" is unhelpful. "Fix off-by-one error in sample selection" is useful. Your future self (and your co-authors) will thank you.
+:::
+
+## Exercise 1: Create a Project and Make Commits {.exercise}
+
+**Time: ~15 minutes**
+
+1. Create a folder called `wage-analysis` and initialize Git:
+
+```bash
+mkdir wage-analysis
+cd wage-analysis
+git init
+```
+
+2. Create a file called `clean_data.R`. Write a few lines of R code (anything is fine: loading a library, creating a variable, etc.).
+
+3. Stage and commit:
+
+```bash
+git add clean_data.R
+git commit -m "Add data cleaning script"
+```
+
+4. Edit the file (add a comment or a new line of code), then stage and commit again:
+
+```bash
+git add clean_data.R
+git commit -m "Add full-time worker filter"
+```
+
+5. View your commits:
+
+```bash
+git log
+```
+
+You should see two commits with your messages, timestamps, and author info.
+
+## Viewing History
+
+### git log
+
+`git log` shows the full history of commits, most recent first. Each entry includes the commit hash (a unique ID), author, date, and message.
+
+For a compact view:
+
+```bash
+git log --oneline
+```
+
+Output looks like:
+
+```
+a1b2c3d  Add regression output table
+e4f5g6h  Clean variable names
+i7j8k9l  Add data cleaning script
+```
+
+### git diff
+
+`git diff` shows what changed since the last commit (for unstaged files):
+
+```bash
+git diff
+```
+
+Example output:
+
+```diff
+- lm(wage ~ educ, data = df)
++ lm(wage ~ educ + exper, data = df)
+```
+
+Lines starting with `-` were removed. Lines starting with `+` were added.
+
+To see changes that are already staged:
+
+```bash
+git diff --staged
+```
+
+## .gitignore
+
+Not every file belongs in version control. Large data files, sensitive credentials, and system files should be excluded.
+
+Create a file called `.gitignore` in your project root:
+
+```
+# Data files (too large or sensitive for Git)
+*.csv
+*.dta
+data/
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# System files
+.DS_Store
+Thumbs.db
+```
+
+Then stage and commit it:
+
+```bash
+git add .gitignore
+git commit -m "Add .gitignore for data and R artifacts"
+```
+
+::: {.callout-warning}
+**Data files do not belong in Git.** Git is designed for code (small text files), not for large datasets. If you commit a 500 MB CSV, every collaborator will have to download it with the full repository. Use a shared drive, Dropbox, or a data repository for large files.
+:::
+
+## Undoing Mistakes
+
+You will make mistakes. Git has tools to recover from each of them.
+
+### Unstage a file
+
+You staged a file by accident and want to remove it from the staging area (without deleting the file):
+
+```bash
+git restore --staged clean_data.R
+```
+
+### Discard local changes
+
+You edited a file and want to go back to the last committed version:
+
+```bash
+git restore clean_data.R
+```
+
+::: {.callout-caution}
+This is **destructive**. Your edits are gone. Git cannot recover them because they were never committed.
+:::
+
+### Undo the last commit (keep changes)
+
+You committed too early and want to undo the commit but keep the files staged:
+
+```bash
+git reset --soft HEAD~1
+```
+
+`HEAD~1` means "one commit before the current one."
+
+## Exercise 2: Full Workflow Practice {.exercise}
+
+**Time: ~15 minutes**
+
+1. In your `wage-analysis` project, create a `.gitignore` file with the contents shown above. Stage and commit it.
+
+2. Create a new file called `run_regression.R`:
+
+```r
+# run_regression.R
+# Estimate wage equation
+
+library(readr)
+
+wages <- read_csv("data/wages.csv")
+
+# Basic OLS
+model1 <- lm(log(wage) ~ educ + exper + tenure, data = wages)
+summary(model1)
+```
+
+Stage and commit:
+
+```bash
+git add run_regression.R
+git commit -m "Add basic wage regression"
+```
+
+3. Edit `run_regression.R` and add a second model:
+
+```r
+# Add experience squared
+model2 <- lm(log(wage) ~ educ + exper + I(exper^2) + tenure, data = wages)
+summary(model2)
+```
+
+View the diff before committing:
+
+```bash
+git diff
+```
+
+Then stage and commit:
+
+```bash
+git add run_regression.R
+git commit -m "Add quadratic experience specification"
+```
+
+4. Practice unstaging. Create a junk file, stage it, then unstage:
+
+```bash
+echo "test" > junk.R
+git add junk.R
+git status
+git restore --staged junk.R
+git status
+```
+
+5. View your full history:
+
+```bash
+git log --oneline
+```
+
+## What's Next
+
+In **Session 2** we will connect your local repository to GitHub, learn to push and pull, create branches, and collaborate with pull requests.
+
+**Before next session:** create a free account at [github.com](https://github.com).
