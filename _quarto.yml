@@ -3,29 +3,92 @@ project:
   output-dir: docs
 
 website:
-  title: "AEM 7010: Practical Skills for Applied Economics Research"
-  subtitle: "Prof. Ariel Ortiz-Bobea — Cornell University"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - text: "Sessions"
-        menu:
-          - href: 1-intro/index.qmd
-            text: "1. Introduction"
-          - href: 2-3-reproducibility/index.qmd
-            text: "2–3. Reproducibility"
-          - href: 4-5-git/index.qmd
-            text: "4–5. Version Control & Git"
-          - href: 6-7-ai/index.qmd
-            text: "6–7. AI Tools"
-          - href: 8-resources/index.qmd
-            text: "8. Cornell Resources"
+  title: "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>"
+  description: "AEM 7010: Doing Applied Economics Research. Practical Skills. Sessions 4–7."
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - text: "Preliminaries"
+        href: index.qmd
+      - section: "Version Control"
+        contents:
+          - text: "Session 4: Git Fundamentals"
+            href: version-control/session4.qmd
+          - text: "  · Why version control?"
+            href: version-control/session4.qmd#why-version-control
+          - text: "  · What is Git?"
+            href: version-control/session4.qmd#what-is-git
+          - text: "  · Setup"
+            href: version-control/session4.qmd#setup
+          - text: "  · The three areas"
+            href: version-control/session4.qmd#the-three-areas-of-git
+          - text: "  · Your first repository"
+            href: version-control/session4.qmd#your-first-repository
+          - text: "  · Staging and committing"
+            href: version-control/session4.qmd#staging-and-committing
+          - text: "  · Writing good commits"
+            href: version-control/session4.qmd#writing-good-commits
+          - text: "  · Exercise 1"
+            href: version-control/session4.qmd#exercise-1-create-a-project-and-make-commits
+          - text: "  · Viewing history"
+            href: version-control/session4.qmd#viewing-history
+          - text: "  · .gitignore"
+            href: version-control/session4.qmd#gitignore
+          - text: "  · Undoing mistakes"
+            href: version-control/session4.qmd#undoing-mistakes
+          - text: "  · Exercise 2"
+            href: version-control/session4.qmd#exercise-2-full-workflow-practice
+          - text: "Session 5: GitHub & Collaboration"
+            href: version-control/session5.qmd
+          - text: "  · What is GitHub?"
+            href: version-control/session5.qmd#what-is-github
+          - text: "  · Keep your email private"
+            href: version-control/session5.qmd#keep-your-email-private
+          - text: "  · SSH keys"
+            href: version-control/session5.qmd#connect-to-github-ssh-keys
+          - text: "  · Remotes: push & pull"
+            href: version-control/session5.qmd#remotes-push-and-pull
+          - text: "  · Cloning"
+            href: version-control/session5.qmd#cloning-a-repository
+          - text: "  · Exercise 3"
+            href: version-control/session5.qmd#exercise-3-push-to-github
+          - text: "  · Branches"
+            href: version-control/session5.qmd#branches
+          - text: "  · Pull requests"
+            href: version-control/session5.qmd#pull-requests
+          - text: "  · Merge conflicts"
+            href: version-control/session5.qmd#handling-merge-conflicts
+          - text: "  · Exercise 4"
+            href: version-control/session5.qmd#exercise-4-branches-and-pull-requests
+          - text: "  · Tags for reproducibility"
+            href: version-control/session5.qmd#tags-for-reproducibility
+          - text: "Git cheat sheet"
+            href: version-control/cheatsheet.qmd
+      - section: "AI Tools"
+        contents:
+          - text: "Session 6: AI Foundations"
+            href: ai-tools/session6.qmd
+          - text: "Session 7: AI in Research Practice"
+            href: ai-tools/session7.qmd
+  page-footer:
+    left: "Prof. Ariel Ortiz-Bobea — Cornell Dyson School"
+    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
-    theme: cosmo
-    toc: true
-    toc-depth: 3
+    theme:
+      - cosmo
+      - cornell.scss
+    toc: false
     code-copy: true
     code-overflow: wrap
+    code-block-bg: true
+    link-external-newwindow: true
+    include-after-body: scrollspy.html
+    grid:
+      sidebar-width: 280px
+      body-width: 820px
+      margin-width: 0px
+      gutter-width: 1.5rem

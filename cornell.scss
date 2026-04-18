@@ -1,0 +1,129 @@
+/*-- scss:defaults --*/
+
+// Web fonts: Source Serif 4 (body) + Source Sans 3 (headings/UI) + JetBrains Mono (code).
+// Scholarly serif for body reading; matching sans for headings and UI chrome.
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+// Cornell palette
+$cornell-red:      #B31B1B;  // Carnelian
+$cornell-red-dark: #8C1212;
+$cornell-cream:    #F7F4E9;
+$cornell-gray:     #6B6B6B;
+$ink:              #1B1B1B;
+
+// Bootstrap overrides
+$primary:     $cornell-red;
+$link-color:  $cornell-red;
+$body-color:  $ink;
+
+// Serif for body, sans for headings/UI (classic academic pairing)
+$font-family-sans-serif: "Source Serif 4", "Charter", Georgia, "Times New Roman", serif;
+$font-family-monospace:  "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+$headings-font-family:   "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight:   700;
+
+// Reading ergonomics
+$font-size-base:   1.0625rem;   // ~17px body
+$line-height-base: 1.65;
+$h1-font-size:     2.25rem;
+$h2-font-size:     1.625rem;
+$h3-font-size:     1.25rem;
+
+/*-- scss:rules --*/
+
+// Page title in Cornell red
+h1.title {
+  color: $cornell-red;
+  border-bottom: 2px solid $cornell-red;
+  padding-bottom: 0.35rem;
+}
+
+// H2s get a subtle red underline
+h2 {
+  border-bottom: 1px solid lighten($cornell-red, 50%);
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+}
+
+// Code block left accent
+div.sourceCode,
+pre.sourceCode {
+  border-left: 3px solid $cornell-red;
+  background-color: #FAFAF7;
+}
+
+// Inline code
+code:not(.sourceCode) {
+  color: $cornell-red-dark;
+  background-color: rgba($cornell-red, 0.06);
+  padding: 0.08em 0.35em;
+  border-radius: 3px;
+}
+
+// Sidebar branding: course code as eyebrow label, course title below
+.sidebar-title {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+
+  .course-code {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $cornell-red;
+    margin-bottom: 0.2rem;
+  }
+
+  .course-title {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $ink;
+  }
+}
+
+.sidebar-navigation .active > .sidebar-link,
+.sidebar-navigation a.active {
+  color: $cornell-red !important;
+  font-weight: 600;
+}
+
+// Scrollspy: link for the section currently in view
+.sidebar-navigation a.scrollspy-current {
+  color: $cornell-red !important;
+  font-weight: 600;
+  border-left: 2px solid $cornell-red;
+  padding-left: calc(0.5rem - 2px);
+  background-color: rgba($cornell-red, 0.05);
+}
+
+// Callouts — keep Quarto's per-type color cues but tint the note variant Cornell red
+.callout.callout-style-default.callout-note {
+  border-left-color: $cornell-red;
+}
+.callout.callout-style-default.callout-note .callout-icon::before {
+  filter: hue-rotate(-140deg) saturate(1.8);
+}
+
+// Exercise sections — gentle cream highlight
+.exercise {
+  background-color: $cornell-cream;
+  padding: 1rem 1.25rem 0.5rem 1.25rem;
+  border-left: 4px solid $cornell-red;
+  border-radius: 0 4px 4px 0;
+  margin-top: 1.5rem;
+}
+
+// Tabset active tab in Cornell red
+.panel-tabset .nav-link.active {
+  color: $cornell-red !important;
+  border-bottom-color: $cornell-red !important;
+}
+
+// Footer
+.nav-footer,
+.page-footer {
+  color: $cornell-gray;
+  font-size: 0.9rem;
+}

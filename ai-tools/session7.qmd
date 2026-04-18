@@ -1,0 +1,46 @@
+---
+title: "Session 7: AI in Research Practice"
+subtitle: "Disclosure, replication, and ethical use of AI tools in economics research"
+---
+
+::: {.callout-note}
+## This session is under development
+Content for this session will be added before **April 29, 2026**. The outline below reflects the planned structure.
+:::
+
+## Planned content
+
+### AI for academic writing (~15 min) {#ai-for-academic-writing}
+
+- Using LLMs to draft, edit, and restructure prose.
+- Limitations: generic phrasing, hallucinated citations, loss of voice.
+- Demo: paste a rough paragraph, ask for revision, compare.
+
+### AI for literature review and discovery (~15 min) {#ai-for-literature-review}
+
+- Tools for searching and summarizing papers: Semantic Scholar, Elicit, Connected Papers, Consensus.
+- Demo: find papers on a topic, generate a summary table.
+- Caveat: always verify the citations exist.
+
+### Journal and university policies (~10 min) {#journal-policies}
+
+- AEA, Nature, Science, PNAS disclosure requirements.
+- Cornell's academic integrity policies as they apply to AI use.
+- Your responsibility as the author: AI-generated content does not transfer authorship responsibility.
+
+### Research transparency in the AI era (~10 min) {#research-transparency}
+
+- How to document AI use in your research workflow.
+- Logging prompts and outputs as part of a replication package.
+- Reproducibility challenges when AI tools change over time.
+- Connection to [Sessions 4–5](../version-control/session5.qmd#tags-for-reproducibility): tagged Git releases as replication snapshots that include AI-assisted code.
+
+### Discussion and practical exercise (~20 min) {#discussion-exercise}
+
+- Ethical scenarios: When is AI use appropriate? When does it cross a line?
+- Cases: using AI to write a referee report, generate code for a replication package, draft an abstract.
+
+### Wrap-up (~5 min) {#wrap-up}
+
+- Synthesis of the module.
+- Key takeaways for working with AI in research over your career.

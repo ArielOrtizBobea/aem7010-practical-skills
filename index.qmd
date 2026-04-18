@@ -1,35 +1,80 @@
 ---
-title: "AEM 7010: Doing Applied Economics Research: Practical Skills"
-subtitle: "Spring 2026 — Prof. Ariel Ortiz-Bobea"
+title: "Practical Skills: Git, GitHub & AI"
+subtitle: "AEM 7010: Doing Applied Economics Research<br>Prof. Ariel Ortiz-Bobea"
 ---
 
-## Overview
+## About this site
 
-This course accelerates your learning curve on skills that are rarely taught but critical for research productivity. Topics include data management, reproducibility, version control, and the use of AI tools in research.
+This site covers **sessions 4–7** of AEM 7010. Sessions 1–3 (introduction and reproducibility with Lars Vilhuber) and session 8 (Cornell resources) are taught separately and are not included here.
 
-**Schedule:** April 8 – May 4, 2026 | Mon/Wed, 8:40–9:55 AM | Warren 137
+## What you will learn
+
+| Module | Sessions | Topics |
+|--------|----------|--------|
+| **Version Control** | 4–5 | Git fundamentals, GitHub, branches, pull requests, tags, collaboration |
+| **AI Tools**        | 6–7 | Coding assistants, research workflows, disclosure, verification |
+
+By the end of these four sessions you will be able to:
+
+- Track changes to your R scripts and research code using Git
+- Back up your work on GitHub and collaborate with co-authors through pull requests
+- Tag specific versions of your code for paper submissions and replication packages
+- Use AI coding assistants responsibly in research
+- Document and disclose AI use in a way that meets journal and replication standards
 
 ## Sessions
 
-| # | Date | Topic | Materials |
-|---|------|-------|-----------|
-| 1 | Apr 8 | [Introduction](1-intro/index.qmd) | Slides |
-| 2 | Apr 13 | [Reproducibility I](2-3-reproducibility/index.qmd) | Guest: Lars Vilhuber |
-| 3 | Apr 15 | [Reproducibility II](2-3-reproducibility/index.qmd) | Guest: Lars Vilhuber |
-| 4 | Apr 20 | [Git Fundamentals](4-5-git/index.qmd) | Slides + Walkthrough |
-| 5 | Apr 22 | [GitHub & Collaboration](4-5-git/index.qmd) | Slides + Walkthrough |
-| 6 | Apr 27 | [AI Tools for Research I](6-7-ai/index.qmd) | Slides + Walkthrough |
-| 7 | Apr 29 | [AI Tools for Research II](6-7-ai/index.qmd) | Slides + Walkthrough |
-| 8 | May 4 | [Cornell Resources](8-resources/index.qmd) | Slides |
+**Session 4: Git Fundamentals.** The core Git workflow on your own computer: `init`, `add`, `commit`, `log`, `diff`, `.gitignore`, and undoing mistakes.
 
-## Key principles
+**Session 5: GitHub & Collaboration.** Connect to GitHub, push and pull, create branches, open pull requests, and tag releases for reproducibility.
 
-- You are not writing code for yourself, but for others — including yourself at *t+1*.
-- Invest in workflow skills early. The returns compound over your career.
-- Any version control system is better than none.
-- AI tools are powerful but require judgment and verification.
+**Session 6: AI Foundations.** The landscape of AI coding assistants, how they work, and a live demo of AI-assisted R coding.
 
-## Instructor
+**Session 7: AI in Research Practice.** Journal and disclosure policies, documenting AI use in replication packages, and ethical scenarios.
 
-Prof. Ariel Ortiz-Bobea, Dyson and Brooks Schools, Cornell University.
-[Course Canvas site](https://canvas.cornell.edu/courses/85144) | Office hours: Wednesdays 2–4 PM, Warren 450B
+## Before You Begin
+
+Please complete the following before **Session 4**.
+
+1. **Install Git** on your laptop
+    - Mac: `brew install git` (if you have Homebrew) or download from [git-scm.com](https://git-scm.com)
+    - Windows: download the installer from [git-scm.com](https://git-scm.com)
+2. **Open a terminal**
+    - Mac: open the Terminal app (search for "Terminal" in Spotlight)
+    - Windows: open Git Bash (installed with Git)
+3. **Verify the installation** by running:
+
+```bash
+git --version
+```
+
+You should see something like `git version 2.39.0`.
+
+4. **Install R and an editor or IDE.** Sessions 4–5 show three ways to use Git: Terminal, RStudio, and VS Code. You will follow the Terminal in class, but having an editor also set up lets you try the GUI alternatives at home. Sessions 6–7 assume you have both editors available for the AI-coding demos.
+
+    - **R** is required for every code example in this site and for the `wooldridge` package. Download the installer for your platform from [cran.r-project.org](https://cran.r-project.org). Free and open source.
+    - **RStudio** is the standard IDE for applied economics research in R. If you already use it for coursework, you are set. Otherwise, download from [posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/).
+    - **VS Code** is a general-purpose code editor that has become the most widely used tool in software and data work. Download from [code.visualstudio.com](https://code.visualstudio.com).
+
+    I encourage you to install all three. R is the engine. RStudio is ideal for R-centric work. VS Code is ideal for everything else: Python, shell scripts, LaTeX, Quarto, Markdown, editing configuration files, and working with AI coding assistants.
+
+5. **Install the `wooldridge` R package** so the tutorial's data examples work without any downloads. In R or RStudio, run:
+
+    ```r
+    install.packages("wooldridge")
+    ```
+
+    This gives you the classic datasets from Jeffrey Wooldridge's *Introductory Econometrics* textbook (`wage1`, `wage2`, and many others) that we use throughout the exercises.
+
+Before **Session 5**, also **create a free GitHub account** at [github.com](https://github.com).
+
+::: {.callout-note}
+## What is Homebrew?
+Homebrew is the standard macOS package manager. Think of it as an app store for command-line tools. If you do not already have it, run the one-line install command from [brew.sh](https://brew.sh). If you prefer to skip Homebrew, use the direct download from [git-scm.com](https://git-scm.com) instead.
+:::
+
+## Companion Materials
+
+- [Session 4 slides (PowerPoint)](version-control/session4_git_fundamentals.pptx)
+- [Session 5 slides (PowerPoint)](version-control/session5_github_collaboration.pptx)
+- [Exercise R scripts](version-control/exercises/)

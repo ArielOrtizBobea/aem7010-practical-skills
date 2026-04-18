@@ -1,0 +1,42 @@
+---
+title: "Session 6: AI Foundations"
+subtitle: "How LLMs and AI coding assistants work, and how to use them in research"
+---
+
+::: {.callout-note}
+## This session is under development
+Content for this session will be added before **April 27, 2026**. The outline below reflects the planned structure. Version control is covered in [Sessions 4–5](../version-control/session4.qmd).
+:::
+
+## Planned content
+
+### The AI landscape for researchers (~15 min) {#the-ai-landscape-for-researchers}
+
+- **Chat interfaces:** Claude, ChatGPT, Gemini. Who makes what.
+- **Coding assistants:** Claude Code (Anthropic), GitHub Copilot (GitHub / Microsoft; uses multiple backend models), Cursor (Anysphere; an IDE that wraps Claude, GPT, Gemini), Codex (OpenAI).
+- **Models vs. products.** Some of these are models; others are products that route to models. The practical implication is that when you document AI use for replication, you record both.
+- **How LLMs work at a high level.** Tokens, context windows, model families, the gap between training data and current reality.
+
+### AI for coding: live demo (~25 min) {#ai-for-coding-live-demo}
+
+- Write R code for a realistic data task with an LLM.
+- The workflow: prompt, review, iterate, verify.
+- Common failure modes: hallucinated functions, wrong package syntax, subtle statistical errors.
+- How version control (Session 4–5) is the safety net: every AI change is a commit you can review and revert.
+
+### Best practices for AI-assisted research code (~15 min) {#best-practices}
+
+- Verify every output before committing.
+- Use AI as a first draft, not a final answer.
+- Prompt engineering basics: be specific, provide context, ask for explanations.
+- Treat AI suggestions with the same skepticism you would apply to a well-meaning but unfamiliar RA.
+
+### Hands-on exercise (~15 min) {#hands-on-exercise}
+
+- Students use an LLM to write an R script for a simple task.
+- Compare outputs across tools.
+- Commit the result to their Git repo.
+
+### Wrap-up (~5 min) {#wrap-up}
+
+- Preview of Session 7: journal disclosure policies and ethical scenarios.
