@@ -216,26 +216,26 @@ Prof.&nbsp;Ariel Ortiz-Bobea
 <p>Version control matters in three situations every applied economist now faces.</p>
 <ul>
 <li><strong>Yourself over time.</strong> <code>analysis_v1.R</code> → <code>analysis_v2.R</code> → <code>analysis_FINAL_v2.R</code> → <code>analysis_REALLY_FINAL.R</code>. Which version produced the coefficient in Table 2?</li>
-<li><strong>You and AI coding tools.</strong> Claude Code, Copilot, Cursor, Codex all produce dozens of lines in seconds. Some are wrong in subtle ways.</li>
+<li><strong>You and AI coding tools.</strong> Claude Code, Copilot, Cursor, Codex all produce dozens of lines in seconds. Some are wrong.</li>
 <li><strong>You and co-authors.</strong> Multiple people editing the same project without silently overwriting each other’s work.</li>
 </ul>
 <div class="note-box">
-<p>Git is the connective infrastructure that makes all three workable.</p>
+<p>Git is the infrastructure that makes all three workable.</p>
 </div>
 </section>
 <section id="git-github" class="slide level2">
 <h2>Git ≠ GitHub</h2>
 <p><span class="anchor-tag">§ Tutorial: What Is Git?</span></p>
 <ul>
-<li><strong>Git</strong> is a tool that runs on your laptop. It manages snapshots of your project locally.</li>
-<li><strong>GitHub</strong> is a cloud service that hosts Git repositories for backup, collaboration, and sharing.</li>
+<li><strong>Git</strong> is a tool that runs on your laptop. Manages snapshots of your project locally.</li>
+<li><strong>GitHub</strong> is a cloud service that hosts Git repositories. Backup, collaboration, sharing.</li>
 </ul>
-<p>Today: Git (local). Session 5 on Wednesday: GitHub (remote).</p>
+<p>Today: Git (local). Session 5 (Wednesday): GitHub (remote).</p>
 </section>
-<section id="situations-where-git-helps" class="slide level2 smaller">
+<section id="situations-where-git-helps" class="slide level2">
 <h2>Situations Where Git Helps</h2>
 <p><span class="anchor-tag">§ Tutorial: Situations Where Git Helps</span></p>
-<p>Six scenarios, each introducing vocabulary you will meet today and Wednesday.</p>
+<p>Six scenarios, each introducing vocabulary you’ll meet today and Wednesday:</p>
 <ul>
 <li><strong>Working solo, months later</strong> → <em>commit</em>, <em>log</em>, <em>diff</em></li>
 <li><strong>Refactoring clunky code</strong> → <em>branch</em>, <em>merge</em></li>
@@ -248,7 +248,7 @@ Prof.&nbsp;Ariel Ortiz-Bobea
 <section id="the-three-areas-of-git" class="slide level2">
 <h2>The Three Areas of Git</h2>
 <p><span class="anchor-tag">§ Tutorial: The Three Areas of Git</span></p>
-<p>Every Git project has three areas. The mental model of the entire course.</p>
+<p>Every Git project has three areas. The mental model of the entire course:</p>
 <div class="three-areas">
 <div class="area">
 <p>Working<br>Directory</p>
@@ -268,9 +268,9 @@ Prof.&nbsp;Ariel Ortiz-Bobea
 </div>
 <p>The workflow: <strong>edit → stage → commit</strong>.</p>
 </section>
-<section id="a-mental-model-the-shopping-cart" class="slide level2 smaller">
+<section id="a-mental-model-the-shopping-cart" class="slide level2">
 <h2>A Mental Model: The Shopping Cart</h2>
-<p><span class="anchor-tag">§ Tutorial: The Three Areas of Git</span></p>
+<p><span class="anchor-tag">§ Tutorial: A mental model: the shopping cart</span></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -309,67 +309,120 @@ Prof.&nbsp;Ariel Ortiz-Bobea
 </tr>
 </tbody>
 </table>
-<p>Staging exists because you want to see exactly what you are about to commit to, before it becomes permanent.</p>
-<div class="tutorial-cue">
-<p>⟶ Now switch to the tutorial: Setup, Your First Repository, Staging &amp; Committing (~20 min hands-on)</p>
+<p>The staging step exists because you want to see exactly what you are about to commit to, before it becomes permanent.</p>
+</section>
+<section id="three-interfaces-same-git" class="slide level2">
+<h2>Three Interfaces, Same Git</h2>
+<p><span class="anchor-tag">§ Tutorial: Three interfaces, same Git</span></p>
+<p>Commands throughout this session appear in three tabs on the companion site.</p>
+<ul>
+<li><strong>Terminal</strong> (what we use in class): portable, works on Cornell’s cluster, in SSH sessions, inside scripts.</li>
+<li><strong>RStudio</strong> Git pane: fine for daily R work.</li>
+<li><strong>VS Code</strong> Source Control panel: general-purpose, works with any language.</li>
+</ul>
+<div class="note-box">
+<p>We teach the commands so you have the vocabulary. Once you know what each command does, use whichever interface you prefer.</p>
 </div>
 </section>
-<section id="writing-good-commits" class="slide level2 smaller">
+<section id="your-first-repository" class="slide level2">
+<h2>Your First Repository</h2>
+<p><span class="anchor-tag">§ Tutorial: Your First Repository</span></p>
+<p>Three commands to turn any folder into a Git repository:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">mkdir</span> my-research          <span class="co"># create the folder</span></span>
+<span id="cb1-2"><a></a><span class="bu">cd</span> my-research             <span class="co"># step into it</span></span>
+<span id="cb1-3"><a></a><span class="fu">git</span> init                   <span class="co"># make it a Git repo</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="note-box">
+<p>Keep Git repositories <strong>out</strong> of Dropbox, iCloud, Box, or OneDrive. Those services race against Git’s internal writes and silently corrupt repositories. A dedicated <code>~/github/</code> folder is the convention.</p>
+</div>
+</section>
+<section id="staging-and-committing" class="slide level2">
+<h2>Staging and Committing</h2>
+<p><span class="anchor-tag">§ Tutorial: Staging and Committing</span></p>
+<p>The daily workflow:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="co"># After editing clean_data.R:</span></span>
+<span id="cb2-2"><a></a><span class="fu">git</span> status                            <span class="co"># what changed?</span></span>
+<span id="cb2-3"><a></a><span class="fu">git</span> add clean_data.R                  <span class="co"># stage the file</span></span>
+<span id="cb2-4"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add cleaning script"</span>   <span class="co"># record it</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The only interesting choices are <strong>what to stage</strong> and <strong>what to put in the message</strong>.</p>
+</section>
+<section id="writing-good-commits" class="slide level2">
 <h2>Writing Good Commits</h2>
 <p><span class="anchor-tag">§ Tutorial: Writing good commits</span></p>
 <p><strong>Be specific.</strong> “Fix bug” is useless. “Fix off-by-one error in sample selection” is useful.</p>
-<p><strong>One logical change per commit.</strong> If the message needs the word <em>and</em>, it is two commits.</p>
-<p><strong>Research changelog style:</strong></p>
+<p><strong>One logical change per commit.</strong> If the message needs the word <em>and</em>, it’s two commits.</p>
+<p><strong>Research changelog style.</strong></p>
 <pre><code>Add control for state fixed effects
 Switch to winsorized outcome at 1%
 Fix sample filter for pre-2000 observations</code></pre>
-<p><strong>Avoid:</strong> “Fixed stuff”, “WIP”, “Lots of changes”, “.”</p>
-<div class="tutorial-cue">
-<p>⟶ Now switch to the tutorial: Exercise 1 (~5 min hands-on)</p>
-</div>
+<p><strong>Avoid.</strong> “Fixed stuff”, “WIP”, “Lots of changes”, “.”</p>
 </section>
-<section id="safety-rails-.gitignore-undoing-mistakes" class="slide level2 smaller">
-<h2>Safety Rails: <code>.gitignore</code> + Undoing Mistakes</h2>
-<p><span class="anchor-tag">§ Tutorial: .gitignore and Undoing Mistakes</span></p>
-<p><strong>Keep files out of Git</strong> with a <code>.gitignore</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">*.csv,</span> <span class="pp">*</span>.dta, data/   <span class="co"># data (too large or sensitive)</span></span>
-<span id="cb2-2"><a></a><span class="ex">.Rhistory,</span> .RData     <span class="co"># R artifacts</span></span>
-<span id="cb2-3"><a></a><span class="ex">.DS_Store,</span> Thumbs.db  <span class="co"># system files</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Three undo operations:</strong></p>
+<section id="gitignore-what-not-to-track" class="slide level2">
+<h2>.gitignore: What NOT to Track</h2>
+<p><span class="anchor-tag">§ Tutorial: .gitignore</span></p>
+<p>Not every file belongs in Git. Large data, credentials, system files go in a <code>.gitignore</code> file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="co"># Data files (too large or sensitive)</span></span>
+<span id="cb4-2"><a></a><span class="ex">*.csv</span></span>
+<span id="cb4-3"><a></a><span class="ex">*.dta</span></span>
+<span id="cb4-4"><a></a><span class="ex">data/</span></span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="co"># R artifacts</span></span>
+<span id="cb4-7"><a></a><span class="ex">.Rhistory</span></span>
+<span id="cb4-8"><a></a><span class="ex">.RData</span></span>
+<span id="cb4-9"><a></a><span class="ex">.Rproj.user/</span></span>
+<span id="cb4-10"><a></a></span>
+<span id="cb4-11"><a></a><span class="co"># System files</span></span>
+<span id="cb4-12"><a></a><span class="ex">.DS_Store</span></span>
+<span id="cb4-13"><a></a><span class="ex">Thumbs.db</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Code lives in the Git repo. Data lives elsewhere (Dropbox). A <strong>symlink</strong> connects them. See the tutorial for the mechanics.</p>
+</section>
+<section id="undoing-mistakes" class="slide level2">
+<h2>Undoing Mistakes</h2>
+<p><span class="anchor-tag">§ Tutorial: Undoing Mistakes</span></p>
+<p>Three safety rails:</p>
 <ul>
-<li><strong>Unstage by accident staged file:</strong> <code>git restore --staged &lt;file&gt;</code></li>
-<li><strong>Discard a bad edit</strong> (destructive): <code>git restore &lt;file&gt;</code></li>
-<li><strong>Undo last commit, keep the work:</strong> <code>git reset --soft HEAD~1</code></li>
+<li><strong>Unstage a file</strong> (you staged by accident): <code>git restore --staged &lt;file&gt;</code></li>
+<li><strong>Discard local changes</strong> (destructive, before commit): <code>git restore &lt;file&gt;</code></li>
+<li><strong>Undo the last commit, keep the changes</strong> (you committed too early): <code>git reset --soft HEAD~1</code></li>
 </ul>
 <div class="note-box">
-<p>Git is forgiving, but only for states it knows about. Commit often.</p>
+<p>Git is forgiving, but only for states it knows about. That is why committing often matters.</p>
 </div>
-<div class="tutorial-cue">
-<p>⟶ Now switch to the tutorial: Exercise 2 (~10 min hands-on)</p>
-</div>
+</section>
+<section id="exercises" class="slide level2">
+<h2>Exercises</h2>
+<p>Two hands-on practices in your <code>my-research</code> project:</p>
+<ul>
+<li><strong>Exercise 1 (~5 min)</strong> — Add a second script, commit it, view the log. Pick your preferred interface: Terminal, RStudio, or VS Code.</li>
+<li><strong>Exercise 2 (~10 min)</strong> — Practice the safety rails: <code>git diff</code>, unstaging, discarding, final log.</li>
+</ul>
+<p>Instructions on the companion site.</p>
 </section>
 <section id="whats-next" class="slide level2">
 <h2>What’s Next</h2>
 <p>Today: Git on your own laptop. Commits, staging, undoing mistakes, ignoring files.</p>
 <p><strong>Wednesday (Session 5): GitHub.</strong></p>
 <ul>
-<li>Push <code>my-research</code> to a GitHub repository</li>
+<li>Push your <code>my-research</code> project to a GitHub repository</li>
 <li>Pull changes from a co-author</li>
 <li>Create branches for risky experiments</li>
 <li>Open pull requests for review</li>
 <li>Tag versions for paper submissions and replication packages</li>
 </ul>
 <div class="note-box">
-<p>Before Wednesday: create a free GitHub account at <a href="https://github.com">github.com</a> if you have not already. <strong>Questions now?</strong></p>
+<p>Before Wednesday: create a free GitHub account at <a href="https://github.com">github.com</a> if you have not already.</p>
 </div>
-<p>The full walkthrough with copy-paste commands, screenshots, and RStudio / VS Code equivalents is on the companion site: <a href="https://arielortizbobea.github.io/aem7010-practical-skills/">arielortizbobea.github.io/aem7010-practical-skills</a></p>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions?</h2>
+<p>The companion site has the full walkthrough with copy-paste commands, screenshots, and the RStudio / VS Code equivalents for every step.</p>
+<p><a href="https://arielortizbobea.github.io/aem7010-practical-skills/">arielortizbobea.github.io/aem7010-practical-skills</a></p>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>AEM 7010 · Session 4 · Git Fundamentals</p>
 </div>
 </div></div>
 
@@ -580,66 +633,6 @@ Fix sample filter for pre-2000 observations</code></pre>
           RevealZoom
         ]
       });
-    </script>
-    <div id="section-progress"></div>
-    <script>
-    (function () {
-      // Short labels for slide titles, in order. Only titles listed here
-      // appear in the progress strip. Title slide and final slides skipped.
-      var sections = [
-        { match: /^Why Version Control/i,     label: "Why VC?" },
-        { match: /^Git ≠ GitHub/i,             label: "Git vs GitHub" },
-        { match: /^Situations Where/i,         label: "Situations" },
-        { match: /^The Three Areas/i,          label: "Three Areas" },
-        { match: /^A Mental Model/i,           label: "Shopping Cart" },
-        { match: /^Writing Good Commits/i,     label: "Good Commits" },
-        { match: /^Safety Rails/i,             label: "Safety Rails" },
-        { match: /^What['\u2019]s Next/i,      label: "Next" }
-      ];
-
-      function buildProgress() {
-        var container = document.getElementById('section-progress');
-        if (!container) return;
-
-        sections.forEach(function (s, i) {
-          var item = document.createElement('span');
-          item.className = 'section-progress-item';
-          item.dataset.index = i;
-          item.textContent = s.label;
-          container.appendChild(item);
-        });
-
-        updateActive();
-      }
-
-      function updateActive() {
-        var current = Reveal.getCurrentSlide();
-        var heading = current.querySelector('h1, h2');
-        var title = heading ? heading.textContent.trim() : '';
-        var activeIdx = -1;
-        for (var i = 0; i < sections.length; i++) {
-          if (sections[i].match.test(title)) {
-            activeIdx = i;
-            break;
-          }
-        }
-        document.querySelectorAll('.section-progress-item').forEach(function (el) {
-          el.classList.toggle('active', parseInt(el.dataset.index) === activeIdx);
-        });
-        document.getElementById('section-progress').classList.toggle(
-          'section-progress-hidden', activeIdx === -1
-        );
-      }
-
-      if (typeof Reveal !== 'undefined') {
-        if (Reveal.isReady()) {
-          buildProgress();
-        } else {
-          Reveal.on('ready', buildProgress);
-        }
-        Reveal.on('slidechanged', updateActive);
-      }
-    })();
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
