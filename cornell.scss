@@ -62,15 +62,36 @@ code:not(.sourceCode) {
 
 // Sidebar branding: Cornell logo, course code as eyebrow label, course title below.
 // Logo + text both centered in the sidebar.
+
+// Quarto default adds text-left to .sidebar-header; override to center
+// and tighten top padding so the seal sits close to the top.
+.sidebar-header {
+  text-align: center !important;
+  padding-top: 0.5rem !important;
+}
+
+// The <a> wrapper around the logo image
+.sidebar-logo-link {
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 1;   // no extra line-height below the inline image
+}
+
+// Quarto's class on the <img> element. Use high specificity + !important
+// to beat Bootstrap utility classes like .d-lg-inline and .py-0.
+img.sidebar-logo,
 .sidebar-logo {
-  display: block;
-  max-width: 140px;
-  height: auto;
-  margin: 0 auto 0.75rem auto;   // centered, some breathing room above AEM code
+  max-width: 50px !important;
+  width: 50px !important;
+  height: auto !important;
+  margin: 0 auto !important;       // no extra vertical margin on the image itself
+  padding: 0 !important;
+  display: block !important;
 }
 
 .sidebar-title {
   line-height: 1.2;
+  margin-top: 0.25rem !important;   // small gap between logo and course code
   margin-bottom: 0.5rem;
   text-align: center;
 

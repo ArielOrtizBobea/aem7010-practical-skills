@@ -3,6 +3,10 @@ title: "Session 5: GitHub & Collaboration"
 subtitle: "Working with remotes and teams"
 ---
 
+::: {.callout-note appearance="minimal"}
+**Slides for this session:** [View the slide deck](slides/session5.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below; the walkthrough on this page is the substantive material.
+:::
+
 ## Quick Recap
 
 In Session 4 we learned the core local Git workflow:
@@ -83,6 +87,20 @@ The rule that makes this secure is simple. Your **private key** stays on your la
 The upside over passwords is twofold. First, you never type a password again. Second, an attacker who intercepts your traffic cannot steal your private key, because the private key never travels.
 
 You generate the key pair once, give GitHub the public half, and keep the private half on your laptop.
+
+::: {.callout-tip}
+## Already have SSH set up with GitHub? Just verify.
+
+If you already use GitHub over SSH on this laptop (from a previous course, research project, or setup elsewhere), there is no need to repeat Steps 1–5. Run this one command in your terminal:
+
+```bash
+ssh -T git@github.com
+```
+
+If you see something like `Hi yourusername! You've successfully authenticated...`, your setup is good. Skip ahead to [Keep Your Email Private](#keep-your-email-private) or straight to the [Remotes and Cloning](#where-a-repository-comes-from) sections.
+
+If the command errors (`Permission denied`, `Could not resolve hostname`, etc.) or you have never done this before, continue with Steps 1–6 below.
+:::
 
 ::: {.callout-important}
 ## Where to run these commands
@@ -316,6 +334,10 @@ In this tutorial we walk through **cloning** in detail, since it is the most com
 ## Cloning a Repository
 
 `git clone <URL>` downloads a full repository from GitHub to your laptop, including the full commit history. The command also sets up the remote connection automatically, so `git push` and `git pull` work immediately.
+
+::: {.callout-note appearance="minimal"}
+**This is a reference walkthrough — read it, do not run it yet.** The URL examples below use `YOURUSERNAME/my-research.git` as a placeholder. You will actually clone in **Exercise 3** further down, after you click **Use this template** on the course starter repo to create `YOURUSERNAME/my-research` under your own GitHub account. Trying to run `git clone` against that URL now will fail with `Repository not found` because the repo does not exist yet.
+:::
 
 ### What you need
 

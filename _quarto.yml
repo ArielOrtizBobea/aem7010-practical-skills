@@ -6,6 +6,8 @@ website:
   title: "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>"
   description: "AEM 7010: Doing Applied Economics Research. Practical Skills. Sessions 4–7."
   sidebar:
+    logo: images/cornell_seal_simple_web_b31b1b.svg
+    title: "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>"
     style: "docked"
     search: true
     collapse-level: 2
