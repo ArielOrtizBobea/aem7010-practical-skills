@@ -42,22 +42,44 @@ website:
             href: version-control/session4.qmd#linking-to-data-that-lives-elsewhere
           - text: "Undoing mistakes"
             href: version-control/session4.qmd#undoing-mistakes
+          - text: "— Unstage a file"
+            href: version-control/session4.qmd#unstage-a-file
+          - text: "— Discard local changes"
+            href: version-control/session4.qmd#discard-local-changes
+          - text: "— Undo the last commit"
+            href: version-control/session4.qmd#undo-the-last-commit-keep-the-changes
+          - text: "— Return to an earlier version"
+            href: version-control/session4.qmd#return-to-an-earlier-version-of-a-file
           - text: "Exercise 2"
             href: version-control/session4.qmd#exercise-2-practice-the-safety-rails
           - text: "Session 5: GitHub & Collaboration"
             href: version-control/session5.qmd
           - text: "What is GitHub?"
             href: version-control/session5.qmd#what-is-github
+          - text: "Why put code on GitHub?"
+            href: version-control/session5.qmd#why-put-your-code-on-github
+          - text: "Connect to GitHub"
+            href: version-control/session5.qmd#connect-to-github-ssh-keys
+          - text: "— What SSH is"
+            href: version-control/session5.qmd#what-ssh-actually-is
+          - text: "— Setup steps"
+            href: version-control/session5.qmd#step-1-check-whether-you-already-have-a-key
+          - text: "— HTTPS alternative"
+            href: version-control/session5.qmd#https-alternative
           - text: "Keep your email private"
             href: version-control/session5.qmd#keep-your-email-private
-          - text: "SSH keys"
-            href: version-control/session5.qmd#connect-to-github-ssh-keys
-          - text: "Remotes: push & pull"
-            href: version-control/session5.qmd#remotes-push-and-pull
-          - text: "Cloning"
+          - text: "Where a repository comes from"
+            href: version-control/session5.qmd#where-a-repository-comes-from
+          - text: "Cloning a repository"
             href: version-control/session5.qmd#cloning-a-repository
+          - text: "Push and pull"
+            href: version-control/session5.qmd#push-and-pull
+          - text: "Starting from scratch"
+            href: version-control/session5.qmd#starting-from-scratch
+          - text: "Forks and templates"
+            href: version-control/session5.qmd#forks-and-templates
           - text: "Exercise 3"
-            href: version-control/session5.qmd#exercise-3-push-to-github
+            href: version-control/session5.qmd#exercise-3-clone-your-copy-of-the-starter-repo
           - text: "Branches"
             href: version-control/session5.qmd#branches
           - text: "Pull requests"
@@ -68,6 +90,8 @@ website:
             href: version-control/session5.qmd#exercise-4-branches-and-pull-requests
           - text: "Tags for reproducibility"
             href: version-control/session5.qmd#tags-for-reproducibility
+          - text: "Data: too large or restricted"
+            href: version-control/session5.qmd#when-the-data-is-too-large-or-restricted
           - text: "Git cheat sheet"
             href: version-control/cheatsheet.qmd
       - section: "AI Tools"

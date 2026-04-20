@@ -17,24 +17,258 @@ Today we take those skills online.
 
 ## What Is GitHub?
 
-GitHub is a cloud hosting service for Git repositories. It provides:
-
-- **Backup**: your code lives in the cloud, not just on your laptop
-- **Collaboration**: co-authors can contribute to the same project
-- **Sharing**: publish replication packages and make research transparent
+GitHub is a cloud hosting service for Git repositories. You still run Git on your laptop and do your work there. GitHub stores a mirror of your repository on its servers. Two commands keep the two copies in sync: `git push` uploads your commits to GitHub, `git pull` downloads what others (or your other machines) have pushed.
 
 ::: {.callout-note}
 GitHub is free for public and private repositories. You can also apply for [GitHub Education](https://education.github.com) benefits as a student or faculty member.
 :::
 
+## Why Put Your Code on GitHub?
+
+Version control on your laptop tracks your changes over time. GitHub adds a cloud copy of that history. Four motivations make this worth doing for every research project.
+
+### Backup and recovery
+
+Hard drives fail. Laptops get stolen. Coffee spills. A local Git repository lives in one folder on one machine; lose the machine and you lose the project. A remote on GitHub is a continuously updated backup of both your code and its full history. Restoring onto a new laptop takes one command.
+
+### Working across your own machines
+
+Many applied economists work on more than one computer: a laptop for travel, an office desktop, sometimes a cluster for heavy computation. Without a cloud remote, synchronizing them means emailing scripts to yourself or copying folders onto USB drives. With GitHub, each machine pulls the latest version and pushes changes when finished. The history is the same everywhere.
+
+### Working with co-authors
+
+Co-authors clone the same repository, each make commits, and push their work. Git tracks who wrote what, flags conflicts where two people edited the same line, and preserves every change. Nobody's work is silently overwritten, and nobody emails `paper_FINAL_jane_edits_v3_with_corrections.tex`.
+
+### Sharing and transparency
+
+Journals increasingly require replication packages. Top journals in economics expect code posted in a public archive before acceptance. A GitHub repository with a tagged release at submission is the cleanest way to satisfy that requirement, and the link lives in the published paper.
+
+::: {.callout-tip}
+These four motivations map to the Git and GitHub concepts covered below.
+
+- **Backup and cross-machine work**: `git push` uploads your commits to GitHub, `git pull` downloads new commits from GitHub.
+- **Co-authors**: **branches** are parallel lines of development where you can experiment without disturbing working code. **Pull requests** are GitHub's interface for reviewing those branches and merging them back into the main version.
+- **Sharing**: **tags** mark specific commits as named snapshots (for example `v1.0-accepted`). **GitHub Releases** bundle a tag with downloadable files, which is how you post a self-contained replication archive.
+:::
+
+## Connect to GitHub: SSH Keys
+
+Before you can push or pull, your laptop needs to prove to GitHub that you are who you claim to be. GitHub supports two authentication methods.
+
+- **HTTPS with a credential helper.** Your laptop talks to GitHub over the same protocol your browser uses. A helper (`osxkeychain` on Mac, Git Credential Manager on Windows, `libsecret` on Linux) stores a Personal Access Token so you are not re-prompted on every push.
+- **SSH keys.** Your laptop holds a private cryptographic key; GitHub holds the matching public key. Every connection signs a challenge instead of sending a password or token. No secret material crosses the network.
+
+Both work. The differences that matter in practice:
+
+| | HTTPS + credential helper | SSH keys |
+|---|---|---|
+| Setup time | ~2 minutes | ~5 minutes (one-time) |
+| Expiration | Personal Access Tokens expire and need rotation (typically every 90 days) | Does not expire |
+| Firewalls | Port 443, always open | Port 22, sometimes blocked on managed-IT or campus networks |
+| Convenience across repos | One token authenticates all | One key authenticates all |
+| Same setup across machines | Slightly different helper on each OS | Identical everywhere (Mac, Linux, Windows via Git Bash) |
+
+For a research workflow, **SSH is the more common long-term choice**. You set it up once and forget about it: the same configuration works on your laptop, your office desktop, and a compute cluster, and you never have to rotate a token. HTTPS is a reasonable fallback if port 22 is blocked on your network.
+
+**We use SSH in this tutorial.** If you prefer HTTPS, see the [HTTPS alternative](#https-alternative) at the end of this section; the Git commands (`git push`, `git pull`, and the rest) are identical either way, only the authentication layer differs.
+
+### What SSH actually is
+
+**SSH** (Secure Shell) is a protocol for secure communication between two computers. Every time you run `git push` or `git pull` against an SSH remote, your laptop opens an SSH connection to GitHub and the commands travel over that encrypted channel.
+
+The authentication mechanism SSH uses is **public-key cryptography**. You generate two paired files on your laptop: a **private key** and a **public key**. Anything one key encrypts, only the other can decrypt. The two are linked by math and cannot be guessed from each other.
+
+The rule that makes this secure is simple. Your **private key** stays on your laptop and is never shared. Your **public key** is safe to hand out. You give the public key to GitHub once. From then on, when you connect, your laptop proves it holds the matching private key without ever sending the private key itself. No password crosses the network.
+
+The upside over passwords is twofold. First, you never type a password again. Second, an attacker who intercepts your traffic cannot steal your private key, because the private key never travels.
+
+You generate the key pair once, give GitHub the public half, and keep the private half on your laptop.
+
+::: {.callout-important}
+## Where to run these commands
+
+All commands in this section run in a **terminal**.
+
+- **Mac / Linux:** use the **Terminal** app (Applications → Utilities → Terminal). The **Terminal tab inside RStudio** and the **Integrated Terminal in VS Code** also work; they run the same shell.
+- **Windows:** use **Git Bash**, the terminal that shipped with Git for Windows. **Not** PowerShell and **not** Command Prompt. Open it from the Start menu, or select **Git Bash** in VS Code's terminal dropdown.
+:::
+
+### Step 1: Check whether you already have a key
+
+Before generating a new key, see if one already exists on this machine:
+
+```bash
+ls -al ~/.ssh
+```
+
+Two possible outcomes:
+
+- **You see files called `id_ed25519` and `id_ed25519.pub`** in the listing. You already have an ed25519 key pair. **Skip ahead to Step 4** (copy the public key).
+- **You see an error like `ls: /Users/yourname/.ssh: No such file or directory`, or the folder exists but does not contain those files.** You do not have an SSH key on this machine yet. **Continue with Step 2.** This is the expected state for most first-timers. A GitHub account by itself does not create local SSH keys; the `.ssh` folder is only created the first time you run `ssh-keygen`.
+
+::: {.callout-note}
+`~/.ssh` is an absolute path. The `~` expands to your home directory, so the command looks in the same place regardless of your current working directory.
+:::
+
+### Step 2: Generate a key pair
+
+Replace the email with the one tied to your GitHub account.
+
+```bash
+ssh-keygen -t ed25519 -C "you@email.com"
+```
+
+The command is interactive. It will prompt you three times.
+
+**Prompt 1 — where to save the key:**
+
+```
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/yourname/.ssh/id_ed25519):
+```
+
+Press **Enter** to accept the default location.
+
+**Prompts 2 and 3 — passphrase and confirmation:**
+
+```
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+```
+
+Either type a passphrase at both prompts (slightly more secure, recommended on a shared machine) or press **Enter** twice to leave it empty (simpler, defensible on a personal laptop). The passphrase does not appear on screen while you type; that is expected.
+
+**What you see when it finishes.** A confirmation message and a block of ASCII art:
+
+```
+Your identification has been saved in /Users/yourname/.ssh/id_ed25519
+Your public key has been saved in /Users/yourname/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:aB3cD4eF... you@email.com
+The key's randomart image is:
++--[ED25519 256]--+
+|    .o.+*=O+     |
+|   . .=.ooX*     |
+|  . . *..+o=.    |
+|   . o .o +      |
+|    . . So       |
+|       ....      |
+|      ...E       |
+|     o.o..       |
+|    .o.++o       |
++----[SHA256]-----+
+```
+
+The **randomart image** is a visual fingerprint of your key. OpenSSH prints one after every key generation as a human-friendly way to spot mismatches later (a radically different picture means a different key). It is decorative: you do not need to record it or act on it.
+
+Verify the files now exist:
+
+```bash
+ls -al ~/.ssh
+```
+
+You should see both `id_ed25519` (private key — keep this secret) and `id_ed25519.pub` (public key — the one you share).
+
+### Step 3: Start the SSH agent and add your key
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+
+The first line starts the background process that holds your key in memory. The second tells it about your new key.
+
+::: {.callout-tip}
+## On macOS, persist the key across reboots
+
+Tell the agent to store your passphrase in the macOS Keychain so you do not need to unlock it again after a reboot:
+
+```bash
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+:::
+
+### Step 4: Copy the public key
+
+Display the public key in the terminal:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+The output looks like `ssh-ed25519 AAAAC3Nz... you@email.com`. Select and copy the **entire** line.
+
+::: {.callout-warning}
+Only share the **public** key (`id_ed25519.pub`, the one ending in `.pub`). Never paste the private key (`id_ed25519`, no extension) anywhere.
+:::
+
+**Shortcut — Mac:** pipe directly to the clipboard instead of copying manually:
+
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+**Shortcut — Windows (Git Bash):**
+
+```bash
+clip < ~/.ssh/id_ed25519.pub
+```
+
+### Step 5: Add the key to GitHub
+
+This step happens in your **web browser**, not the terminal.
+
+1. Go to [github.com](https://github.com). Click your profile picture (top right) → **Settings**.
+2. In the left sidebar, click **SSH and GPG keys**.
+3. Click **New SSH key** (green button, top right of the SSH keys section).
+4. Paste your key in the **Key** field. Give it a **Title** that identifies the laptop, for example "My MacBook" or "Dyson office desktop". Leave **Key type** as **Authentication Key**.
+5. Click **Add SSH key**. GitHub may ask you to confirm your password, and then require a **second factor** to verify it is really you (adding an SSH key grants push access, so GitHub re-verifies on sensitive actions).
+
+    GitHub has required 2FA for all contributors since 2024, so you almost certainly have one of the following set up:
+
+    - **Authenticator app** (Google Authenticator, Authy, 1Password, Microsoft Authenticator, etc.): enter the current 6-digit code. These rotate every 30 seconds, so enter promptly.
+    - **Duo**: Cornell's single sign-on uses Duo. If your GitHub account is linked to a Cornell or institutional identity, you may receive a **push notification** on your phone (tap "Approve") or be shown a 6-digit Duo passcode to enter.
+    - **Security key** (YubiKey, Titan, or your laptop's fingerprint / Touch ID): plug in and tap, or authenticate with the built-in biometric.
+    - **SMS or email** (legacy): enter the code GitHub sends to your phone or inbox.
+
+    If you have never set up 2FA on GitHub and it prompts you to do so before accepting the SSH key, follow the wizard: installing an authenticator app (Authy, 1Password, or Google Authenticator) is the most portable choice for a personal account.
+
+### Step 6: Test the connection
+
+Back in your terminal:
+
+```bash
+ssh -T git@github.com
+```
+
+The first time you connect, you will see a warning asking you to confirm GitHub's host fingerprint. Type `yes` and press Enter. If the setup worked, you will see:
+
+```
+Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+That message is what you want. "Does not provide shell access" is normal — GitHub never lets anyone log in interactively.
+
+### HTTPS alternative (if SSH is blocked) {#https-alternative}
+
+If SSH does not work on your machine (managed-IT restrictions, firewalls closing port 22), you can authenticate over HTTPS instead. The set-up varies slightly by operating system:
+
+- **Mac:** Git uses the **osxkeychain** helper by default. Push once, enter your GitHub username, paste a **Personal Access Token** as the password, and Git remembers it.
+- **Windows:** Git for Windows ships with **Git Credential Manager**. It opens a browser for GitHub sign-in the first time you push. No token needed.
+- **Linux:** install `git-credential-libsecret` and run `git config --global credential.helper libsecret`.
+
+Everywhere in this tutorial we use an SSH URL (`git@github.com:user/repo.git`). If you are on HTTPS, substitute the HTTPS URL (`https://github.com/user/repo.git`) in the same commands. The rest of Git works identically.
+
 ## Keep Your Email Private
 
-Every commit you push to a public GitHub repository shows the name and email you configured back in Session 4. If you used a personal email, it is now visible to anyone browsing the repo. GitHub offers a stable `noreply` address tied to your account that you can use instead.
+As flagged in [Session 4](session4.qmd), every commit records the name and email you set with `git config`. Once you push to a public repo, that email is searchable by anyone browsing GitHub. The fix is a GitHub-provided `noreply` address.
+
+You should already be signed into GitHub from Step 5 of the SSH setup. Stay in the browser.
 
 1. Go to [github.com/settings/emails](https://github.com/settings/emails).
 2. Under **Primary email address**, check the box for **Keep my email addresses private**.
 3. GitHub shows a noreply address shaped like `12345678+yourusername@users.noreply.github.com`. Copy it.
-4. Update your local Git configuration:
+4. Switch to your **terminal** and update Git's global configuration:
 
 ```bash
 git config --global user.email "12345678+yourusername@users.noreply.github.com"
@@ -43,176 +277,546 @@ git config --global user.email "12345678+yourusername@users.noreply.github.com"
 Replace the address with the one shown on your GitHub settings page.
 
 ::: {.callout-tip}
-This only affects commits made *after* you change the setting. Past commits keep whatever email they were created with. Rewriting history to replace old emails is possible but advanced. See [GitHub's documentation](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address) if you need it.
+This only affects commits made *after* you change the setting. Past commits keep whatever email they were created with. See [GitHub's documentation](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address) if you need to rewrite old ones.
 :::
 
-## Connect to GitHub: SSH Keys
+## Where a Repository Comes From
 
-SSH keys let your computer authenticate with GitHub without typing a password every time.
+Before we push or pull, it helps to know the three ways a project ends up connected to GitHub. Your path depends on whether the project already exists and who owns it.
 
-### 1. Generate a key pair
+### 1. Start from scratch
 
-```bash
-ssh-keygen -t ed25519 -C "you@email.com"
-```
+You have a new research idea with no code yet. Two variants arrive at the same end state.
 
-Press Enter to accept the default file location. You can set a passphrase or leave it empty.
+- **GitHub-first.** Create an empty repository on [github.com/new](https://github.com/new). Clone it to your laptop. Your local folder comes pre-connected to the remote. This is the simpler path for a project you know from the start you want on GitHub.
+- **Laptop-first.** The folder and code already exist (the session 4 flow: `git init`, local commits). Create an empty repository on GitHub, then run `git remote add origin <URL>` to link the two. The right path when you started locally and only later decided to push.
 
-### 2. Start the SSH agent and add your key
+### 2. Clone an existing repository
 
-```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
+The repository already exists on GitHub. `git clone <URL>` downloads the full project and its history to your laptop, pre-connected to the remote. Whether you can push back depends on whether the owner added you as a collaborator. Typical cases in applied economics: joining a co-author's project, following along with a course starter, pulling a public replication package.
 
-### 3. Copy the public key
+### 3. Fork, then clone
 
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
+You want your own independent copy on GitHub of someone else's repo, typically because you cannot push to theirs. Click **Fork** on GitHub to create a copy under your account, then clone your fork. You have full push access to your fork, and can propose changes back to the original via a pull request. We revisit this pattern in Sessions 6–7 when working with Claude Code project templates.
 
-Copy the entire output.
+### Which path, when?
 
-### 4. Add the key to GitHub
+| Scenario | Entry point |
+|---|---|
+| Your own new research project | Start from scratch |
+| Joining your advisor's or co-author's repo | Clone |
+| Following a course starter (including this session's exercise) | **Use this template**, then clone |
+| Contributing to an R package or replication repo you do not own | Fork, then clone |
+| Basing your own work on someone else's code, diverging from their version | Fork, then clone |
 
-1. Go to [github.com](https://github.com) → click your profile picture → **Settings**
-2. In the left sidebar, click **SSH and GPG keys**
-3. Click **New SSH key**
-4. Paste your key and give it a title (e.g., "My Laptop")
-5. Click **Add SSH key**
-
-### 5. Test the connection
-
-```bash
-ssh -T git@github.com
-```
-
-You should see: `Hi username! You've successfully authenticated...`
-
-::: {.callout-tip}
-**Windows users:** run these commands in Git Bash, not in PowerShell or Command Prompt.
-:::
-
-## Remotes: Push and Pull
-
-A **remote** is a copy of your repository stored on a server (like GitHub). The standard remote name is `origin`.
-
-### The relationship
-
-```
-Your Computer  ←— git pull —→  GitHub (origin)
-               —— git push ——→
-```
-
-- `git push` uploads your commits to GitHub
-- `git pull` downloads new commits from GitHub
-
-### Link your local repo to GitHub
-
-First, create a new repository on GitHub:
-
-1. Go to [github.com/new](https://github.com/new)
-2. Name it (e.g., `my-research`)
-3. **Do NOT** initialize with a README (your local repo already has commits)
-4. Click **Create repository**
-
-GitHub will show you setup commands. Use the SSH option:
-
-```bash
-git remote add origin git@github.com:yourusername/my-research.git
-```
-
-### Push your commits
-
-```bash
-git push -u origin main
-```
-
-The `-u` flag sets `origin main` as the default upstream, so future pushes only need `git push`.
-
-### Pull changes
-
-If someone else pushed commits (or you edited a file on GitHub), download them:
-
-```bash
-git pull origin main
-```
+In this tutorial we walk through **cloning** in detail, since it is the most common path for joining an existing project. Starting from scratch and forking each get their own short subsections below.
 
 ## Cloning a Repository
 
-`git clone` downloads an entire repository (with full history) from GitHub to your computer:
+`git clone <URL>` downloads a full repository from GitHub to your laptop, including the full commit history. The command also sets up the remote connection automatically, so `git push` and `git pull` work immediately.
+
+### What you need
+
+- An SSH or HTTPS URL for the repo. On GitHub, click the green **Code** button on the repository's main page, choose **SSH** (or **HTTPS**), and copy the URL.
+- A parent folder on your laptop where the clone should live. The clone command creates a new subfolder inside your current location.
+
+::: {.callout-warning}
+## If the target folder already exists
+
+`git clone` refuses to proceed if a folder with the same name already exists at the destination. This is the common case when students come from session 4 and already have a `my-research/` folder, or when they retry a clone after an earlier attempt.
+
+Symptoms:
+
+- **Terminal:** `fatal: destination path 'my-research' already exists and is not an empty directory.`
+- **RStudio and VS Code:** the clone dialog reports the target directory is not empty.
+
+Fix: rename or remove the existing folder before cloning. From your terminal:
 
 ```bash
-git clone git@github.com:username/my-research.git
-cd my-research
+cd ~/github
+mv my-research my-research-old          # safe: keep the old version
+# or, if you do not need the old folder:
+rm -rf my-research                      # destructive and irreversible
 ```
 
-After cloning, the remote `origin` is already configured. You can immediately push and pull.
-
-::: {.callout-tip}
-Cloning is how you start working on a collaborator's project. You get the full history, all branches, and a ready-to-go remote connection.
+Then retry the clone below.
 :::
 
-## Exercise 3: Push to GitHub {.exercise}
+### Three interfaces, same operation
 
-**Time: ~15 minutes**
+::: {.panel-tabset}
 
-1. **Create a repository on GitHub.** Go to [github.com/new](https://github.com/new), name it `my-research`, and click Create (do NOT initialize with README).
+## Terminal
 
-2. **Add the remote** to your local `my-research` project:
+Navigate to the parent folder where you want the project to live:
+
+```bash
+cd ~/github
+```
+
+Then clone (replace `YOURUSERNAME` with your GitHub username, the handle shown in your GitHub profile URL):
+
+```bash
+git clone git@github.com:YOURUSERNAME/my-research.git
+```
+
+Git creates a new `my-research/` folder, downloads everything, and reports progress. When it finishes, step into the project:
 
 ```bash
 cd my-research
-git remote add origin git@github.com:YOURUSERNAME/my-research.git
 ```
 
-Replace `YOURUSERNAME` with your GitHub username.
+## RStudio
 
-3. **Push your commits:**
+1. **File → New Project → Version Control → Git**.
+2. In the dialog:
+   - **Repository URL:** paste the SSH (or HTTPS) URL from GitHub.
+   - **Project directory name:** auto-fills from the URL; leave it or edit.
+   - **Create project as subdirectory of:** choose the parent folder (for example `~/github`).
+3. Click **Create Project**.
+
+RStudio clones the repo and opens it as a new RStudio Project. The Git pane (top right) appears, already connected to the remote.
+
+## VS Code
+
+1. Open the **Command Palette** (`Cmd+Shift+P` on Mac, `Ctrl+Shift+P` on Windows/Linux).
+2. Type `Git: Clone` and press Enter.
+3. Paste the SSH or HTTPS URL in the input box and press Enter.
+4. When prompted, choose the parent folder where the repo should live.
+5. When VS Code asks whether to open the cloned repo, click **Open**.
+
+:::
+
+### Verify the remote is set
+
+After cloning, confirm the remote connection. In your terminal, inside the cloned folder:
+
+```bash
+git remote -v
+```
+
+You should see something like:
+
+```
+origin  git@github.com:YOURUSERNAME/my-research.git (fetch)
+origin  git@github.com:YOURUSERNAME/my-research.git (push)
+```
+
+`origin` is the default name Git assigns to the remote you cloned from. Future push and pull commands target `origin` unless you say otherwise.
+
+## Push and Pull
+
+Once a remote is set up (either because you cloned, or because you added one with `git remote add`), two commands keep your laptop and GitHub in sync.
+
+```{mermaid}
+flowchart LR
+  laptop["Your Laptop"] -- git push --> github["GitHub&nbsp;(origin)"]
+  github -- git pull --> laptop
+```
+
+- `git push` uploads your new local commits to GitHub.
+- `git pull` downloads new commits from GitHub into your local copy.
+
+::: {.callout-note}
+## Anatomy of `git push -u origin main`
+
+The command has four pieces:
+
+- **`git push`**: the command.
+- **`-u`** (or `--set-upstream`): a flag. It tells Git to record the linkage between your local branch and its counterpart on the remote, so future pushes and pulls on this branch do not need arguments.
+- **`origin`**: the **remote name**, a label on your laptop that points to a URL. Clone names it `origin` by default. See all your remotes with `git remote -v`. Rename with `git remote rename origin newname`.
+- **`main`**: the **branch name**. Shorthand for "push my local `main` to the remote `main`." The fully explicit form is `main:main` (source:destination). Names usually match.
+
+| Command | What it means |
+|---|---|
+| `git push origin main` | Push local `main` to `origin/main`. Do not set upstream. |
+| `git push -u origin main` | Same, and set `origin/main` as the upstream of local `main`. |
+| `git push -u origin branch1` | Push a new branch `branch1` and set its upstream. |
+| `git push` | Bare. Only works once the current branch has an upstream. |
+
+After the first `-u` push on a given branch, plain `git push` and `git pull` become shorthand for the configured upstream. Set once per branch, use forever.
+
+**About the name "origin".** A remote is a label, not the repository. It points to a URL, like a contact in your phone points to a number. Git names it `origin` by convention because it is the *origin* of your clone. You can rename it, but nearly every Git tutorial, book, and answer on Stack Overflow uses `origin`, so keeping it avoids friction. Multiple remotes become useful in specific patterns: a `upstream` pointing to a repo you forked from, a `backup` pointing to a mirror on a different host. Most research projects have just one remote.
+:::
+
+### Push your commits
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+git push
+```
+
+If this is the first push from a freshly cloned repo, this works immediately because `clone` already set the upstream to `origin/main`. If you started from scratch with `git init`, your first push needs the `-u` flag to set the upstream:
 
 ```bash
 git push -u origin main
 ```
 
-4. **Verify.** Go to your repository page on GitHub and refresh. You should see your files and commit history.
+After the first push, future pushes are just `git push`.
 
-5. **Test pulling.** On GitHub, click on `clean_data.R` → pencil icon → add a comment line at the top → Commit. Then pull locally:
+## RStudio
+
+In the **Git pane** (top-right of the IDE), click the **green up-arrow ⬆ Push** button. A dialog opens and shows the output of the underlying `git push`.
+
+If this is the first push on a new branch, RStudio may ask you to confirm setting upstream tracking; accept.
+
+## VS Code
+
+Open the **Source Control** panel (branch icon in the left activity bar, or `⌃⇧G` / `Ctrl+Shift+G`). Click the **Sync** button (circular arrows in the top row) or the **... More actions** menu → **Push**.
+
+The first time you push a new branch, VS Code prompts you to publish the branch; click **OK** to set up tracking.
+
+:::
+
+### Pull changes from GitHub
+
+::: {.panel-tabset}
+
+## Terminal
 
 ```bash
-git pull origin main
+git pull
 ```
 
-Open the file to confirm the edit is there.
+This fetches any new commits from `origin/main` and merges them into your local `main`. If you are on another branch, specify it: `git pull origin branch-name`.
+
+## RStudio
+
+In the Git pane, click the **blue down-arrow ⬇ Pull** button. A dialog shows the output of the underlying `git pull`.
+
+## VS Code
+
+In Source Control, click the **Sync** button (does both pull and push in one step) or the **... menu → Pull**.
+
+:::
+
+### What you should see on the first push
+
+When a push succeeds, GitHub's website refreshes to show your files and commit history. Common errors and their fixes:
+
+- `Permission denied (publickey)`: your SSH key is not recognized by GitHub. Run `ssh -T git@github.com` to check the connection (see [Step 6](#step-6-test-the-connection)). If that also fails, revisit the SSH setup.
+- `rejected — non-fast-forward`: the remote has commits your local copy does not. Run `git pull` first to bring them in, resolve any conflicts, then push again.
+- `fatal: The current branch main has no upstream branch`: you started from `git init` and have not set tracking. Use `git push -u origin main` for the first push.
+
+## Starting From Scratch
+
+::: {.callout-note appearance="minimal"}
+**Reference section: no action required today.** Exercise 3 uses the "Use this template" flow (see below), not this from-scratch flow. This section is here so you know what to do when you later start a brand-new research project on your own laptop. You can skim or skip for now.
+:::
+
+If you began a project on your laptop without a remote (the session 4 flow: `git init`, commits, no GitHub connection yet), attaching a GitHub remote takes two commands.
+
+1. Create a new empty repository on [github.com/new](https://github.com/new). Name it, leave **Initialize with README** unchecked (your local repo already has commits), click **Create repository**.
+
+2. In your terminal, inside the local project folder:
+
+```bash
+git remote add origin git@github.com:YOURUSERNAME/project-name.git
+git push -u origin main
+```
+
+The first line registers GitHub as the remote called `origin`. The second pushes your existing commits and sets up upstream tracking.
+
+::: {.callout-tip}
+GitHub also displays these exact commands on the empty repository's welcome page, under **...or push an existing repository from the command line**. You can copy-paste directly from there.
+:::
+
+## Forks and Templates
+
+### Forking a repository
+
+A **fork** is a server-side copy of someone else's repository under your own GitHub account. You fork when you want your own independent version of a repo you do not own.
+
+On GitHub:
+
+1. Go to the source repository's page.
+2. Click **Fork** (top-right of the page).
+3. Confirm the fork destination (your own account or an organization you belong to).
+4. GitHub creates `YOURUSERNAME/repo-name` with the full history and a link back to the source.
+5. Clone your fork locally, the same way you would any other repo.
+
+You can push freely to your fork. To propose changes back to the source, open a **pull request** on GitHub (covered later in this session).
+
+::: {.callout-tip}
+We revisit forks in Sessions 6–7 when working with Claude Code project templates. The fork-and-clone pattern is how you get your own working copy of a template maintained by someone else.
+:::
+
+### Using a template
+
+GitHub also supports **template repositories**. The owner marks a repo as a template, and anyone with a GitHub account can generate a fresh copy in one click. Unlike a fork, the copy has **no link back** to the source and starts with a clean commit history.
+
+On GitHub:
+
+1. Go to the template repository's page. Templates display a **Use this template** button where the Fork button would normally appear.
+2. Click **Use this template → Create a new repository**.
+3. Give your copy a name (for example `my-research`). This creates `YOURUSERNAME/my-research` under your account.
+4. Clone your new repository locally, the same way you would any other.
+
+### Fork vs. template: when to use which
+
+- Use a **fork** when you may contribute changes back to the source, or when the linked history is valuable (for example, when working on an open-source package).
+- Use a **template** when you want a clean starting point with no connection back and no history baggage. Research starter kits and course scaffolds are the typical case.
+
+The starter repo for this course, [`arielortizbobea/aem7010-starter`](https://github.com/arielortizbobea/aem7010-starter), is a **template**. Exercise 3 below walks you through using it.
+
+## Exercise 3: Clone Your Copy of the Starter Repo {.exercise}
+
+**Time: ~15 minutes**
+
+The goal is to practice the full workflow end to end: create a repository on GitHub from a template, clone it to your laptop, make a change, push it back, and pull a change made on GitHub.
+
+### 1. Create your copy of the starter
+
+1. Open [arielortizbobea/aem7010-starter](https://github.com/arielortizbobea/aem7010-starter) in your browser.
+2. Click the green **Use this template** button → **Create a new repository**.
+3. Name your new repository **`my-research`**. Leave it public (or private, your choice). Click **Create repository**.
+
+GitHub creates `YOURUSERNAME/my-research` under your account with the starter files and a fresh history.
+
+::: {.callout-note}
+## Finding your GitHub username
+
+`YOURUSERNAME` throughout this exercise means your **GitHub username** (sometimes called your *handle*): the short name you chose when you created your GitHub account. It is not your email or your full name.
+
+To find it, look at the URL of your new repository page: `https://github.com/YOURUSERNAME/my-research`. The part between `github.com/` and `/my-research` is your username. For example, if the URL shows `github.com/arielortizbobea/my-research`, then `arielortizbobea` is the username you substitute in the commands below.
+:::
+
+### 2. Free up the `my-research` folder (if needed)
+
+If you worked through session 4, you may already have a `~/github/my-research` folder on your laptop. The clone below will fail with `destination path 'my-research' already exists` unless you move or remove it first.
+
+Check in your terminal:
+
+```bash
+ls -d ~/github/my-research 2>/dev/null
+```
+
+If the command prints `/Users/YOU/github/my-research`, the folder exists and you need to choose one of the two options below. If it prints nothing, you do not have the folder and can skip to step 3.
+
+**Option A (recommended): keep the session 4 work by renaming.**
+
+```bash
+cd ~/github
+mv my-research my-research-session4
+```
+
+Your session 4 history is preserved in `my-research-session4/` in case you want to come back to it.
+
+**Option B: delete the old folder.** Only choose this if you are sure you do not need any commits from the session 4 folder. The operation is irreversible.
+
+```bash
+cd ~/github
+rm -rf my-research
+```
+
+Either option frees up `~/github/my-research` for the fresh clone in step 3.
+
+### 3. Clone it to your laptop
+
+Replace `YOURUSERNAME` with your GitHub handle throughout.
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+cd ~/github
+git clone git@github.com:YOURUSERNAME/my-research.git
+cd my-research
+```
+
+## RStudio
+
+1. **File → New Project → Version Control → Git**.
+2. **Repository URL:** paste `git@github.com:YOURUSERNAME/my-research.git`.
+3. **Project directory name:** leave as `my-research`.
+4. **Create project as subdirectory of:** choose `~/github`.
+5. Click **Create Project**.
+
+RStudio clones the repo and opens it as a new RStudio Project.
+
+## VS Code
+
+1. Open the **Command Palette** (`Cmd+Shift+P` on Mac, `Ctrl+Shift+P` on Windows/Linux).
+2. Type `Git: Clone` and press Enter.
+3. Paste `git@github.com:YOURUSERNAME/my-research.git` and press Enter.
+4. When prompted, choose `~/github` as the parent folder.
+5. When VS Code asks whether to open the cloned folder, click **Open**.
+
+:::
+
+You should now see the starter files: `README.md`, `.gitignore`, `clean_data.R`, `run_regression.R`.
+
+### 4. Make a change and commit
+
+Open `clean_data.R` in your editor. Add a comment at the top:
+
+```r
+# Modified by YOUR NAME for session 5 exercise
+```
+
+Save the file. Then stage and commit:
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+git add clean_data.R
+git commit -m "Add modification note to clean_data.R"
+```
+
+## RStudio
+
+1. In the **Git pane** (top-right of the IDE), tick the checkbox next to `clean_data.R` to stage it. The status changes from `M` (modified) to a green `A` or checkmark.
+2. Click **Commit**. The Review Changes dialog opens.
+3. Type `Add modification note to clean_data.R` in the commit message box (top-right of the dialog).
+4. Click **Commit**. The dialog shows the commit output.
+
+## VS Code
+
+1. Open the **Source Control** panel (branch icon in the left activity bar, or `⌃⇧G` / `Ctrl+Shift+G`).
+2. Under **Changes**, hover over `clean_data.R` and click the **+** icon to stage. The file moves to **Staged Changes**.
+3. In the message box above the staged changes, type `Add modification note to clean_data.R`.
+4. Click the **✓ Commit** button.
+
+:::
+
+### 5. Push your commit
+
+Because cloning set the upstream automatically, you do not need any arguments to push.
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+git push
+```
+
+## RStudio
+
+In the Git pane, click the **green up-arrow ⬆ Push** button. A dialog shows the output of the push.
+
+## VS Code
+
+In the Source Control panel, click the **Sync** button (circular arrows, top row) or the **... menu → Push**.
+
+:::
+
+If you see `Permission denied (publickey)`, revisit [SSH setup](#connect-to-github-ssh-keys).
+
+### 6. Verify on GitHub
+
+Go to `https://github.com/YOURUSERNAME/my-research`. Refresh. You should see your comment in `clean_data.R` and your commit message in the history.
+
+### 7. Test pulling
+
+Simulate a co-author making a change on GitHub:
+
+1. On GitHub, click on `clean_data.R` → pencil icon (**Edit this file**) → add a second comment line at the bottom, for example `# Additional note added from the GitHub web editor`.
+2. Commit the change via the green **Commit changes** button (default options are fine).
+
+Now pull the change back to your laptop:
+
+::: {.panel-tabset}
+
+## Terminal
+
+```bash
+git pull
+```
+
+## RStudio
+
+In the Git pane, click the **blue down-arrow ⬇ Pull** button. A dialog shows the fetched commits.
+
+## VS Code
+
+In the Source Control panel, click the **Sync** button or the **... menu → Pull**.
+
+:::
+
+Open `clean_data.R` and confirm the edit made on GitHub now appears locally.
 
 ## Branches
 
 A **branch** is a parallel version of your code. You can experiment on a branch without affecting the main version. When the work is ready, you merge it back.
 
-### Why branches?
+### When to branch
 
-- Try a new specification without breaking working code
-- Each co-author works on their own branch
-- Keep `main` clean and functional at all times
+A branch earns its keep when the work has at least one of these properties:
+
+1. **Exploratory.** You might abandon it. If you do, the branch disappears and `main` stays clean. No trace of the dead end.
+2. **Multi-step.** It takes several commits to finish and makes sense as a reviewable unit only when assembled.
+3. **Risky.** It could break a currently-working `main`. You want `main` runnable end-to-end while you work.
+4. **Parallel with someone else.** Two people cannot edit `main` simultaneously without stepping on each other.
+5. **Reviewed before merging.** A co-author wants to see the changes before they land. This is the motivation for pull requests.
+
+If none of these apply, commit on `main`. Branches for two-minute changes are ceremony without payoff.
+
+::: {.callout-tip}
+## Analogy: a sketchpad
+
+`main` is the canvas you intend to sign. A branch is a sketchpad where you try variations. If a sketch works, you copy it to the canvas (merge the branch). If not, you close the sketchpad (delete the branch) and nothing contaminates the final work.
+:::
+
+### Research examples where a branch is clearly worth it
+
+- **Responding to a referee report (R&R).** The classic case. `main` stays at the state of the submitted paper. You create a branch for each revision round or for each specific concern (`rr-round-1`, `rr-referee2-sample-selection`). Work proceeds on the branch: re-running regressions, updating tables, editing the text. You merge back when each item is resolved, tag the state at resubmission (`v0.2-first-rr`, covered later in this session), and you end up with a full record of how the paper evolved from submission to acceptance.
+- **Cascading specification change.** Adding state fixed effects triggers rerunning every diagnostic, updating three tables, and editing the results discussion. Branch `add-state-fe`. If the result is worth keeping, merge; if not, delete the branch and nothing downstream is touched.
+- **Dataset extension.** Updated data arrive through 2023. Ingestion, validation, recomputation, and table re-rendering are multi-commit work. Branch `extend-sample-to-2023`.
+- **AI-assisted rewrite.** Claude Code rewrites your cleaning pipeline in 200 lines. Some of it may be subtly wrong. Branch `ai-refactor-cleaning` gives you a review buffer before the rewrite touches `main`.
+- **Co-author collaboration.** You rerun regressions while your co-author edits the introduction. Each works on a branch. Neither blocks the other, and merges surface conflicts in the one-or-two places they exist.
+
+What *not* to branch for: typo fixes, one-line adjustments, obvious bug fixes. The ceremony costs more than the benefit on trivial changes.
 
 ### Create and switch to a branch
 
-```bash
-git branch add-iv-analysis
-git checkout add-iv-analysis
-```
+::: {.panel-tabset}
 
-Or, as a shortcut:
+## Terminal
 
 ```bash
 git checkout -b add-iv-analysis
 ```
 
+This single command creates a new branch **and** switches to it. It combines two commands that Git also accepts separately:
+
+- **`git branch add-iv-analysis`** creates a new branch at the current commit. A branch in Git is just a named pointer to a commit. Creating one does not switch you to it. You stay on whichever branch you were already on. Running `git branch` with no arguments lists all branches and marks the current one with an asterisk.
+- **`git checkout add-iv-analysis`** switches to an existing branch. Your working directory updates to reflect that branch's files. Historically `git checkout` was also used to restore individual files, which is why Git 2.23+ introduced `git switch` and `git restore` as cleaner single-purpose replacements; `git switch -c add-iv-analysis` is the modern equivalent of `git checkout -b add-iv-analysis`.
+
+The `-b` flag on `git checkout` stands for "branch": it tells Git to create the new branch before switching, collapsing the two steps into one.
+
+## RStudio
+
+1. In the **Git pane** (top-right of the IDE), click the **New Branch** button (purple branch icon next to the current branch dropdown). The New Branch dialog opens.
+2. **Branch name:** type `add-iv-analysis`.
+3. Leave **Sync branch with remote** checked if you plan to push this branch to GitHub.
+4. Click **Create**.
+
+RStudio creates the branch and switches to it. The branch dropdown in the Git pane now shows `add-iv-analysis`.
+
+## VS Code
+
+1. Click the current branch name in the **bottom-left status bar** (it shows `main` with a small branch icon).
+2. In the dropdown that opens at the top of the window, select **+ Create new branch...**
+3. Type `add-iv-analysis` and press Enter.
+
+VS Code creates the branch and checks it out. The status bar now shows `add-iv-analysis`.
+
+:::
+
 ### Work on the branch
 
-Make your edits, stage, and commit as usual. These commits only exist on the branch.
+Make your edits, stage, and commit as usual (see session 4's three-interface walkthrough if you need a refresher). Commits made now exist only on the branch.
+
+A minimal terminal example for demonstration:
 
 ```bash
-# Create a new file
 echo '# IV regression using 2SLS' > iv_analysis.R
 git add iv_analysis.R
 git commit -m "Add IV analysis script"
@@ -220,15 +824,33 @@ git commit -m "Add IV analysis script"
 
 ### Switch back to main
 
+::: {.panel-tabset}
+
+## Terminal
+
 ```bash
 git checkout main
 ```
 
-Notice that `iv_analysis.R` disappears. It only exists on the other branch. Your working directory reflects whichever branch you are on.
+## RStudio
+
+In the Git pane, click the branch dropdown (showing the current branch name) and select `main`.
+
+## VS Code
+
+Click the current branch name in the bottom-left status bar and select `main` from the dropdown.
+
+:::
+
+Notice that `iv_analysis.R` disappears from your working directory. It only exists on the other branch. Your working directory reflects whichever branch you are on.
 
 ### Merge the branch
 
-When you are satisfied with the work on your branch:
+When you are satisfied with the work on your branch, merge it back to main.
+
+::: {.callout-note appearance="minimal"}
+**Merge and delete are terminal-primary.** RStudio's Git pane does not expose a merge action. VS Code has `Git: Merge Branch` in the Command Palette, but most users stay in the terminal for clarity and for the diagnostic messages Git prints. If you prefer to stay in your editor, RStudio users can open the Terminal tab (**Tools → Terminal → New Terminal**), and VS Code users can open the integrated terminal (``Ctrl+` ``). Then run the commands below.
+:::
 
 ```bash
 git checkout main
@@ -239,7 +861,7 @@ Now `iv_analysis.R` appears on `main` and all the branch's commits are part of m
 
 ### Delete the branch (optional)
 
-After merging, you can clean up:
+After merging, you can clean up. Same terminal-primary convention:
 
 ```bash
 git branch -d add-iv-analysis
@@ -247,31 +869,66 @@ git branch -d add-iv-analysis
 
 ## Pull Requests
 
-A **pull request** (PR) is GitHub's way of proposing changes. Instead of merging locally, you push a branch to GitHub and ask for it to be reviewed before merging.
+A **pull request** (PR) is GitHub's way of proposing changes. Instead of merging locally, you push a branch to GitHub and ask for it to be reviewed before merging. Pull requests are the standard collaboration workflow in both industry and academic research. They create a written record of what changed and why, which is valuable for reproducibility.
+
+::: {.callout-note appearance="minimal"}
+**Where the PR workflow lives.** Creating, reviewing, and merging pull requests happens on **GitHub.com**, in your browser. Neither RStudio nor VS Code has full PR support built in. If you prefer to stay in your editor, two optional paths:
+
+- **GitHub CLI** (`gh`): terminal tool for PRs. Install from [cli.github.com](https://cli.github.com). Useful commands: `gh pr create`, `gh pr review`, `gh pr merge`.
+- **VS Code extension**: "GitHub Pull Requests and Issues" lets you open and review PRs inside VS Code. Install from the Extensions marketplace, then sign in to GitHub.
+
+The walkthrough below uses the github.com browser interface, which is the canonical path and the one we use in class.
+:::
 
 ### The pull request workflow
 
-1. **Create a branch** and make your commits
-2. **Push the branch to GitHub:**
+1. **Create a branch and make your commits.** Use the three-interface pattern from the [Branches](#branches) section above.
 
-```bash
-git push -u origin add-iv-analysis
-```
+2. **Push the branch to GitHub.** The first push on a new branch needs `-u` to set the upstream.
 
-3. **Open a PR** on GitHub. Go to your repository → you will see a banner saying "add-iv-analysis had recent pushes" → click **Compare & pull request**
-4. **Write a description** explaining what you changed and why
-5. **Review.** Your co-author reads the changes, leaves comments, and approves
-6. **Merge.** Click **Merge pull request** on GitHub
+    ::: {.panel-tabset}
 
-::: {.callout-note}
-Pull requests are the standard collaboration workflow in both industry and academic research. They create a written record of what changed and why, which is valuable for reproducibility.
-:::
+    ## Terminal
+
+    ```bash
+    git push -u origin add-iv-analysis
+    ```
+
+    ## RStudio
+
+    In the Git pane, confirm you are on the `add-iv-analysis` branch (check the dropdown). Click the **green up-arrow ⬆ Push** button. If this is the first push on this branch, RStudio prompts you to set upstream tracking; accept.
+
+    ## VS Code
+
+    Click the current branch name (`add-iv-analysis`) in the bottom-left status bar. In the dropdown at the top, select **Publish Branch** (this option appears whenever a local branch has no remote counterpart yet). VS Code pushes the branch and sets upstream in one step.
+
+    :::
+
+3. **Open a PR on github.com.** Visit your repository's page. You will usually see a yellow banner reading "`add-iv-analysis` had recent pushes" with a green **Compare & pull request** button. Click it. If the banner is gone (it disappears after a few minutes), go to the **Pull requests** tab → **New pull request** → set the **compare** branch to `add-iv-analysis` → click **Create pull request**.
+
+4. **Write a description** explaining what you changed and why. One paragraph is usually enough for a research PR. Reference specific tables, figures, or robustness checks when relevant.
+
+5. **Review.** Your co-author reads the diff under **Files changed**, leaves inline comments on specific lines, and approves the PR (or requests changes).
+
+6. **Merge.** Click **Merge pull request** on GitHub. GitHub then offers to delete the branch; accept unless you have a reason to keep it.
 
 ## Handling Merge Conflicts
 
-A merge conflict happens when two people edit the same line in the same file. Git marks the conflict and asks you to choose.
+A merge conflict happens when Git cannot automatically combine two sets of changes because they touch the same line in the same file. Git pauses the operation, marks the affected file, and asks you to decide which version to keep.
+
+### When conflicts arise
+
+You hit a conflict in three common situations:
+
+- **After `git pull`** when a co-author pushed a commit that edited the same line you edited locally.
+- **After `git merge`** when two branches modified the same line.
+- **While rebasing.** Rebasing is advanced and not covered in this course.
+
+In each case, Git stops mid-operation and leaves your working directory in a **conflicted state**. You cannot commit or push again until you resolve the conflict.
 
 ### What a conflict looks like
+
+Open the affected file in your editor. Git inserts **conflict markers** where the disagreement is:
 
 ```
 <<<<<<< HEAD
@@ -281,23 +938,51 @@ lm(log(wage) ~ educ + exper + tenure, data = df)
 >>>>>>> add-iv-analysis
 ```
 
-- The top section (`HEAD`) is your current branch's version
-- The bottom section is the incoming branch's version
+- Between `<<<<<<< HEAD` and `=======` is **your current branch's version**.
+- Between `=======` and `>>>>>>> add-iv-analysis` is **the incoming version from the other branch**.
 
 ### How to resolve
 
-1. Open the file in your editor
-2. Decide which version to keep (or combine them into something new)
-3. Delete the `<<<<<<<`, `=======`, and `>>>>>>>` markers
-4. Stage and commit the resolved file:
+::: {.panel-tabset}
 
-```bash
-git add clean_data.R
-git commit -m "Resolve merge conflict in regression specification"
-```
+## Terminal
+
+1. Open the conflicted file in a text editor (e.g., `code clean_data.R` to open in VS Code, or `nano clean_data.R`).
+2. Decide which version to keep, or combine them into something new.
+3. Delete the `<<<<<<<`, `=======`, and `>>>>>>>` marker lines.
+4. Save the file.
+5. Stage and commit:
+
+    ```bash
+    git add clean_data.R
+    git commit -m "Resolve merge conflict in regression specification"
+    ```
+
+The commit completes the merge Git had paused.
+
+## RStudio
+
+1. The conflicted file appears in the Git pane with an orange `U` (unmerged) icon.
+2. Open the file. The conflict markers are visible in the editor.
+3. Edit the file to keep the version you want. Delete the `<<<<<<<`, `=======`, and `>>>>>>>` lines manually.
+4. Save.
+5. Back in the Git pane, tick the checkbox next to the file to stage it. The `U` becomes a checkmark.
+6. Click **Commit**, type a message (e.g., `Resolve merge conflict in regression specification`), click **Commit**.
+
+## VS Code
+
+VS Code has the most polished conflict UI of the three.
+
+1. The conflicted file shows colored highlighting. Above each conflict block, VS Code offers inline action links: **Accept Current Change**, **Accept Incoming Change**, **Accept Both Changes**, **Compare Changes**.
+2. Click the action that matches your decision, or edit manually if you want a hybrid version.
+3. Save the file.
+4. In the Source Control panel, the file moves from **Merge Changes** to **Staged Changes**.
+5. Type a commit message and click the **✓ Commit** button.
+
+:::
 
 ::: {.callout-tip}
-Merge conflicts are normal, not dangerous. They happen whenever two people edit the same line. The fix is always: open the file, choose the right version, remove the markers, commit.
+Merge conflicts are normal, not dangerous. They happen whenever two people edit the same line. The fix is always the same in spirit: decide which version to keep, remove the markers, stage and commit.
 :::
 
 ## Exercise 4: Branches and Pull Requests {.exercise}
@@ -306,42 +991,126 @@ Merge conflicts are normal, not dangerous. They happen whenever two people edit 
 
 ### Setup
 
-1. **Person A:** go to your `my-research` repo on GitHub → Settings → Collaborators → Add your partner's GitHub username.
-2. **Person B:** accept the invitation (check your email or GitHub notifications), then clone Person A's repo:
+1. **Person A:** go to your `my-research` repo on GitHub → **Settings → Collaborators → Add people**. Enter your partner's GitHub username and send the invitation.
+2. **Person B:** accept the invitation (check your email or GitHub notifications), then clone Person A's repo. Replace `PERSONA_USERNAME` with Person A's actual GitHub handle throughout.
 
-```bash
-git clone git@github.com:PERSONA_USERNAME/my-research.git
-cd my-research
-```
+    ::: {.panel-tabset}
+
+    ## Terminal
+
+    ```bash
+    cd ~/github
+    git clone git@github.com:PERSONA_USERNAME/my-research.git
+    cd my-research
+    ```
+
+    ## RStudio
+
+    1. **File → New Project → Version Control → Git**.
+    2. **Repository URL:** `git@github.com:PERSONA_USERNAME/my-research.git`.
+    3. **Project directory name:** leave as `my-research` (or change to `my-research-partner` to avoid collision with your own repo of the same name).
+    4. **Create project as subdirectory of:** `~/github`.
+    5. Click **Create Project**.
+
+    ## VS Code
+
+    1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) → `Git: Clone`.
+    2. Paste `git@github.com:PERSONA_USERNAME/my-research.git`, press Enter.
+    3. Choose `~/github` as the parent folder (or rename the target folder to avoid collision).
+    4. Click **Open** when VS Code prompts.
+
+    :::
 
 ### Create branches and PRs
 
-3. **Both partners:** create a branch with your name, add a new `.R` file, commit, and push:
+3. **Both partners:** create a branch with your name.
 
-```bash
-git checkout -b yourname-feature
-```
+    ::: {.panel-tabset}
 
-Create a file (e.g., `descriptive_stats.R` or `robustness_check.R`) with a few lines of R code.
+    ## Terminal
 
-```bash
-git add your_file.R
-git commit -m "Add descriptive statistics"
-git push -u origin yourname-feature
-```
+    ```bash
+    git checkout -b yourname-feature
+    ```
 
-4. **Both partners:** go to GitHub and open a pull request from your branch into `main`.
+    ## RStudio
 
-5. **Review each other's PR.** Click on "Files changed" to see the diff. Leave a comment (e.g., "Looks good!" or "Maybe add a header comment?"). Then click **Merge pull request**.
+    In the Git pane, click the **New Branch** button (purple branch icon). Type `yourname-feature` as the name, leave Sync with remote checked, click **Create**.
 
-6. **Pull the merged changes locally:**
+    ## VS Code
 
-```bash
-git checkout main
-git pull origin main
-```
+    Click the current branch name in the bottom-left status bar → **+ Create new branch...** → type `yourname-feature` → Enter.
 
-Both files should now be on main.
+    :::
+
+4. **Both partners:** add a new `.R` file with a few lines of R code (for example `descriptive_stats.R` or `robustness_check.R`), stage it, and commit.
+
+    ::: {.panel-tabset}
+
+    ## Terminal
+
+    ```bash
+    # After creating your_file.R in any editor:
+    git add your_file.R
+    git commit -m "Add descriptive statistics"
+    ```
+
+    ## RStudio
+
+    Create the file (**File → New File → R Script**, paste your content, save as `your_file.R` inside the project). In the Git pane, tick the checkbox next to the file, click **Commit**, type the message, click **Commit**.
+
+    ## VS Code
+
+    Create the file (**File → New File**, paste your content, save as `your_file.R` inside the cloned folder). In the Source Control panel, click **+** next to the file, type the commit message, click **✓ Commit**.
+
+    :::
+
+5. **Both partners:** push your branch to GitHub.
+
+    ::: {.panel-tabset}
+
+    ## Terminal
+
+    ```bash
+    git push -u origin yourname-feature
+    ```
+
+    ## RStudio
+
+    Click the **green up-arrow ⬆ Push** button in the Git pane. Accept the "set upstream" prompt on the first push.
+
+    ## VS Code
+
+    In the bottom-left status bar, click the branch name and select **Publish Branch** from the dropdown.
+
+    :::
+
+6. **Both partners:** go to GitHub and open a pull request from your branch into `main` (see the [Pull Requests](#pull-requests) workflow above if you need the steps).
+
+7. **Review each other's PR.** Click **Files changed** to see the diff. Leave a comment (for example "Looks good!" or "Add a header comment?"). When you are satisfied, click **Merge pull request**.
+
+8. **Pull the merged changes locally** so your laptop has both new files.
+
+    ::: {.panel-tabset}
+
+    ## Terminal
+
+    ```bash
+    git checkout main
+    git pull
+    ```
+
+    ## RStudio
+
+    In the Git pane, switch to `main` via the branch dropdown, then click the **blue down-arrow ⬇ Pull** button.
+
+    ## VS Code
+
+    Click the branch name in the status bar and select `main`, then click **Sync** (or **... menu → Pull**).
+
+    :::
+
+Both partners now have `main` containing both of your contributions.
 
 ## Tags for Reproducibility
 
@@ -357,16 +1126,30 @@ v1.0-accepted               (final version in the published paper)
 v1.0-replication-package    (the archive you posted on AEA/Zenodo/ICPSR)
 ```
 
+::: {.callout-note appearance="minimal"}
+**Tags are terminal-primary.** RStudio's Git pane does not expose tag creation or tag push. VS Code has `Git: Create Tag` in the Command Palette but most users stay in the terminal, where the commands are short and composable. The instructions below use the terminal; RStudio users can open the Terminal tab (**Tools → Terminal → New Terminal**), VS Code users can open the integrated terminal (``Ctrl+` ``).
+:::
+
 ### Create a tag
 
 ```bash
 git tag -a v0.1-first-submission -m "Code for initial JPE submission"
 ```
 
+The `-a` flag creates an **annotated** tag (recommended for research; stores the author, date, and message). Without `-a`, Git creates a lightweight tag that is just a pointer.
+
 ### Push tags to GitHub
+
+Tags are not pushed automatically. You push them explicitly:
 
 ```bash
 git push --tags
+```
+
+Or push a single tag:
+
+```bash
+git push origin v0.1-first-submission
 ```
 
 ### Check out a tag later
@@ -375,7 +1158,7 @@ git push --tags
 git checkout v1.0
 ```
 
-This puts you in "detached HEAD" state. You can look around and run code, but any new commits won't belong to a branch. To go back:
+This puts you in **detached HEAD** state. You can look around and run code, but any new commits will not belong to a branch. To return to normal work:
 
 ```bash
 git checkout main
@@ -383,10 +1166,27 @@ git checkout main
 
 ### GitHub Releases
 
-On GitHub, tags appear under the **Releases** tab. You can attach files (data documentation, README) to a release, making it a self-contained replication package.
+On GitHub, every tag appears under the **Releases** tab. You can turn a tag into a proper **Release** and attach files (a PDF of the paper, data documentation, a README) to it, producing a self-contained download that anyone can grab in one click.
 
 ::: {.callout-important}
-Many journals now require replication packages. A tagged GitHub release with a README is a clean, standard way to comply.
+Many journals now require replication packages. A tagged GitHub Release with a README is a clean, standard way to comply when the code and data are small enough to live together in the repository. See [When the Data Is Too Large or Restricted](#when-the-data-is-too-large-or-restricted) below for what to do when the data exceeds GitHub's limits.
+:::
+
+## When the Data Is Too Large or Restricted
+
+GitHub is not a data archive. Files over 100 MB trigger warnings; files over 2 GB are rejected. Many applied-economics replication packages exceed these limits, and some datasets cannot be shared publicly at all. The standard solution is to **keep the code on GitHub and the data in a dedicated archive that mints a DOI (Digital Object Identifier)**, then link the two in your replication documentation.
+
+**Where to put the data.**
+
+- **openICPSR / AEA Data and Code Repository** ([openicpsr.org/openicpsr/aea](https://www.openicpsr.org/openicpsr/aea)): the official archive for AEA journals. If you publish in the *AER* or an AEJ, this is where your replication package must live.
+- **Zenodo** ([zenodo.org](https://zenodo.org)): free, CERN-operated, accepts files up to 50 GB, issues DOIs. Integrates with GitHub so a Release can be archived in one click.
+- **Harvard Dataverse** ([dataverse.harvard.edu](https://dataverse.harvard.edu)): widely used in social sciences, free, issues DOIs.
+- **ICPSR** ([icpsr.umich.edu](https://www.icpsr.umich.edu)): long-established social-science archive, often required by journals and funders.
+
+**If the data cannot be shared.** Confidential administrative records, licensed commercial data, and some Census microdata cannot be posted publicly. Journal policies accept a **data availability statement** that describes the data, its source, the access restrictions, and how an authorized researcher can obtain it. You still post the **code** so that anyone with equivalent access can reproduce your analysis.
+
+::: {.callout-warning}
+**Avoid Git LFS (Large File Storage) for replication archives.** GitHub's large-file extension is metered, costs money past a small quota, and the files disappear if the repository owner stops paying. They are also difficult to cite. Use a dedicated archive instead.
 :::
 
 ## Summary
