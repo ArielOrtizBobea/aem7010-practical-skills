@@ -105,6 +105,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -244,6 +247,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../version-control/session4.html#unstage-a-file" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Unstage a file</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session4.html#discard-local-changes" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Discard local changes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session4.html#undo-the-last-commit-keep-the-changes" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Undo the last commit</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session4.html#return-to-an-earlier-version-of-a-file" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Return to an earlier version</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../version-control/session4.html#exercise-2-practice-the-safety-rails" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 2</span></a>
   </div>
@@ -262,31 +289,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#why-put-your-code-on-github" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Why put code on GitHub?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#connect-to-github-ssh-keys" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Connect to GitHub</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#what-ssh-actually-is" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— What SSH is</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#step-1-check-whether-you-already-have-a-key" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Setup steps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#https-alternative" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— HTTPS alternative</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../version-control/session5.html#keep-your-email-private" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Keep your email private</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../version-control/session5.html#connect-to-github-ssh-keys" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SSH keys</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../version-control/session5.html#remotes-push-and-pull" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remotes: push &amp; pull</span></a>
+  <a href="../version-control/session5.html#where-a-repository-comes-from" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where a repository comes from</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../version-control/session5.html#cloning-a-repository" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cloning</span></a>
+ <span class="menu-text">Cloning a repository</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../version-control/session5.html#exercise-3-push-to-github" class="sidebar-item-text sidebar-link">
+  <a href="../version-control/session5.html#push-and-pull" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Push and pull</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#starting-from-scratch" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Starting from scratch</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#forks-and-templates" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Forks and templates</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#exercise-3-clone-your-copy-of-the-starter-repo" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3</span></a>
   </div>
 </li>
@@ -318,6 +387,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../version-control/session5.html#tags-for-reproducibility" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tags for reproducibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control/session5.html#when-the-data-is-too-large-or-restricted" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data: too large or restricted</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -394,12 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-is-github" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-github">What Is GitHub?</h2>
-<p>GitHub is a cloud hosting service for Git repositories. It provides:</p>
-<ul>
-<li><strong>Backup</strong>: your code lives in the cloud, not just on your laptop</li>
-<li><strong>Collaboration</strong>: co-authors can contribute to the same project</li>
-<li><strong>Sharing</strong>: publish replication packages and make research transparent</li>
-</ul>
+<p>GitHub is a cloud hosting service for Git repositories. You still run Git on your laptop and do your work there. GitHub stores a mirror of your repository on its servers. Two commands keep the two copies in sync: <code>git push</code> uploads your commits to GitHub, <code>git pull</code> downloads what others (or your other machines) have pushed.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -414,16 +484,270 @@ Note
 </div>
 </div>
 </section>
+<section id="why-put-your-code-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="why-put-your-code-on-github">Why Put Your Code on GitHub?</h2>
+<p>Version control on your laptop tracks your changes over time. GitHub adds a cloud copy of that history. Four motivations make this worth doing for every research project.</p>
+<section id="backup-and-recovery" class="level3">
+<h3 class="anchored" data-anchor-id="backup-and-recovery">Backup and recovery</h3>
+<p>Hard drives fail. Laptops get stolen. Coffee spills. A local Git repository lives in one folder on one machine; lose the machine and you lose the project. A remote on GitHub is a continuously updated backup of both your code and its full history. Restoring onto a new laptop takes one command.</p>
+</section>
+<section id="working-across-your-own-machines" class="level3">
+<h3 class="anchored" data-anchor-id="working-across-your-own-machines">Working across your own machines</h3>
+<p>Many applied economists work on more than one computer: a laptop for travel, an office desktop, sometimes a cluster for heavy computation. Without a cloud remote, synchronizing them means emailing scripts to yourself or copying folders onto USB drives. With GitHub, each machine pulls the latest version and pushes changes when finished. The history is the same everywhere.</p>
+</section>
+<section id="working-with-co-authors" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-co-authors">Working with co-authors</h3>
+<p>Co-authors clone the same repository, each make commits, and push their work. Git tracks who wrote what, flags conflicts where two people edited the same line, and preserves every change. Nobody’s work is silently overwritten, and nobody emails <code>paper_FINAL_jane_edits_v3_with_corrections.tex</code>.</p>
+</section>
+<section id="sharing-and-transparency" class="level3">
+<h3 class="anchored" data-anchor-id="sharing-and-transparency">Sharing and transparency</h3>
+<p>Journals increasingly require replication packages. Top journals in economics expect code posted in a public archive before acceptance. A GitHub repository with a tagged release at submission is the cleanest way to satisfy that requirement, and the link lives in the published paper.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These four motivations map to the Git and GitHub concepts covered below.</p>
+<ul>
+<li><strong>Backup and cross-machine work</strong>: <code>git push</code> uploads your commits to GitHub, <code>git pull</code> downloads new commits from GitHub.</li>
+<li><strong>Co-authors</strong>: <strong>branches</strong> are parallel lines of development where you can experiment without disturbing working code. <strong>Pull requests</strong> are GitHub’s interface for reviewing those branches and merging them back into the main version.</li>
+<li><strong>Sharing</strong>: <strong>tags</strong> mark specific commits as named snapshots (for example <code>v1.0-accepted</code>). <strong>GitHub Releases</strong> bundle a tag with downloadable files, which is how you post a self-contained replication archive.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="connect-to-github-ssh-keys" class="level2">
+<h2 class="anchored" data-anchor-id="connect-to-github-ssh-keys">Connect to GitHub: SSH Keys</h2>
+<p>Before you can push or pull, your laptop needs to prove to GitHub that you are who you claim to be. GitHub supports two authentication methods.</p>
+<ul>
+<li><strong>HTTPS with a credential helper.</strong> Your laptop talks to GitHub over the same protocol your browser uses. A helper (<code>osxkeychain</code> on Mac, Git Credential Manager on Windows, <code>libsecret</code> on Linux) stores a Personal Access Token so you are not re-prompted on every push.</li>
+<li><strong>SSH keys.</strong> Your laptop holds a private cryptographic key; GitHub holds the matching public key. Every connection signs a challenge instead of sending a password or token. No secret material crosses the network.</li>
+</ul>
+<p>Both work. The differences that matter in practice:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>HTTPS + credential helper</th>
+<th>SSH keys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Setup time</td>
+<td>~2 minutes</td>
+<td>~5 minutes (one-time)</td>
+</tr>
+<tr class="even">
+<td>Expiration</td>
+<td>Personal Access Tokens expire and need rotation (typically every 90 days)</td>
+<td>Does not expire</td>
+</tr>
+<tr class="odd">
+<td>Firewalls</td>
+<td>Port 443, always open</td>
+<td>Port 22, sometimes blocked on managed-IT or campus networks</td>
+</tr>
+<tr class="even">
+<td>Convenience across repos</td>
+<td>One token authenticates all</td>
+<td>One key authenticates all</td>
+</tr>
+<tr class="odd">
+<td>Same setup across machines</td>
+<td>Slightly different helper on each OS</td>
+<td>Identical everywhere (Mac, Linux, Windows via Git Bash)</td>
+</tr>
+</tbody>
+</table>
+<p>For a research workflow, <strong>SSH is the more common long-term choice</strong>. You set it up once and forget about it: the same configuration works on your laptop, your office desktop, and a compute cluster, and you never have to rotate a token. HTTPS is a reasonable fallback if port 22 is blocked on your network.</p>
+<p><strong>We use SSH in this tutorial.</strong> If you prefer HTTPS, see the <a href="#https-alternative">HTTPS alternative</a> at the end of this section; the Git commands (<code>git push</code>, <code>git pull</code>, and the rest) are identical either way, only the authentication layer differs.</p>
+<section id="what-ssh-actually-is" class="level3">
+<h3 class="anchored" data-anchor-id="what-ssh-actually-is">What SSH actually is</h3>
+<p><strong>SSH</strong> (Secure Shell) is a protocol for secure communication between two computers. Every time you run <code>git push</code> or <code>git pull</code> against an SSH remote, your laptop opens an SSH connection to GitHub and the commands travel over that encrypted channel.</p>
+<p>The authentication mechanism SSH uses is <strong>public-key cryptography</strong>. You generate two paired files on your laptop: a <strong>private key</strong> and a <strong>public key</strong>. Anything one key encrypts, only the other can decrypt. The two are linked by math and cannot be guessed from each other.</p>
+<p>The rule that makes this secure is simple. Your <strong>private key</strong> stays on your laptop and is never shared. Your <strong>public key</strong> is safe to hand out. You give the public key to GitHub once. From then on, when you connect, your laptop proves it holds the matching private key without ever sending the private key itself. No password crosses the network.</p>
+<p>The upside over passwords is twofold. First, you never type a password again. Second, an attacker who intercepts your traffic cannot steal your private key, because the private key never travels.</p>
+<p>You generate the key pair once, give GitHub the public half, and keep the private half on your laptop.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Where to run these commands
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All commands in this section run in a <strong>terminal</strong>.</p>
+<ul>
+<li><strong>Mac / Linux:</strong> use the <strong>Terminal</strong> app (Applications → Utilities → Terminal). The <strong>Terminal tab inside RStudio</strong> and the <strong>Integrated Terminal in VS Code</strong> also work; they run the same shell.</li>
+<li><strong>Windows:</strong> use <strong>Git Bash</strong>, the terminal that shipped with Git for Windows. <strong>Not</strong> PowerShell and <strong>not</strong> Command Prompt. Open it from the Start menu, or select <strong>Git Bash</strong> in VS Code’s terminal dropdown.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-1-check-whether-you-already-have-a-key" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-check-whether-you-already-have-a-key">Step 1: Check whether you already have a key</h3>
+<p>Before generating a new key, see if one already exists on this machine:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Two possible outcomes:</p>
+<ul>
+<li><strong>You see files called <code>id_ed25519</code> and <code>id_ed25519.pub</code></strong> in the listing. You already have an ed25519 key pair. <strong>Skip ahead to Step 4</strong> (copy the public key).</li>
+<li><strong>You see an error like <code>ls: /Users/yourname/.ssh: No such file or directory</code>, or the folder exists but does not contain those files.</strong> You do not have an SSH key on this machine yet. <strong>Continue with Step 2.</strong> This is the expected state for most first-timers. A GitHub account by itself does not create local SSH keys; the <code>.ssh</code> folder is only created the first time you run <code>ssh-keygen</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>~/.ssh</code> is an absolute path. The <code>~</code> expands to your home directory, so the command looks in the same place regardless of your current working directory.</p>
+</div>
+</div>
+</section>
+<section id="step-2-generate-a-key-pair" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-generate-a-key-pair">Step 2: Generate a key pair</h3>
+<p>Replace the email with the one tied to your GitHub account.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"you@email.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The command is interactive. It will prompt you three times.</p>
+<p><strong>Prompt 1 — where to save the key:</strong></p>
+<pre><code>Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/yourname/.ssh/id_ed25519):</code></pre>
+<p>Press <strong>Enter</strong> to accept the default location.</p>
+<p><strong>Prompts 2 and 3 — passphrase and confirmation:</strong></p>
+<pre><code>Enter passphrase (empty for no passphrase):
+Enter same passphrase again:</code></pre>
+<p>Either type a passphrase at both prompts (slightly more secure, recommended on a shared machine) or press <strong>Enter</strong> twice to leave it empty (simpler, defensible on a personal laptop). The passphrase does not appear on screen while you type; that is expected.</p>
+<p><strong>What you see when it finishes.</strong> A confirmation message and a block of ASCII art:</p>
+<pre><code>Your identification has been saved in /Users/yourname/.ssh/id_ed25519
+Your public key has been saved in /Users/yourname/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:aB3cD4eF... you@email.com
+The key's randomart image is:
++--[ED25519 256]--+
+|    .o.+*=O+     |
+|   . .=.ooX*     |
+|  . . *..+o=.    |
+|   . o .o +      |
+|    . . So       |
+|       ....      |
+|      ...E       |
+|     o.o..       |
+|    .o.++o       |
++----[SHA256]-----+</code></pre>
+<p>The <strong>randomart image</strong> is a visual fingerprint of your key. OpenSSH prints one after every key generation as a human-friendly way to spot mismatches later (a radically different picture means a different key). It is decorative: you do not need to record it or act on it.</p>
+<p>Verify the files now exist:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span> ~/.ssh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see both <code>id_ed25519</code> (private key — keep this secret) and <code>id_ed25519.pub</code> (public key — the one you share).</p>
+</section>
+<section id="step-3-start-the-ssh-agent-and-add-your-key" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-start-the-ssh-agent-and-add-your-key">Step 3: Start the SSH agent and add your key</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first line starts the background process that holds your key in memory. The second tells it about your new key.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>On macOS, persist the key across reboots
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tell the agent to store your passphrase in the macOS Keychain so you do not need to unlock it again after a reboot:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> <span class="at">--apple-use-keychain</span> ~/.ssh/id_ed25519</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="step-4-copy-the-public-key" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-copy-the-public-key">Step 4: Copy the public key</h3>
+<p>Display the public key in the terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The output looks like <code>ssh-ed25519 AAAAC3Nz... you@email.com</code>. Select and copy the <strong>entire</strong> line.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only share the <strong>public</strong> key (<code>id_ed25519.pub</code>, the one ending in <code>.pub</code>). Never paste the private key (<code>id_ed25519</code>, no extension) anywhere.</p>
+</div>
+</div>
+<p><strong>Shortcut — Mac:</strong> pipe directly to the clipboard instead of copying manually:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pbcopy</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Shortcut — Windows (Git Bash):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">clip</span> <span class="op">&lt;</span> ~/.ssh/id_ed25519.pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-5-add-the-key-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-add-the-key-to-github">Step 5: Add the key to GitHub</h3>
+<p>This step happens in your <strong>web browser</strong>, not the terminal.</p>
+<ol type="1">
+<li><p>Go to <a href="https://github.com">github.com</a>. Click your profile picture (top right) → <strong>Settings</strong>.</p></li>
+<li><p>In the left sidebar, click <strong>SSH and GPG keys</strong>.</p></li>
+<li><p>Click <strong>New SSH key</strong> (green button, top right of the SSH keys section).</p></li>
+<li><p>Paste your key in the <strong>Key</strong> field. Give it a <strong>Title</strong> that identifies the laptop, for example “My MacBook” or “Dyson office desktop”. Leave <strong>Key type</strong> as <strong>Authentication Key</strong>.</p></li>
+<li><p>Click <strong>Add SSH key</strong>. GitHub may ask you to confirm your password, and then require a <strong>second factor</strong> to verify it is really you (adding an SSH key grants push access, so GitHub re-verifies on sensitive actions).</p>
+<p>GitHub has required 2FA for all contributors since 2024, so you almost certainly have one of the following set up:</p>
+<ul>
+<li><strong>Authenticator app</strong> (Google Authenticator, Authy, 1Password, Microsoft Authenticator, etc.): enter the current 6-digit code. These rotate every 30 seconds, so enter promptly.</li>
+<li><strong>Duo</strong>: Cornell’s single sign-on uses Duo. If your GitHub account is linked to a Cornell or institutional identity, you may receive a <strong>push notification</strong> on your phone (tap “Approve”) or be shown a 6-digit Duo passcode to enter.</li>
+<li><strong>Security key</strong> (YubiKey, Titan, or your laptop’s fingerprint / Touch ID): plug in and tap, or authenticate with the built-in biometric.</li>
+<li><strong>SMS or email</strong> (legacy): enter the code GitHub sends to your phone or inbox.</li>
+</ul>
+<p>If you have never set up 2FA on GitHub and it prompts you to do so before accepting the SSH key, follow the wizard: installing an authenticator app (Authy, 1Password, or Google Authenticator) is the most portable choice for a personal account.</p></li>
+</ol>
+</section>
+<section id="step-6-test-the-connection" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-test-the-connection">Step 6: Test the connection</h3>
+<p>Back in your terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first time you connect, you will see a warning asking you to confirm GitHub’s host fingerprint. Type <code>yes</code> and press Enter. If the setup worked, you will see:</p>
+<pre><code>Hi yourusername! You've successfully authenticated, but GitHub does not provide shell access.</code></pre>
+<p>That message is what you want. “Does not provide shell access” is normal — GitHub never lets anyone log in interactively.</p>
+</section>
+<section id="https-alternative" class="level3">
+<h3 class="anchored" data-anchor-id="https-alternative">HTTPS alternative (if SSH is blocked)</h3>
+<p>If SSH does not work on your machine (managed-IT restrictions, firewalls closing port 22), you can authenticate over HTTPS instead. The set-up varies slightly by operating system:</p>
+<ul>
+<li><strong>Mac:</strong> Git uses the <strong>osxkeychain</strong> helper by default. Push once, enter your GitHub username, paste a <strong>Personal Access Token</strong> as the password, and Git remembers it.</li>
+<li><strong>Windows:</strong> Git for Windows ships with <strong>Git Credential Manager</strong>. It opens a browser for GitHub sign-in the first time you push. No token needed.</li>
+<li><strong>Linux:</strong> install <code>git-credential-libsecret</code> and run <code>git config --global credential.helper libsecret</code>.</li>
+</ul>
+<p>Everywhere in this tutorial we use an SSH URL (<code>git@github.com:user/repo.git</code>). If you are on HTTPS, substitute the HTTPS URL (<code>https://github.com/user/repo.git</code>) in the same commands. The rest of Git works identically.</p>
+</section>
+</section>
 <section id="keep-your-email-private" class="level2">
 <h2 class="anchored" data-anchor-id="keep-your-email-private">Keep Your Email Private</h2>
-<p>Every commit you push to a public GitHub repository shows the name and email you configured back in Session 4. If you used a personal email, it is now visible to anyone browsing the repo. GitHub offers a stable <code>noreply</code> address tied to your account that you can use instead.</p>
+<p>As flagged in <a href="../version-control/session4.html">Session 4</a>, every commit records the name and email you set with <code>git config</code>. Once you push to a public repo, that email is searchable by anyone browsing GitHub. The fix is a GitHub-provided <code>noreply</code> address.</p>
+<p>You should already be signed into GitHub from Step 5 of the SSH setup. Stay in the browser.</p>
 <ol type="1">
 <li>Go to <a href="https://github.com/settings/emails">github.com/settings/emails</a>.</li>
 <li>Under <strong>Primary email address</strong>, check the box for <strong>Keep my email addresses private</strong>.</li>
 <li>GitHub shows a noreply address shaped like <code>12345678+yourusername@users.noreply.github.com</code>. Copy it.</li>
-<li>Update your local Git configuration:</li>
+<li>Switch to your <strong>terminal</strong> and update Git’s global configuration:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"12345678+yourusername@users.noreply.github.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"12345678+yourusername@users.noreply.github.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Replace the address with the one shown on your GitHub settings page.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -435,233 +759,292 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This only affects commits made <em>after</em> you change the setting. Past commits keep whatever email they were created with. Rewriting history to replace old emails is possible but advanced. See <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">GitHub’s documentation</a> if you need it.</p>
+<p>This only affects commits made <em>after</em> you change the setting. Past commits keep whatever email they were created with. See <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address">GitHub’s documentation</a> if you need to rewrite old ones.</p>
 </div>
 </div>
 </section>
-<section id="connect-to-github-ssh-keys" class="level2">
-<h2 class="anchored" data-anchor-id="connect-to-github-ssh-keys">Connect to GitHub: SSH Keys</h2>
-<p>SSH keys let your computer authenticate with GitHub without typing a password every time.</p>
-<section id="generate-a-key-pair" class="level3">
-<h3 class="anchored" data-anchor-id="generate-a-key-pair">1. Generate a key pair</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"you@email.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Press Enter to accept the default file location. You can set a passphrase or leave it empty.</p>
-</section>
-<section id="start-the-ssh-agent-and-add-your-key" class="level3">
-<h3 class="anchored" data-anchor-id="start-the-ssh-agent-and-add-your-key">2. Start the SSH agent and add your key</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="copy-the-public-key" class="level3">
-<h3 class="anchored" data-anchor-id="copy-the-public-key">3. Copy the public key</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Copy the entire output.</p>
-</section>
-<section id="add-the-key-to-github" class="level3">
-<h3 class="anchored" data-anchor-id="add-the-key-to-github">4. Add the key to GitHub</h3>
-<ol type="1">
-<li>Go to <a href="https://github.com">github.com</a> → click your profile picture → <strong>Settings</strong></li>
-<li>In the left sidebar, click <strong>SSH and GPG keys</strong></li>
-<li>Click <strong>New SSH key</strong></li>
-<li>Paste your key and give it a title (e.g., “My Laptop”)</li>
-<li>Click <strong>Add SSH key</strong></li>
-</ol>
-</section>
-<section id="test-the-connection" class="level3">
-<h3 class="anchored" data-anchor-id="test-the-connection">5. Test the connection</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You should see: <code>Hi username! You've successfully authenticated...</code></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Windows users:</strong> run these commands in Git Bash, not in PowerShell or Command Prompt.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="remotes-push-and-pull" class="level2">
-<h2 class="anchored" data-anchor-id="remotes-push-and-pull">Remotes: Push and Pull</h2>
-<p>A <strong>remote</strong> is a copy of your repository stored on a server (like GitHub). The standard remote name is <code>origin</code>.</p>
-<section id="the-relationship" class="level3">
-<h3 class="anchored" data-anchor-id="the-relationship">The relationship</h3>
-<pre><code>Your Computer  ←— git pull —→  GitHub (origin)
-               —— git push ——→</code></pre>
+<section id="where-a-repository-comes-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-a-repository-comes-from">Where a Repository Comes From</h2>
+<p>Before we push or pull, it helps to know the three ways a project ends up connected to GitHub. Your path depends on whether the project already exists and who owns it.</p>
+<section id="start-from-scratch" class="level3">
+<h3 class="anchored" data-anchor-id="start-from-scratch">1. Start from scratch</h3>
+<p>You have a new research idea with no code yet. Two variants arrive at the same end state.</p>
 <ul>
-<li><code>git push</code> uploads your commits to GitHub</li>
-<li><code>git pull</code> downloads new commits from GitHub</li>
+<li><strong>GitHub-first.</strong> Create an empty repository on <a href="https://github.com/new">github.com/new</a>. Clone it to your laptop. Your local folder comes pre-connected to the remote. This is the simpler path for a project you know from the start you want on GitHub.</li>
+<li><strong>Laptop-first.</strong> The folder and code already exist (the session 4 flow: <code>git init</code>, local commits). Create an empty repository on GitHub, then run <code>git remote add origin &lt;URL&gt;</code> to link the two. The right path when you started locally and only later decided to push.</li>
 </ul>
 </section>
-<section id="link-your-local-repo-to-github" class="level3">
-<h3 class="anchored" data-anchor-id="link-your-local-repo-to-github">Link your local repo to GitHub</h3>
-<p>First, create a new repository on GitHub:</p>
-<ol type="1">
-<li>Go to <a href="https://github.com/new">github.com/new</a></li>
-<li>Name it (e.g., <code>my-research</code>)</li>
-<li><strong>Do NOT</strong> initialize with a README (your local repo already has commits)</li>
-<li>Click <strong>Create repository</strong></li>
-</ol>
-<p>GitHub will show you setup commands. Use the SSH option:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:yourusername/my-research.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="clone-an-existing-repository" class="level3">
+<h3 class="anchored" data-anchor-id="clone-an-existing-repository">2. Clone an existing repository</h3>
+<p>The repository already exists on GitHub. <code>git clone &lt;URL&gt;</code> downloads the full project and its history to your laptop, pre-connected to the remote. Whether you can push back depends on whether the owner added you as a collaborator. Typical cases in applied economics: joining a co-author’s project, following along with a course starter, pulling a public replication package.</p>
 </section>
-<section id="push-your-commits" class="level3">
-<h3 class="anchored" data-anchor-id="push-your-commits">Push your commits</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>-u</code> flag sets <code>origin main</code> as the default upstream, so future pushes only need <code>git push</code>.</p>
+<section id="fork-then-clone" class="level3">
+<h3 class="anchored" data-anchor-id="fork-then-clone">3. Fork, then clone</h3>
+<p>You want your own independent copy on GitHub of someone else’s repo, typically because you cannot push to theirs. Click <strong>Fork</strong> on GitHub to create a copy under your account, then clone your fork. You have full push access to your fork, and can propose changes back to the original via a pull request. We revisit this pattern in Sessions 6–7 when working with Claude Code project templates.</p>
 </section>
-<section id="pull-changes" class="level3">
-<h3 class="anchored" data-anchor-id="pull-changes">Pull changes</h3>
-<p>If someone else pushed commits (or you edited a file on GitHub), download them:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="which-path-when" class="level3">
+<h3 class="anchored" data-anchor-id="which-path-when">Which path, when?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Entry point</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Your own new research project</td>
+<td>Start from scratch</td>
+</tr>
+<tr class="even">
+<td>Joining your advisor’s or co-author’s repo</td>
+<td>Clone</td>
+</tr>
+<tr class="odd">
+<td>Following a course starter (including this session’s exercise)</td>
+<td><strong>Use this template</strong>, then clone</td>
+</tr>
+<tr class="even">
+<td>Contributing to an R package or replication repo you do not own</td>
+<td>Fork, then clone</td>
+</tr>
+<tr class="odd">
+<td>Basing your own work on someone else’s code, diverging from their version</td>
+<td>Fork, then clone</td>
+</tr>
+</tbody>
+</table>
+<p>In this tutorial we walk through <strong>cloning</strong> in detail, since it is the most common path for joining an existing project. Starting from scratch and forking each get their own short subsections below.</p>
 </section>
 </section>
 <section id="cloning-a-repository" class="level2">
 <h2 class="anchored" data-anchor-id="cloning-a-repository">Cloning a Repository</h2>
-<p><code>git clone</code> downloads an entire repository (with full history) from GitHub to your computer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:username/my-research.git</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After cloning, the remote <code>origin</code> is already configured. You can immediately push and pull.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<p><code>git clone &lt;URL&gt;</code> downloads a full repository from GitHub to your laptop, including the full commit history. The command also sets up the remote connection automatically, so <code>git push</code> and <code>git pull</code> work immediately.</p>
+<section id="what-you-need" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-need">What you need</h3>
+<ul>
+<li>An SSH or HTTPS URL for the repo. On GitHub, click the green <strong>Code</strong> button on the repository’s main page, choose <strong>SSH</strong> (or <strong>HTTPS</strong>), and copy the URL.</li>
+<li>A parent folder on your laptop where the clone should live. The clone command creates a new subfolder inside your current location.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+<span class="screen-reader-only">Warning</span>If the target folder already exists
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Cloning is how you start working on a collaborator’s project. You get the full history, all branches, and a ready-to-go remote connection.</p>
-</div>
-</div>
-</section>
-<section id="exercise-3-push-to-github" class="level2 exercise">
-<h2 class="exercise anchored" data-anchor-id="exercise-3-push-to-github">Exercise 3: Push to GitHub</h2>
-<p><strong>Time: ~15 minutes</strong></p>
-<ol type="1">
-<li><p><strong>Create a repository on GitHub.</strong> Go to <a href="https://github.com/new">github.com/new</a>, name it <code>my-research</code>, and click Create (do NOT initialize with README).</p></li>
-<li><p><strong>Add the remote</strong> to your local <code>my-research</code> project:</p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:YOURUSERNAME/my-research.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Replace <code>YOURUSERNAME</code> with your GitHub username.</p>
-<ol start="3" type="1">
-<li><strong>Push your commits:</strong></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="4" type="1">
-<li><p><strong>Verify.</strong> Go to your repository page on GitHub and refresh. You should see your files and commit history.</p></li>
-<li><p><strong>Test pulling.</strong> On GitHub, click on <code>clean_data.R</code> → pencil icon → add a comment line at the top → Commit. Then pull locally:</p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Open the file to confirm the edit is there.</p>
-</section>
-<section id="branches" class="level2">
-<h2 class="anchored" data-anchor-id="branches">Branches</h2>
-<p>A <strong>branch</strong> is a parallel version of your code. You can experiment on a branch without affecting the main version. When the work is ready, you merge it back.</p>
-<section id="why-branches" class="level3">
-<h3 class="anchored" data-anchor-id="why-branches">Why branches?</h3>
+<p><code>git clone</code> refuses to proceed if a folder with the same name already exists at the destination. This is the common case when students come from session 4 and already have a <code>my-research/</code> folder, or when they retry a clone after an earlier attempt.</p>
+<p>Symptoms:</p>
 <ul>
-<li>Try a new specification without breaking working code</li>
-<li>Each co-author works on their own branch</li>
-<li>Keep <code>main</code> clean and functional at all times</li>
+<li><strong>Terminal:</strong> <code>fatal: destination path 'my-research' already exists and is not an empty directory.</code></li>
+<li><strong>RStudio and VS Code:</strong> the clone dialog reports the target directory is not empty.</li>
 </ul>
+<p>Fix: rename or remove the existing folder before cloning. From your terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> my-research my-research-old          <span class="co"># safe: keep the old version</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or, if you do not need the old folder:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> my-research                      <span class="co"># destructive and irreversible</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then retry the clone below.</p>
+</div>
+</div>
 </section>
-<section id="create-and-switch-to-a-branch" class="level3">
-<h3 class="anchored" data-anchor-id="create-and-switch-to-a-branch">Create and switch to a branch</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch add-iv-analysis</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or, as a shortcut:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="work-on-the-branch" class="level3">
-<h3 class="anchored" data-anchor-id="work-on-the-branch">Work on the branch</h3>
-<p>Make your edits, stage, and commit as usual. These commits only exist on the branch.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new file</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'# IV regression using 2SLS'</span> <span class="op">&gt;</span> iv_analysis.R</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add iv_analysis.R</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add IV analysis script"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="switch-back-to-main" class="level3">
-<h3 class="anchored" data-anchor-id="switch-back-to-main">Switch back to main</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Notice that <code>iv_analysis.R</code> disappears. It only exists on the other branch. Your working directory reflects whichever branch you are on.</p>
-</section>
-<section id="merge-the-branch" class="level3">
-<h3 class="anchored" data-anchor-id="merge-the-branch">Merge the branch</h3>
-<p>When you are satisfied with the work on your branch:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Now <code>iv_analysis.R</code> appears on <code>main</code> and all the branch’s commits are part of main’s history.</p>
-</section>
-<section id="delete-the-branch-optional" class="level3">
-<h3 class="anchored" data-anchor-id="delete-the-branch-optional">Delete the branch (optional)</h3>
-<p>After merging, you can clean up:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="pull-requests" class="level2">
-<h2 class="anchored" data-anchor-id="pull-requests">Pull Requests</h2>
-<p>A <strong>pull request</strong> (PR) is GitHub’s way of proposing changes. Instead of merging locally, you push a branch to GitHub and ask for it to be reviewed before merging.</p>
-<section id="the-pull-request-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="the-pull-request-workflow">The pull request workflow</h3>
+<section id="three-interfaces-same-operation" class="level3">
+<h3 class="anchored" data-anchor-id="three-interfaces-same-operation">Three interfaces, same operation</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Navigate to the parent folder where you want the project to live:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then clone (replace <code>YOURUSERNAME</code> with your GitHub username, the handle shown in your GitHub profile URL):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:YOURUSERNAME/my-research.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Git creates a new <code>my-research/</code> folder, downloads everything, and reports progress. When it finishes, step into the project:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
-<li><strong>Create a branch</strong> and make your commits</li>
-<li><strong>Push the branch to GitHub:</strong></li>
+<li><strong>File → New Project → Version Control → Git</strong>.</li>
+<li>In the dialog:
+<ul>
+<li><strong>Repository URL:</strong> paste the SSH (or HTTPS) URL from GitHub.</li>
+<li><strong>Project directory name:</strong> auto-fills from the URL; leave it or edit.</li>
+<li><strong>Create project as subdirectory of:</strong> choose the parent folder (for example <code>~/github</code>).</li>
+</ul></li>
+<li>Click <strong>Create Project</strong>.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="3" type="1">
-<li><strong>Open a PR</strong> on GitHub. Go to your repository → you will see a banner saying “add-iv-analysis had recent pushes” → click <strong>Compare &amp; pull request</strong></li>
-<li><strong>Write a description</strong> explaining what you changed and why</li>
-<li><strong>Review.</strong> Your co-author reads the changes, leaves comments, and approves</li>
-<li><strong>Merge.</strong> Click <strong>Merge pull request</strong> on GitHub</li>
+<p>RStudio clones the repo and opens it as a new RStudio Project. The Git pane (top right) appears, already connected to the remote.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ol type="1">
+<li>Open the <strong>Command Palette</strong> (<code>Cmd+Shift+P</code> on Mac, <code>Ctrl+Shift+P</code> on Windows/Linux).</li>
+<li>Type <code>Git: Clone</code> and press Enter.</li>
+<li>Paste the SSH or HTTPS URL in the input box and press Enter.</li>
+<li>When prompted, choose the parent folder where the repo should live.</li>
+<li>When VS Code asks whether to open the cloned repo, click <strong>Open</strong>.</li>
 </ol>
+</div>
+</div>
+</div>
+</section>
+<section id="verify-the-remote-is-set" class="level3">
+<h3 class="anchored" data-anchor-id="verify-the-remote-is-set">Verify the remote is set</h3>
+<p>After cloning, confirm the remote connection. In your terminal, inside the cloned folder:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see something like:</p>
+<pre><code>origin  git@github.com:YOURUSERNAME/my-research.git (fetch)
+origin  git@github.com:YOURUSERNAME/my-research.git (push)</code></pre>
+<p><code>origin</code> is the default name Git assigns to the remote you cloned from. Future push and pull commands target <code>origin</code> unless you say otherwise.</p>
+</section>
+</section>
+<section id="push-and-pull" class="level2">
+<h2 class="anchored" data-anchor-id="push-and-pull">Push and Pull</h2>
+<p>Once a remote is set up (either because you cloned, or because you added one with <code>git remote add</code>), two commands keep your laptop and GitHub in sync.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  laptop["Your Laptop"] -- git push --&gt; github["GitHub&amp;nbsp;(origin)"]
+  github -- git pull --&gt; laptop
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ul>
+<li><code>git push</code> uploads your new local commits to GitHub.</li>
+<li><code>git pull</code> downloads new commits from GitHub into your local copy.</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Anatomy of <code>git push -u origin main</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pull requests are the standard collaboration workflow in both industry and academic research. They create a written record of what changed and why, which is valuable for reproducibility.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="handling-merge-conflicts" class="level2">
-<h2 class="anchored" data-anchor-id="handling-merge-conflicts">Handling Merge Conflicts</h2>
-<p>A merge conflict happens when two people edit the same line in the same file. Git marks the conflict and asks you to choose.</p>
-<section id="what-a-conflict-looks-like" class="level3">
-<h3 class="anchored" data-anchor-id="what-a-conflict-looks-like">What a conflict looks like</h3>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-lm(wage ~ educ + exper, data = df)
-=======
-lm(log(wage) ~ educ + exper + tenure, data = df)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-iv-analysis</code></pre>
+<p>The command has four pieces:</p>
 <ul>
-<li>The top section (<code>HEAD</code>) is your current branch’s version</li>
-<li>The bottom section is the incoming branch’s version</li>
+<li><strong><code>git push</code></strong>: the command.</li>
+<li><strong><code>-u</code></strong> (or <code>--set-upstream</code>): a flag. It tells Git to record the linkage between your local branch and its counterpart on the remote, so future pushes and pulls on this branch do not need arguments.</li>
+<li><strong><code>origin</code></strong>: the <strong>remote name</strong>, a label on your laptop that points to a URL. Clone names it <code>origin</code> by default. See all your remotes with <code>git remote -v</code>. Rename with <code>git remote rename origin newname</code>.</li>
+<li><strong><code>main</code></strong>: the <strong>branch name</strong>. Shorthand for “push my local <code>main</code> to the remote <code>main</code>.” The fully explicit form is <code>main:main</code> (source:destination). Names usually match.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>git push origin main</code></td>
+<td>Push local <code>main</code> to <code>origin/main</code>. Do not set upstream.</td>
+</tr>
+<tr class="even">
+<td><code>git push -u origin main</code></td>
+<td>Same, and set <code>origin/main</code> as the upstream of local <code>main</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>git push -u origin branch1</code></td>
+<td>Push a new branch <code>branch1</code> and set its upstream.</td>
+</tr>
+<tr class="even">
+<td><code>git push</code></td>
+<td>Bare. Only works once the current branch has an upstream.</td>
+</tr>
+</tbody>
+</table>
+<p>After the first <code>-u</code> push on a given branch, plain <code>git push</code> and <code>git pull</code> become shorthand for the configured upstream. Set once per branch, use forever.</p>
+<p><strong>About the name “origin”.</strong> A remote is a label, not the repository. It points to a URL, like a contact in your phone points to a number. Git names it <code>origin</code> by convention because it is the <em>origin</em> of your clone. You can rename it, but nearly every Git tutorial, book, and answer on Stack Overflow uses <code>origin</code>, so keeping it avoids friction. Multiple remotes become useful in specific patterns: a <code>upstream</code> pointing to a repo you forked from, a <code>backup</code> pointing to a mirror on a different host. Most research projects have just one remote.</p>
+</div>
+</div>
+<section id="push-your-commits" class="level3">
+<h3 class="anchored" data-anchor-id="push-your-commits">Push your commits</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If this is the first push from a freshly cloned repo, this works immediately because <code>clone</code> already set the upstream to <code>origin/main</code>. If you started from scratch with <code>git init</code>, your first push needs the <code>-u</code> flag to set the upstream:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After the first push, future pushes are just <code>git push</code>.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>In the <strong>Git pane</strong> (top-right of the IDE), click the <strong>green up-arrow ⬆ Push</strong> button. A dialog opens and shows the output of the underlying <code>git push</code>.</p>
+<p>If this is the first push on a new branch, RStudio may ask you to confirm setting upstream tracking; accept.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Open the <strong>Source Control</strong> panel (branch icon in the left activity bar, or <code>⌃⇧G</code> / <code>Ctrl+Shift+G</code>). Click the <strong>Sync</strong> button (circular arrows in the top row) or the <strong>… More actions</strong> menu → <strong>Push</strong>.</p>
+<p>The first time you push a new branch, VS Code prompts you to publish the branch; click <strong>OK</strong> to set up tracking.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pull-changes-from-github" class="level3">
+<h3 class="anchored" data-anchor-id="pull-changes-from-github">Pull changes from GitHub</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This fetches any new commits from <code>origin/main</code> and merges them into your local <code>main</code>. If you are on another branch, specify it: <code>git pull origin branch-name</code>.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>In the Git pane, click the <strong>blue down-arrow ⬇ Pull</strong> button. A dialog shows the output of the underlying <code>git pull</code>.</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>In Source Control, click the <strong>Sync</strong> button (does both pull and push in one step) or the <strong>… menu → Pull</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-you-should-see-on-the-first-push" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-should-see-on-the-first-push">What you should see on the first push</h3>
+<p>When a push succeeds, GitHub’s website refreshes to show your files and commit history. Common errors and their fixes:</p>
+<ul>
+<li><code>Permission denied (publickey)</code>: your SSH key is not recognized by GitHub. Run <code>ssh -T git@github.com</code> to check the connection (see <a href="#step-6-test-the-connection">Step 6</a>). If that also fails, revisit the SSH setup.</li>
+<li><code>rejected — non-fast-forward</code>: the remote has commits your local copy does not. Run <code>git pull</code> first to bring them in, resolve any conflicts, then push again.</li>
+<li><code>fatal: The current branch main has no upstream branch</code>: you started from <code>git init</code> and have not set tracking. Use <code>git push -u origin main</code> for the first push.</li>
 </ul>
 </section>
-<section id="how-to-resolve" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-resolve">How to resolve</h3>
+</section>
+<section id="starting-from-scratch" class="level2">
+<h2 class="anchored" data-anchor-id="starting-from-scratch">Starting From Scratch</h2>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Reference section: no action required today.</strong> Exercise 3 uses the “Use this template” flow (see below), not this from-scratch flow. This section is here so you know what to do when you later start a brand-new research project on your own laptop. You can skim or skip for now.</p>
+</div>
+</div>
+</div>
+<p>If you began a project on your laptop without a remote (the session 4 flow: <code>git init</code>, commits, no GitHub connection yet), attaching a GitHub remote takes two commands.</p>
 <ol type="1">
-<li>Open the file in your editor</li>
-<li>Decide which version to keep (or combine them into something new)</li>
-<li>Delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers</li>
-<li>Stage and commit the resolved file:</li>
+<li><p>Create a new empty repository on <a href="https://github.com/new">github.com/new</a>. Name it, leave <strong>Initialize with README</strong> unchecked (your local repo already has commits), click <strong>Create repository</strong>.</p></li>
+<li><p>In your terminal, inside the local project folder:</p></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add clean_data.R</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Resolve merge conflict in regression specification"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:YOURUSERNAME/project-name.git</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first line registers GitHub as the remote called <code>origin</code>. The second pushes your existing commits and sets up upstream tracking.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -672,7 +1055,449 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Merge conflicts are normal, not dangerous. They happen whenever two people edit the same line. The fix is always: open the file, choose the right version, remove the markers, commit.</p>
+<p>GitHub also displays these exact commands on the empty repository’s welcome page, under <strong>…or push an existing repository from the command line</strong>. You can copy-paste directly from there.</p>
+</div>
+</div>
+</section>
+<section id="forks-and-templates" class="level2">
+<h2 class="anchored" data-anchor-id="forks-and-templates">Forks and Templates</h2>
+<section id="forking-a-repository" class="level3">
+<h3 class="anchored" data-anchor-id="forking-a-repository">Forking a repository</h3>
+<p>A <strong>fork</strong> is a server-side copy of someone else’s repository under your own GitHub account. You fork when you want your own independent version of a repo you do not own.</p>
+<p>On GitHub:</p>
+<ol type="1">
+<li>Go to the source repository’s page.</li>
+<li>Click <strong>Fork</strong> (top-right of the page).</li>
+<li>Confirm the fork destination (your own account or an organization you belong to).</li>
+<li>GitHub creates <code>YOURUSERNAME/repo-name</code> with the full history and a link back to the source.</li>
+<li>Clone your fork locally, the same way you would any other repo.</li>
+</ol>
+<p>You can push freely to your fork. To propose changes back to the source, open a <strong>pull request</strong> on GitHub (covered later in this session).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We revisit forks in Sessions 6–7 when working with Claude Code project templates. The fork-and-clone pattern is how you get your own working copy of a template maintained by someone else.</p>
+</div>
+</div>
+</section>
+<section id="using-a-template" class="level3">
+<h3 class="anchored" data-anchor-id="using-a-template">Using a template</h3>
+<p>GitHub also supports <strong>template repositories</strong>. The owner marks a repo as a template, and anyone with a GitHub account can generate a fresh copy in one click. Unlike a fork, the copy has <strong>no link back</strong> to the source and starts with a clean commit history.</p>
+<p>On GitHub:</p>
+<ol type="1">
+<li>Go to the template repository’s page. Templates display a <strong>Use this template</strong> button where the Fork button would normally appear.</li>
+<li>Click <strong>Use this template → Create a new repository</strong>.</li>
+<li>Give your copy a name (for example <code>my-research</code>). This creates <code>YOURUSERNAME/my-research</code> under your account.</li>
+<li>Clone your new repository locally, the same way you would any other.</li>
+</ol>
+</section>
+<section id="fork-vs.-template-when-to-use-which" class="level3">
+<h3 class="anchored" data-anchor-id="fork-vs.-template-when-to-use-which">Fork vs.&nbsp;template: when to use which</h3>
+<ul>
+<li>Use a <strong>fork</strong> when you may contribute changes back to the source, or when the linked history is valuable (for example, when working on an open-source package).</li>
+<li>Use a <strong>template</strong> when you want a clean starting point with no connection back and no history baggage. Research starter kits and course scaffolds are the typical case.</li>
+</ul>
+<p>The starter repo for this course, <a href="https://github.com/arielortizbobea/aem7010-starter"><code>arielortizbobea/aem7010-starter</code></a>, is a <strong>template</strong>. Exercise 3 below walks you through using it.</p>
+</section>
+</section>
+<section id="exercise-3-clone-your-copy-of-the-starter-repo" class="level2 exercise">
+<h2 class="exercise anchored" data-anchor-id="exercise-3-clone-your-copy-of-the-starter-repo">Exercise 3: Clone Your Copy of the Starter Repo</h2>
+<p><strong>Time: ~15 minutes</strong></p>
+<p>The goal is to practice the full workflow end to end: create a repository on GitHub from a template, clone it to your laptop, make a change, push it back, and pull a change made on GitHub.</p>
+<section id="create-your-copy-of-the-starter" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-copy-of-the-starter">1. Create your copy of the starter</h3>
+<ol type="1">
+<li>Open <a href="https://github.com/arielortizbobea/aem7010-starter">arielortizbobea/aem7010-starter</a> in your browser.</li>
+<li>Click the green <strong>Use this template</strong> button → <strong>Create a new repository</strong>.</li>
+<li>Name your new repository <strong><code>my-research</code></strong>. Leave it public (or private, your choice). Click <strong>Create repository</strong>.</li>
+</ol>
+<p>GitHub creates <code>YOURUSERNAME/my-research</code> under your account with the starter files and a fresh history.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Finding your GitHub username
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>YOURUSERNAME</code> throughout this exercise means your <strong>GitHub username</strong> (sometimes called your <em>handle</em>): the short name you chose when you created your GitHub account. It is not your email or your full name.</p>
+<p>To find it, look at the URL of your new repository page: <code>https://github.com/YOURUSERNAME/my-research</code>. The part between <code>github.com/</code> and <code>/my-research</code> is your username. For example, if the URL shows <code>github.com/arielortizbobea/my-research</code>, then <code>arielortizbobea</code> is the username you substitute in the commands below.</p>
+</div>
+</div>
+</section>
+<section id="free-up-the-my-research-folder-if-needed" class="level3">
+<h3 class="anchored" data-anchor-id="free-up-the-my-research-folder-if-needed">2. Free up the <code>my-research</code> folder (if needed)</h3>
+<p>If you worked through session 4, you may already have a <code>~/github/my-research</code> folder on your laptop. The clone below will fail with <code>destination path 'my-research' already exists</code> unless you move or remove it first.</p>
+<p>Check in your terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-d</span> ~/github/my-research <span class="dv">2</span><span class="op">&gt;</span>/dev/null</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If the command prints <code>/Users/YOU/github/my-research</code>, the folder exists and you need to choose one of the two options below. If it prints nothing, you do not have the folder and can skip to step 3.</p>
+<p><strong>Option A (recommended): keep the session 4 work by renaming.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> my-research my-research-session4</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your session 4 history is preserved in <code>my-research-session4/</code> in case you want to come back to it.</p>
+<p><strong>Option B: delete the old folder.</strong> Only choose this if you are sure you do not need any commits from the session 4 folder. The operation is irreversible.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Either option frees up <code>~/github/my-research</code> for the fresh clone in step 3.</p>
+</section>
+<section id="clone-it-to-your-laptop" class="level3">
+<h3 class="anchored" data-anchor-id="clone-it-to-your-laptop">3. Clone it to your laptop</h3>
+<p>Replace <code>YOURUSERNAME</code> with your GitHub handle throughout.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:YOURUSERNAME/my-research.git</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<ol type="1">
+<li><strong>File → New Project → Version Control → Git</strong>.</li>
+<li><strong>Repository URL:</strong> paste <code>git@github.com:YOURUSERNAME/my-research.git</code>.</li>
+<li><strong>Project directory name:</strong> leave as <code>my-research</code>.</li>
+<li><strong>Create project as subdirectory of:</strong> choose <code>~/github</code>.</li>
+<li>Click <strong>Create Project</strong>.</li>
+</ol>
+<p>RStudio clones the repo and opens it as a new RStudio Project.</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<ol type="1">
+<li>Open the <strong>Command Palette</strong> (<code>Cmd+Shift+P</code> on Mac, <code>Ctrl+Shift+P</code> on Windows/Linux).</li>
+<li>Type <code>Git: Clone</code> and press Enter.</li>
+<li>Paste <code>git@github.com:YOURUSERNAME/my-research.git</code> and press Enter.</li>
+<li>When prompted, choose <code>~/github</code> as the parent folder.</li>
+<li>When VS Code asks whether to open the cloned folder, click <strong>Open</strong>.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>You should now see the starter files: <code>README.md</code>, <code>.gitignore</code>, <code>clean_data.R</code>, <code>run_regression.R</code>.</p>
+</section>
+<section id="make-a-change-and-commit" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-change-and-commit">4. Make a change and commit</h3>
+<p>Open <code>clean_data.R</code> in your editor. Add a comment at the top:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modified by YOUR NAME for session 5 exercise</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Save the file. Then stage and commit:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add clean_data.R</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add modification note to clean_data.R"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<ol type="1">
+<li>In the <strong>Git pane</strong> (top-right of the IDE), tick the checkbox next to <code>clean_data.R</code> to stage it. The status changes from <code>M</code> (modified) to a green <code>A</code> or checkmark.</li>
+<li>Click <strong>Commit</strong>. The Review Changes dialog opens.</li>
+<li>Type <code>Add modification note to clean_data.R</code> in the commit message box (top-right of the dialog).</li>
+<li>Click <strong>Commit</strong>. The dialog shows the commit output.</li>
+</ol>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<ol type="1">
+<li>Open the <strong>Source Control</strong> panel (branch icon in the left activity bar, or <code>⌃⇧G</code> / <code>Ctrl+Shift+G</code>).</li>
+<li>Under <strong>Changes</strong>, hover over <code>clean_data.R</code> and click the <strong>+</strong> icon to stage. The file moves to <strong>Staged Changes</strong>.</li>
+<li>In the message box above the staged changes, type <code>Add modification note to clean_data.R</code>.</li>
+<li>Click the <strong>✓ Commit</strong> button.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="push-your-commit" class="level3">
+<h3 class="anchored" data-anchor-id="push-your-commit">5. Push your commit</h3>
+<p>Because cloning set the upstream automatically, you do not need any arguments to push.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p>In the Git pane, click the <strong>green up-arrow ⬆ Push</strong> button. A dialog shows the output of the push.</p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p>In the Source Control panel, click the <strong>Sync</strong> button (circular arrows, top row) or the <strong>… menu → Push</strong>.</p>
+</div>
+</div>
+</div>
+<p>If you see <code>Permission denied (publickey)</code>, revisit <a href="#connect-to-github-ssh-keys">SSH setup</a>.</p>
+</section>
+<section id="verify-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="verify-on-github">6. Verify on GitHub</h3>
+<p>Go to <code>https://github.com/YOURUSERNAME/my-research</code>. Refresh. You should see your comment in <code>clean_data.R</code> and your commit message in the history.</p>
+</section>
+<section id="test-pulling" class="level3">
+<h3 class="anchored" data-anchor-id="test-pulling">7. Test pulling</h3>
+<p>Simulate a co-author making a change on GitHub:</p>
+<ol type="1">
+<li>On GitHub, click on <code>clean_data.R</code> → pencil icon (<strong>Edit this file</strong>) → add a second comment line at the bottom, for example <code># Additional note added from the GitHub web editor</code>.</li>
+<li>Commit the change via the green <strong>Commit changes</strong> button (default options are fine).</li>
+</ol>
+<p>Now pull the change back to your laptop:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p>In the Git pane, click the <strong>blue down-arrow ⬇ Pull</strong> button. A dialog shows the fetched commits.</p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p>In the Source Control panel, click the <strong>Sync</strong> button or the <strong>… menu → Pull</strong>.</p>
+</div>
+</div>
+</div>
+<p>Open <code>clean_data.R</code> and confirm the edit made on GitHub now appears locally.</p>
+</section>
+</section>
+<section id="branches" class="level2">
+<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<p>A <strong>branch</strong> is a parallel version of your code. You can experiment on a branch without affecting the main version. When the work is ready, you merge it back.</p>
+<section id="when-to-branch" class="level3">
+<h3 class="anchored" data-anchor-id="when-to-branch">When to branch</h3>
+<p>A branch earns its keep when the work has at least one of these properties:</p>
+<ol type="1">
+<li><strong>Exploratory.</strong> You might abandon it. If you do, the branch disappears and <code>main</code> stays clean. No trace of the dead end.</li>
+<li><strong>Multi-step.</strong> It takes several commits to finish and makes sense as a reviewable unit only when assembled.</li>
+<li><strong>Risky.</strong> It could break a currently-working <code>main</code>. You want <code>main</code> runnable end-to-end while you work.</li>
+<li><strong>Parallel with someone else.</strong> Two people cannot edit <code>main</code> simultaneously without stepping on each other.</li>
+<li><strong>Reviewed before merging.</strong> A co-author wants to see the changes before they land. This is the motivation for pull requests.</li>
+</ol>
+<p>If none of these apply, commit on <code>main</code>. Branches for two-minute changes are ceremony without payoff.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Analogy: a sketchpad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>main</code> is the canvas you intend to sign. A branch is a sketchpad where you try variations. If a sketch works, you copy it to the canvas (merge the branch). If not, you close the sketchpad (delete the branch) and nothing contaminates the final work.</p>
+</div>
+</div>
+</section>
+<section id="research-examples-where-a-branch-is-clearly-worth-it" class="level3">
+<h3 class="anchored" data-anchor-id="research-examples-where-a-branch-is-clearly-worth-it">Research examples where a branch is clearly worth it</h3>
+<ul>
+<li><strong>Responding to a referee report (R&amp;R).</strong> The classic case. <code>main</code> stays at the state of the submitted paper. You create a branch for each revision round or for each specific concern (<code>rr-round-1</code>, <code>rr-referee2-sample-selection</code>). Work proceeds on the branch: re-running regressions, updating tables, editing the text. You merge back when each item is resolved, tag the state at resubmission (<code>v0.2-first-rr</code>, covered later in this session), and you end up with a full record of how the paper evolved from submission to acceptance.</li>
+<li><strong>Cascading specification change.</strong> Adding state fixed effects triggers rerunning every diagnostic, updating three tables, and editing the results discussion. Branch <code>add-state-fe</code>. If the result is worth keeping, merge; if not, delete the branch and nothing downstream is touched.</li>
+<li><strong>Dataset extension.</strong> Updated data arrive through 2023. Ingestion, validation, recomputation, and table re-rendering are multi-commit work. Branch <code>extend-sample-to-2023</code>.</li>
+<li><strong>AI-assisted rewrite.</strong> Claude Code rewrites your cleaning pipeline in 200 lines. Some of it may be subtly wrong. Branch <code>ai-refactor-cleaning</code> gives you a review buffer before the rewrite touches <code>main</code>.</li>
+<li><strong>Co-author collaboration.</strong> You rerun regressions while your co-author edits the introduction. Each works on a branch. Neither blocks the other, and merges surface conflicts in the one-or-two places they exist.</li>
+</ul>
+<p>What <em>not</em> to branch for: typo fixes, one-line adjustments, obvious bug fixes. The ceremony costs more than the benefit on trivial changes.</p>
+</section>
+<section id="create-and-switch-to-a-branch" class="level3">
+<h3 class="anchored" data-anchor-id="create-and-switch-to-a-branch">Create and switch to a branch</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This single command creates a new branch <strong>and</strong> switches to it. It combines two commands that Git also accepts separately:</p>
+<ul>
+<li><strong><code>git branch add-iv-analysis</code></strong> creates a new branch at the current commit. A branch in Git is just a named pointer to a commit. Creating one does not switch you to it. You stay on whichever branch you were already on. Running <code>git branch</code> with no arguments lists all branches and marks the current one with an asterisk.</li>
+<li><strong><code>git checkout add-iv-analysis</code></strong> switches to an existing branch. Your working directory updates to reflect that branch’s files. Historically <code>git checkout</code> was also used to restore individual files, which is why Git 2.23+ introduced <code>git switch</code> and <code>git restore</code> as cleaner single-purpose replacements; <code>git switch -c add-iv-analysis</code> is the modern equivalent of <code>git checkout -b add-iv-analysis</code>.</li>
+</ul>
+<p>The <code>-b</code> flag on <code>git checkout</code> stands for “branch”: it tells Git to create the new branch before switching, collapsing the two steps into one.</p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<ol type="1">
+<li>In the <strong>Git pane</strong> (top-right of the IDE), click the <strong>New Branch</strong> button (purple branch icon next to the current branch dropdown). The New Branch dialog opens.</li>
+<li><strong>Branch name:</strong> type <code>add-iv-analysis</code>.</li>
+<li>Leave <strong>Sync branch with remote</strong> checked if you plan to push this branch to GitHub.</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>RStudio creates the branch and switches to it. The branch dropdown in the Git pane now shows <code>add-iv-analysis</code>.</p>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<ol type="1">
+<li>Click the current branch name in the <strong>bottom-left status bar</strong> (it shows <code>main</code> with a small branch icon).</li>
+<li>In the dropdown that opens at the top of the window, select <strong>+ Create new branch…</strong></li>
+<li>Type <code>add-iv-analysis</code> and press Enter.</li>
+</ol>
+<p>VS Code creates the branch and checks it out. The status bar now shows <code>add-iv-analysis</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="work-on-the-branch" class="level3">
+<h3 class="anchored" data-anchor-id="work-on-the-branch">Work on the branch</h3>
+<p>Make your edits, stage, and commit as usual (see session 4’s three-interface walkthrough if you need a refresher). Commits made now exist only on the branch.</p>
+<p>A minimal terminal example for demonstration:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'# IV regression using 2SLS'</span> <span class="op">&gt;</span> iv_analysis.R</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add iv_analysis.R</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add IV analysis script"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="switch-back-to-main" class="level3">
+<h3 class="anchored" data-anchor-id="switch-back-to-main">Switch back to main</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p>In the Git pane, click the branch dropdown (showing the current branch name) and select <code>main</code>.</p>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<p>Click the current branch name in the bottom-left status bar and select <code>main</code> from the dropdown.</p>
+</div>
+</div>
+</div>
+<p>Notice that <code>iv_analysis.R</code> disappears from your working directory. It only exists on the other branch. Your working directory reflects whichever branch you are on.</p>
+</section>
+<section id="merge-the-branch" class="level3">
+<h3 class="anchored" data-anchor-id="merge-the-branch">Merge the branch</h3>
+<p>When you are satisfied with the work on your branch, merge it back to main.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Merge and delete are terminal-primary.</strong> RStudio’s Git pane does not expose a merge action. VS Code has <code>Git: Merge Branch</code> in the Command Palette, but most users stay in the terminal for clarity and for the diagnostic messages Git prints. If you prefer to stay in your editor, RStudio users can open the Terminal tab (<strong>Tools → Terminal → New Terminal</strong>), and VS Code users can open the integrated terminal (<code>Ctrl+`</code>). Then run the commands below.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now <code>iv_analysis.R</code> appears on <code>main</code> and all the branch’s commits are part of main’s history.</p>
+</section>
+<section id="delete-the-branch-optional" class="level3">
+<h3 class="anchored" data-anchor-id="delete-the-branch-optional">Delete the branch (optional)</h3>
+<p>After merging, you can clean up. Same terminal-primary convention:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="pull-requests" class="level2">
+<h2 class="anchored" data-anchor-id="pull-requests">Pull Requests</h2>
+<p>A <strong>pull request</strong> (PR) is GitHub’s way of proposing changes. Instead of merging locally, you push a branch to GitHub and ask for it to be reviewed before merging. Pull requests are the standard collaboration workflow in both industry and academic research. They create a written record of what changed and why, which is valuable for reproducibility.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Where the PR workflow lives.</strong> Creating, reviewing, and merging pull requests happens on <strong>GitHub.com</strong>, in your browser. Neither RStudio nor VS Code has full PR support built in. If you prefer to stay in your editor, two optional paths:</p>
+<ul>
+<li><strong>GitHub CLI</strong> (<code>gh</code>): terminal tool for PRs. Install from <a href="https://cli.github.com">cli.github.com</a>. Useful commands: <code>gh pr create</code>, <code>gh pr review</code>, <code>gh pr merge</code>.</li>
+<li><strong>VS Code extension</strong>: “GitHub Pull Requests and Issues” lets you open and review PRs inside VS Code. Install from the Extensions marketplace, then sign in to GitHub.</li>
+</ul>
+<p>The walkthrough below uses the github.com browser interface, which is the canonical path and the one we use in class.</p>
+</div>
+</div>
+</div>
+<section id="the-pull-request-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="the-pull-request-workflow">The pull request workflow</h3>
+<ol type="1">
+<li><p><strong>Create a branch and make your commits.</strong> Use the three-interface pattern from the <a href="#branches">Branches</a> section above.</p></li>
+<li><p><strong>Push the branch to GitHub.</strong> The first push on a new branch needs <code>-u</code> to set the upstream.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin add-iv-analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<p>In the Git pane, confirm you are on the <code>add-iv-analysis</code> branch (check the dropdown). Click the <strong>green up-arrow ⬆ Push</strong> button. If this is the first push on this branch, RStudio prompts you to set upstream tracking; accept.</p>
+<p>## VS Code</p>
+<p>Click the current branch name (<code>add-iv-analysis</code>) in the bottom-left status bar. In the dropdown at the top, select <strong>Publish Branch</strong> (this option appears whenever a local branch has no remote counterpart yet). VS Code pushes the branch and sets upstream in one step.</p>
+<p>:::</p></li>
+<li><p><strong>Open a PR on github.com.</strong> Visit your repository’s page. You will usually see a yellow banner reading “<code>add-iv-analysis</code> had recent pushes” with a green <strong>Compare &amp; pull request</strong> button. Click it. If the banner is gone (it disappears after a few minutes), go to the <strong>Pull requests</strong> tab → <strong>New pull request</strong> → set the <strong>compare</strong> branch to <code>add-iv-analysis</code> → click <strong>Create pull request</strong>.</p></li>
+<li><p><strong>Write a description</strong> explaining what you changed and why. One paragraph is usually enough for a research PR. Reference specific tables, figures, or robustness checks when relevant.</p></li>
+<li><p><strong>Review.</strong> Your co-author reads the diff under <strong>Files changed</strong>, leaves inline comments on specific lines, and approves the PR (or requests changes).</p></li>
+<li><p><strong>Merge.</strong> Click <strong>Merge pull request</strong> on GitHub. GitHub then offers to delete the branch; accept unless you have a reason to keep it.</p></li>
+</ol>
+</section>
+</section>
+<section id="handling-merge-conflicts" class="level2">
+<h2 class="anchored" data-anchor-id="handling-merge-conflicts">Handling Merge Conflicts</h2>
+<p>A merge conflict happens when Git cannot automatically combine two sets of changes because they touch the same line in the same file. Git pauses the operation, marks the affected file, and asks you to decide which version to keep.</p>
+<section id="when-conflicts-arise" class="level3">
+<h3 class="anchored" data-anchor-id="when-conflicts-arise">When conflicts arise</h3>
+<p>You hit a conflict in three common situations:</p>
+<ul>
+<li><strong>After <code>git pull</code></strong> when a co-author pushed a commit that edited the same line you edited locally.</li>
+<li><strong>After <code>git merge</code></strong> when two branches modified the same line.</li>
+<li><strong>While rebasing.</strong> Rebasing is advanced and not covered in this course.</li>
+</ul>
+<p>In each case, Git stops mid-operation and leaves your working directory in a <strong>conflicted state</strong>. You cannot commit or push again until you resolve the conflict.</p>
+</section>
+<section id="what-a-conflict-looks-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-a-conflict-looks-like">What a conflict looks like</h3>
+<p>Open the affected file in your editor. Git inserts <strong>conflict markers</strong> where the disagreement is:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+lm(wage ~ educ + exper, data = df)
+=======
+lm(log(wage) ~ educ + exper + tenure, data = df)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-iv-analysis</code></pre>
+<ul>
+<li>Between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> is <strong>your current branch’s version</strong>.</li>
+<li>Between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-iv-analysis</code> is <strong>the incoming version from the other branch</strong>.</li>
+</ul>
+</section>
+<section id="how-to-resolve" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-resolve">How to resolve</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-3" role="tab" aria-controls="tabset-10-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<ol type="1">
+<li><p>Open the conflicted file in a text editor (e.g., <code>code clean_data.R</code> to open in VS Code, or <code>nano clean_data.R</code>).</p></li>
+<li><p>Decide which version to keep, or combine them into something new.</p></li>
+<li><p>Delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marker lines.</p></li>
+<li><p>Save the file.</p></li>
+<li><p>Stage and commit:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add clean_data.R</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Resolve merge conflict in regression specification"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
+<p>The commit completes the merge Git had paused.</p>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<ol type="1">
+<li>The conflicted file appears in the Git pane with an orange <code>U</code> (unmerged) icon.</li>
+<li>Open the file. The conflict markers are visible in the editor.</li>
+<li>Edit the file to keep the version you want. Delete the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> lines manually.</li>
+<li>Save.</li>
+<li>Back in the Git pane, tick the checkbox next to the file to stage it. The <code>U</code> becomes a checkmark.</li>
+<li>Click <strong>Commit</strong>, type a message (e.g., <code>Resolve merge conflict in regression specification</code>), click <strong>Commit</strong>.</li>
+</ol>
+</div>
+<div id="tabset-10-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-3-tab">
+<p>VS Code has the most polished conflict UI of the three.</p>
+<ol type="1">
+<li>The conflicted file shows colored highlighting. Above each conflict block, VS Code offers inline action links: <strong>Accept Current Change</strong>, <strong>Accept Incoming Change</strong>, <strong>Accept Both Changes</strong>, <strong>Compare Changes</strong>.</li>
+<li>Click the action that matches your decision, or edit manually if you want a hybrid version.</li>
+<li>Save the file.</li>
+<li>In the Source Control panel, the file moves from <strong>Merge Changes</strong> to <strong>Staged Changes</strong>.</li>
+<li>Type a commit message and click the <strong>✓ Commit</strong> button.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Merge conflicts are normal, not dangerous. They happen whenever two people edit the same line. The fix is always the same in spirit: decide which version to keep, remove the markers, stage and commit.</p>
 </div>
 </div>
 </section>
@@ -683,30 +1508,77 @@ Tip
 <section id="setup" class="level3">
 <h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ol type="1">
-<li><strong>Person A:</strong> go to your <code>my-research</code> repo on GitHub → Settings → Collaborators → Add your partner’s GitHub username.</li>
-<li><strong>Person B:</strong> accept the invitation (check your email or GitHub notifications), then clone Person A’s repo:</li>
+<li><p><strong>Person A:</strong> go to your <code>my-research</code> repo on GitHub → <strong>Settings → Collaborators → Add people</strong>. Enter your partner’s GitHub username and send the invitation.</p></li>
+<li><p><strong>Person B:</strong> accept the invitation (check your email or GitHub notifications), then clone Person A’s repo. Replace <code>PERSONA_USERNAME</code> with Person A’s actual GitHub handle throughout.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:PERSONA_USERNAME/my-research.git</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<ol type="1">
+<li><strong>File → New Project → Version Control → Git</strong>.</li>
+<li><strong>Repository URL:</strong> <code>git@github.com:PERSONA_USERNAME/my-research.git</code>.</li>
+<li><strong>Project directory name:</strong> leave as <code>my-research</code> (or change to <code>my-research-partner</code> to avoid collision with your own repo of the same name).</li>
+<li><strong>Create project as subdirectory of:</strong> <code>~/github</code>.</li>
+<li>Click <strong>Create Project</strong>.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:PERSONA_USERNAME/my-research.git</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-research</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## VS Code</p>
+<ol type="1">
+<li>Open the Command Palette (<code>Cmd+Shift+P</code> / <code>Ctrl+Shift+P</code>) → <code>Git: Clone</code>.</li>
+<li>Paste <code>git@github.com:PERSONA_USERNAME/my-research.git</code>, press Enter.</li>
+<li>Choose <code>~/github</code> as the parent folder (or rename the target folder to avoid collision).</li>
+<li>Click <strong>Open</strong> when VS Code prompts.</li>
+</ol>
+<p>:::</p></li>
+</ol>
 </section>
 <section id="create-branches-and-prs" class="level3">
 <h3 class="anchored" data-anchor-id="create-branches-and-prs">Create branches and PRs</h3>
 <ol start="3" type="1">
-<li><strong>Both partners:</strong> create a branch with your name, add a new <code>.R</code> file, commit, and push:</li>
+<li><p><strong>Both partners:</strong> create a branch with your name.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> yourname-feature</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<p>In the Git pane, click the <strong>New Branch</strong> button (purple branch icon). Type <code>yourname-feature</code> as the name, leave Sync with remote checked, click <strong>Create</strong>.</p>
+<p>## VS Code</p>
+<p>Click the current branch name in the bottom-left status bar → <strong>+ Create new branch…</strong> → type <code>yourname-feature</code> → Enter.</p>
+<p>:::</p></li>
+<li><p><strong>Both partners:</strong> add a new <code>.R</code> file with a few lines of R code (for example <code>descriptive_stats.R</code> or <code>robustness_check.R</code>), stage it, and commit.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># After creating your_file.R in any editor:</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add your_file.R</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add descriptive statistics"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<p>Create the file (<strong>File → New File → R Script</strong>, paste your content, save as <code>your_file.R</code> inside the project). In the Git pane, tick the checkbox next to the file, click <strong>Commit</strong>, type the message, click <strong>Commit</strong>.</p>
+<p>## VS Code</p>
+<p>Create the file (<strong>File → New File</strong>, paste your content, save as <code>your_file.R</code> inside the cloned folder). In the Source Control panel, click <strong>+</strong> next to the file, type the commit message, click <strong>✓ Commit</strong>.</p>
+<p>:::</p></li>
+<li><p><strong>Both partners:</strong> push your branch to GitHub.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin yourname-feature</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<p>Click the <strong>green up-arrow ⬆ Push</strong> button in the Git pane. Accept the “set upstream” prompt on the first push.</p>
+<p>## VS Code</p>
+<p>In the bottom-left status bar, click the branch name and select <strong>Publish Branch</strong> from the dropdown.</p>
+<p>:::</p></li>
+<li><p><strong>Both partners:</strong> go to GitHub and open a pull request from your branch into <code>main</code> (see the <a href="#pull-requests">Pull Requests</a> workflow above if you need the steps).</p></li>
+<li><p><strong>Review each other’s PR.</strong> Click <strong>Files changed</strong> to see the diff. Leave a comment (for example “Looks good!” or “Add a header comment?”). When you are satisfied, click <strong>Merge pull request</strong>.</p></li>
+<li><p><strong>Pull the merged changes locally</strong> so your laptop has both new files.</p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>## RStudio</p>
+<p>In the Git pane, switch to <code>main</code> via the branch dropdown, then click the <strong>blue down-arrow ⬇ Pull</strong> button.</p>
+<p>## VS Code</p>
+<p>Click the branch name in the status bar and select <code>main</code>, then click <strong>Sync</strong> (or <strong>… menu → Pull</strong>).</p>
+<p>:::</p></li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> yourname-feature</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Create a file (e.g., <code>descriptive_stats.R</code> or <code>robustness_check.R</code>) with a few lines of R code.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add your_file.R</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add descriptive statistics"</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin yourname-feature</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="4" type="1">
-<li><p><strong>Both partners:</strong> go to GitHub and open a pull request from your branch into <code>main</code>.</p></li>
-<li><p><strong>Review each other’s PR.</strong> Click on “Files changed” to see the diff. Leave a comment (e.g., “Looks good!” or “Maybe add a header comment?”). Then click <strong>Merge pull request</strong>.</p></li>
-<li><p><strong>Pull the merged changes locally:</strong></p></li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Both files should now be on main.</p>
+<p>Both partners now have <code>main</code> containing both of your contributions.</p>
 </section>
 </section>
 <section id="tags-for-reproducibility" class="level2">
@@ -718,23 +1590,37 @@ v0.2-first-RR               (code for the first round of R&amp;R)
 v0.3-second-RR              (code for the second round)
 v1.0-accepted               (final version in the published paper)
 v1.0-replication-package    (the archive you posted on AEA/Zenodo/ICPSR)</code></pre>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Tags are terminal-primary.</strong> RStudio’s Git pane does not expose tag creation or tag push. VS Code has <code>Git: Create Tag</code> in the Command Palette but most users stay in the terminal, where the commands are short and composable. The instructions below use the terminal; RStudio users can open the Terminal tab (<strong>Tools → Terminal → New Terminal</strong>), VS Code users can open the integrated terminal (<code>Ctrl+`</code>).</p>
+</div>
+</div>
+</div>
 <section id="create-a-tag" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-tag">Create a tag</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> v0.1-first-submission <span class="at">-m</span> <span class="st">"Code for initial JPE submission"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> v0.1-first-submission <span class="at">-m</span> <span class="st">"Code for initial JPE submission"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>-a</code> flag creates an <strong>annotated</strong> tag (recommended for research; stores the author, date, and message). Without <code>-a</code>, Git creates a lightweight tag that is just a pointer.</p>
 </section>
 <section id="push-tags-to-github" class="level3">
 <h3 class="anchored" data-anchor-id="push-tags-to-github">Push tags to GitHub</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--tags</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Tags are not pushed automatically. You push them explicitly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--tags</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or push a single tag:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin v0.1-first-submission</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="check-out-a-tag-later" class="level3">
 <h3 class="anchored" data-anchor-id="check-out-a-tag-later">Check out a tag later</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This puts you in “detached HEAD” state. You can look around and run code, but any new commits won’t belong to a branch. To go back:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This puts you in <strong>detached HEAD</strong> state. You can look around and run code, but any new commits will not belong to a branch. To return to normal work:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="github-releases" class="level3">
 <h3 class="anchored" data-anchor-id="github-releases">GitHub Releases</h3>
-<p>On GitHub, tags appear under the <strong>Releases</strong> tab. You can attach files (data documentation, README) to a release, making it a self-contained replication package.</p>
+<p>On GitHub, every tag appears under the <strong>Releases</strong> tab. You can turn a tag into a proper <strong>Release</strong> and attach files (a PDF of the paper, data documentation, a README) to it, producing a self-contained download that anyone can grab in one click.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -745,10 +1631,35 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Many journals now require replication packages. A tagged GitHub release with a README is a clean, standard way to comply.</p>
+<p>Many journals now require replication packages. A tagged GitHub Release with a README is a clean, standard way to comply when the code and data are small enough to live together in the repository. See <a href="#when-the-data-is-too-large-or-restricted">When the Data Is Too Large or Restricted</a> below for what to do when the data exceeds GitHub’s limits.</p>
 </div>
 </div>
 </section>
+</section>
+<section id="when-the-data-is-too-large-or-restricted" class="level2">
+<h2 class="anchored" data-anchor-id="when-the-data-is-too-large-or-restricted">When the Data Is Too Large or Restricted</h2>
+<p>GitHub is not a data archive. Files over 100 MB trigger warnings; files over 2 GB are rejected. Many applied-economics replication packages exceed these limits, and some datasets cannot be shared publicly at all. The standard solution is to <strong>keep the code on GitHub and the data in a dedicated archive that mints a DOI (Digital Object Identifier)</strong>, then link the two in your replication documentation.</p>
+<p><strong>Where to put the data.</strong></p>
+<ul>
+<li><strong>openICPSR / AEA Data and Code Repository</strong> (<a href="https://www.openicpsr.org/openicpsr/aea">openicpsr.org/openicpsr/aea</a>): the official archive for AEA journals. If you publish in the <em>AER</em> or an AEJ, this is where your replication package must live.</li>
+<li><strong>Zenodo</strong> (<a href="https://zenodo.org">zenodo.org</a>): free, CERN-operated, accepts files up to 50 GB, issues DOIs. Integrates with GitHub so a Release can be archived in one click.</li>
+<li><strong>Harvard Dataverse</strong> (<a href="https://dataverse.harvard.edu">dataverse.harvard.edu</a>): widely used in social sciences, free, issues DOIs.</li>
+<li><strong>ICPSR</strong> (<a href="https://www.icpsr.umich.edu">icpsr.umich.edu</a>): long-established social-science archive, often required by journals and funders.</li>
+</ul>
+<p><strong>If the data cannot be shared.</strong> Confidential administrative records, licensed commercial data, and some Census microdata cannot be posted publicly. Journal policies accept a <strong>data availability statement</strong> that describes the data, its source, the access restrictions, and how an authorized researcher can obtain it. You still post the <strong>code</strong> so that anyone with equivalent access can reproduce your analysis.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Avoid Git LFS (Large File Storage) for replication archives.</strong> GitHub’s large-file extension is metered, costs money past a small quota, and the files disappear if the repository owner stops paying. They are also difficult to cite. Use a dedicated archive instead.</p>
+</div>
+</div>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
