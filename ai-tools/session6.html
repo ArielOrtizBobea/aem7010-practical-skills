@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Session 6: AI Foundations – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Practical Skills: Git, GitHub &amp; AI&lt;/span&gt;</title>
+<title>Session 6: AI Tools I – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Practical Skills: Git, GitHub &amp; AI&lt;/span&gt;</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session6.html">Session 6: AI Foundations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session6.html">Session 6: AI Tools I (chat)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -121,12 +156,52 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Version Control</span></a>
+ <span class="menu-text">Introduction</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro/session1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Trends in Economic Research</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reproducibility</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reproducibility/session2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 2: Reproducibility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reproducibility/session3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: Reproducibility, continued</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Version Control</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../version-control/session4.html" class="sidebar-item-text sidebar-link">
@@ -377,23 +452,173 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">AI Tools</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ai-tools/session6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Session 6: AI Foundations</span></a>
+ <span class="menu-text">Session 6: AI Tools I (chat)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#where-we-are-in-the-course" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where we are in the course</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#a-mental-model-of-llms" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A mental model of LLMs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#chat-as-a-category" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chat as a category</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#mode-a-vs-mode-b" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Mode A vs Mode B</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#live-demo" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Live demo: chat fails</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#hands-on-exercise" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise: scrape with chat</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#gallery" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Gallery</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#debrief" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Debrief</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session6.html#for-wednesday" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For Wednesday</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ai-tools/session7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Session 7: AI in Research Practice</span></a>
+ <span class="menu-text">Session 7: AI Tools II (Cowork)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#where-we-are" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where we are</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#recap-and-safety" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recap and safety brief</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#cowork-as-a-category" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cowork as a category</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#guided-scrape" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guided scrape: Dyson placements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#prompt-handout" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Prompt handout</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#hands-on-exercise" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Hands-on exercise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#verification-checklist" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">— Verification checklist</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#stress-test" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stress test: add a field</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#debrief" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Debrief</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#for-monday" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For Monday</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 8: AI Tools III (Claude Code)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#claude-code-intro" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Code intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#scaffold" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scaffolding the scraper</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#classification" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classification: rules + LLM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#analysis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analysis and write-up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#synthesis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthesis and course wrap</span></a>
   </div>
 </li>
       </ul>
@@ -407,10 +632,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session6.html">Session 6: AI Foundations</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session6.html">Session 6: AI Tools I (chat)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Session 6: AI Foundations</h1>
-<p class="subtitle lead">How LLMs and AI coding assistants work, and how to use them in research</p>
+<h1 class="title">Session 6: AI Tools I</h1>
+<p class="subtitle lead">How LLMs work, and the limits of chat</p>
 </div>
 
 
@@ -427,64 +652,473 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Slides for this session:</strong> <a href="../ai-tools/slides/session6.html">View the slide deck</a> (opens in your browser; press <code>F</code> for fullscreen). The slides are a lean anchor to the concepts below. The walkthrough on this page is the substantive material and the reference you will come back to.</p>
+</div>
+</div>
+</div>
+<section id="where-we-are-in-the-course" class="level2">
+<h2 class="anchored" data-anchor-id="where-we-are-in-the-course">Where we are in the course</h2>
+<p>Sessions 6, 7, and 8 cover AI tools for applied economics research. They are sequenced on purpose.</p>
+<p>Session 6 (today) is about <strong>chat</strong>: the interface you already know from Claude.ai, ChatGPT, and Gemini. We build a mental model of how large language models work, so you can predict where they will help and where they will fail. The hands-on exercise uses chat to write an R script. The lesson is not “chat is bad.” It is “chat is a constrained tool, and those constraints shape how you can use it responsibly.”</p>
+<p>Session 7 (Wednesday) moves up a level to <strong>agentic desktop AI</strong>: Cowork, and its growing category of peers. These tools see your files and run code on your machine. The guardrails change.</p>
+<p>Session 8 (next Monday) moves one more level to <strong>code-native agents</strong>: Claude Code running in your terminal. This is closest to how professional software teams use AI. The project structure and verification habits scale up.</p>
+<p>Three tools, three sessions, one framework. By next Monday you will be able to pick the right mode for a given research task, and explain why.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>This session is under development
+<span class="screen-reader-only">Note</span>These sessions assume Sessions 4 and 5
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Content for this session will be added before <strong>April 27, 2026</strong>. The outline below reflects the planned structure. Version control is covered in <a href="../version-control/session4.html">Sessions 4–5</a>.</p>
+<p>Every exercise in this module starts with <code>git init</code> in a clean folder and ends with a <code>git commit</code>. Without Git, you cannot safely let an AI touch your working directory. If you skipped the version-control sessions, review <a href="../version-control/session4.html">Session 4</a> before running the hands-on exercise.</p>
 </div>
 </div>
-<section id="planned-content" class="level2">
-<h2 class="anchored" data-anchor-id="planned-content">Planned content</h2>
-<section id="the-ai-landscape-for-researchers" class="level3">
-<h3 class="anchored" data-anchor-id="the-ai-landscape-for-researchers">The AI landscape for researchers (~15 min)</h3>
+</section>
+<section id="a-mental-model-of-llms" class="level2">
+<h2 class="anchored" data-anchor-id="a-mental-model-of-llms">A mental model of LLMs</h2>
+<p>You will use large language models for the rest of your research life. The single most important thing you can carry away from today is a sturdy, non-mystical picture of what they are doing. You do not need the math. You need four facts.</p>
+<section id="fact-1-they-predict-the-next-token" class="level3">
+<h3 class="anchored" data-anchor-id="fact-1-they-predict-the-next-token">Fact 1: They predict the next token</h3>
+<p>Your phone predicts the next word as you type. A large language model does the same thing, at scale: given a sequence of tokens, it predicts the next token. A <strong>token</strong> is a chunk of text, often a word, sometimes a fragment. The word <em>understanding</em> is typically three tokens. The word <em>the</em> is one token. Numbers and rare words split into more pieces.</p>
+<p>The model takes everything in the conversation so far, turns it into tokens, and outputs a probability distribution over the next token. It samples one, appends it, and repeats. That is the entire architecture at the level of behavior. Text in, next token out, loop until a stop condition.</p>
+<p>This sounds small. It is small. The magic comes from training on very large volumes of text, which teaches the model patterns that look remarkably like reasoning. But it is still pattern-completion at heart.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why this matters for research
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A tool that predicts plausible continuations is useful for drafting prose, explaining concepts, and writing code in common patterns. It is risky when the “plausible continuation” is a numeric result, a citation, or a statistical claim. Plausible is not the same as correct. The researcher’s job is to tell the difference.</p>
+</div>
+</div>
+</section>
+<section id="fact-2-they-generate-they-do-not-retrieve" class="level3">
+<h3 class="anchored" data-anchor-id="fact-2-they-generate-they-do-not-retrieve">Fact 2: They generate, they do not retrieve</h3>
+<p>A chat interface is not a database. When you ask it to recall the author of a paper, it does not look the citation up. It generates a string that <em>looks</em> like a citation, token by token. Much of the time the generated string matches a real reference because the reference appeared in training. Sometimes it does not, and you get a fabricated author, title, or DOI that is internally consistent but refers to nothing.</p>
+<p>The clearest public example is <em>Mata v. Avianca</em> (2023): two New York attorneys filed a legal brief with six invented case citations that ChatGPT had generated. The cases looked plausible. They did not exist. The court sanctioned the attorneys.</p>
+<p>Economics has its own version of this. Ask any current chat model to summarize the literature on a narrow topic. You will get a paragraph with citations. Paste each citation into Google Scholar. A nontrivial fraction will not return a hit, or will return a paper by different authors. This is not a bug. It is the architecture working as designed.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Rule of thumb for citations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If an AI tool gives you a citation, verify it before using it. Paste the title into Scholar. Check the DOI. Read the paper. “The AI said this paper exists” is not a sufficient reason to cite it.</p>
+</div>
+</div>
+</section>
+<section id="fact-3-they-are-non-deterministic" class="level3">
+<h3 class="anchored" data-anchor-id="fact-3-they-are-non-deterministic">Fact 3: They are non-deterministic</h3>
+<p>The model outputs a probability distribution over possible next tokens. A sampling step picks one. <strong>Temperature</strong> is a knob that scales that distribution before sampling. At temperature 0, the model picks the single most likely token every time. As temperature rises, the distribution flattens, lower-probability tokens get a real chance, and outputs become more varied. Past 1.5 or so, they tend to become incoherent. A value near 1 is a typical default.</p>
+<p>Whether you can set temperature depends on the product, not on the underlying model.</p>
 <ul>
-<li><strong>Chat interfaces:</strong> Claude, ChatGPT, Gemini. Who makes what.</li>
-<li><strong>Coding assistants:</strong> Claude Code (Anthropic), GitHub Copilot (GitHub / Microsoft; uses multiple backend models), Cursor (Anysphere; an IDE that wraps Claude, GPT, Gemini), Codex (OpenAI).</li>
-<li><strong>Models vs.&nbsp;products.</strong> Some of these are models; others are products that route to models. The practical implication is that when you document AI use for replication, you record both.</li>
-<li><strong>How LLMs work at a high level.</strong> Tokens, context windows, model families, the gap between training data and current reality.</li>
+<li><strong>Chat web apps</strong> (<code>chatgpt.com</code>, Claude.ai, Gemini in the browser): locked by the product at a value near 1. Not user-adjustable.</li>
+<li><strong>APIs, playgrounds, and consoles</strong> (OpenAI, Anthropic Workbench, Google AI Studio): temperature is a parameter or slider. Anthropic accepts 0 to 1; OpenAI accepts 0 to 2.</li>
+<li><strong>Coding agents and Custom GPTs</strong>: pre-set internally, typically low. Sometimes configurable at build time; usually not surfaced in the UI.</li>
+</ul>
+<p>Even at temperature 0, the serving infrastructure does not guarantee bit-for-bit identical output across calls. In chat products, determinism is neither the default nor something the user can choose.</p>
+<p>The practical consequence: two students who type the same prompt into the same tool at the same time can get different answers. Sometimes the difference is just wording. Sometimes the difference is a different R function, a different selector, a different numerical claim. We will see this live in class.</p>
+<p>This is why <strong>a chat transcript is not a replication artifact</strong>. You cannot cite “this was the answer the model gave me” as a stable reference. The output from a chat session is a moment in time that cannot be reproduced, even by you, even five minutes later.</p>
+</section>
+<section id="fact-4-the-context-window-is-finite" class="level3">
+<h3 class="anchored" data-anchor-id="fact-4-the-context-window-is-finite">Fact 4: The context window is finite</h3>
+<p>Everything the model can “see” in a conversation lives in its <strong>context window</strong>: your prompts, its replies, any files you pasted in, any system instructions. The window has a hard size limit. When you fill it, the oldest content starts falling out silently. The model does not announce this. It just starts behaving as if the beginning of the conversation never happened.</p>
+<p>Long conversations with chat models degrade for this reason. You set up careful framing early, work on several subproblems, and then by the thirtieth message the model “forgets” the constraints you established at the start. If you have felt this and assumed the tool got worse, the tool did not get worse: it lost context.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Three implications for research
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Probabilistic outputs require verification.</strong> Always. You verify code by running it; you verify prose by reading it carefully; you verify citations by checking them.</li>
+<li><strong>Context is fragile.</strong> Know what the model can actually see. If a long conversation matters, summarize state into a single message and start a new conversation with that summary.</li>
+<li><strong>What you cannot verify, you cannot cite.</strong> This is the strictest rule of the module. We will come back to it in every session.</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+<section id="chat-as-a-category" class="level2">
+<h2 class="anchored" data-anchor-id="chat-as-a-category">Chat as a category</h2>
+<p>The brand names are ChatGPT, Claude.ai, Gemini, and Copilot Chat today. They will rotate. The <strong>category</strong>, a turn-based conversation with a large language model, will persist. The reasoning in this section applies to whichever interface is current when you graduate.</p>
+<section id="the-copy-paste-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="the-copy-paste-workflow">The copy-paste workflow</h3>
+<p>Chat is the lowest-integration AI tool. You manually bring context into the conversation by pasting it, and you manually take results out by copying them. The friction is the point. You are the bridge between the chat window and your codebase. Nothing moves without you.</p>
+<p>That friction has a side effect that turns out to be useful: chat cannot secretly do something to your files, because it has no access to them. Every change you make is one you chose to paste back into your editor. The audit trail is your commit history.</p>
+</section>
+<section id="what-chat-is-good-at" class="level3">
+<h3 class="anchored" data-anchor-id="what-chat-is-good-at">What chat is good at</h3>
+<p>Chat is strong in four areas.</p>
+<ul>
+<li><strong>Drafting prose and pseudocode.</strong> A first paragraph, a paragraph that summarizes a section, a skeleton for a methods paragraph. You refine it.</li>
+<li><strong>Explaining concepts at your level.</strong> Ask for an intuition behind clustered standard errors aimed at a first-year PhD student. The explanation will be a useful starting point, though you still check it against a textbook.</li>
+<li><strong>Translating code between languages.</strong> R to Python, Python to Stata, Stata to R. The translation is usually almost right and needs careful inspection.</li>
+<li><strong>Explaining error messages.</strong> Paste the error, ask what it means, get a plain-English diagnosis and suggested fix. Verify by trying the fix.</li>
 </ul>
 </section>
-<section id="ai-for-coding-live-demo" class="level3">
-<h3 class="anchored" data-anchor-id="ai-for-coding-live-demo">AI for coding: live demo (~25 min)</h3>
+<section id="what-chat-is-bad-at" class="level3">
+<h3 class="anchored" data-anchor-id="what-chat-is-bad-at">What chat is bad at</h3>
+<p>Chat has four hard limitations.</p>
 <ul>
-<li>Write R code for a realistic data task with an LLM.</li>
-<li>The workflow: prompt, review, iterate, verify.</li>
-<li>Common failure modes: hallucinated functions, wrong package syntax, subtle statistical errors.</li>
-<li>How version control (Session 4–5) is the safety net: every AI change is a commit you can review and revert.</li>
+<li><strong>It cannot run code.</strong> The R script you just got might look correct and fail immediately. You do not know until you run it in your own environment.</li>
+<li><strong>It cannot see your files.</strong> Unless you paste them in. The model’s idea of your data is whatever you described in text, and descriptions lie.</li>
+<li><strong>It does not remember across sessions.</strong> Close the tab, come back tomorrow, and you are starting from zero.</li>
+<li><strong>It does not know what it does not know.</strong> The model will give you confident code for a package version that does not exist. The tone of certainty is the same whether the content is right or invented.</li>
 </ul>
 </section>
-<section id="best-practices" class="level3">
-<h3 class="anchored" data-anchor-id="best-practices">Best practices for AI-assisted research code (~15 min)</h3>
+<section id="mode-a-vs-mode-b" class="level3">
+<h3 class="anchored" data-anchor-id="mode-a-vs-mode-b">Mode A vs Mode B</h3>
+<p>This is the single most important distinction in the module. Write it down.</p>
+<p><strong>Mode A: AI as runtime.</strong> You ask the AI to <em>do</em> the thing. “Scrape this page and give me a table.” “Summarize this dataset.” “Classify these placements as academic or non-academic.” The output is data. The reasoning lives inside the model, hidden.</p>
+<p><strong>Mode B: AI as code author.</strong> You ask the AI to <em>write code that does the thing</em>. “Write an R script that scrapes this page and saves a CSV.” “Write an R script that produces summary statistics.” “Write an R script that classifies these placements, with commented keyword rules.” The output is code. The reasoning lives in the script, visible.</p>
+<p>Mode A is faster in the moment. It is almost always wrong for research. Mode B is the reproducible path.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The reproducible research artifact is always code
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A chat transcript is not a replication package. A session log is not a method. An R script that your co-author or referee can run end-to-end is. When an AI produces results for you, your question is always: <em>what is the code that generated this?</em> If the code does not exist, the result does not belong in a paper.</p>
+</div>
+</div>
+<p>Chat happens to force Mode B. It cannot run anything, so whatever it produces as code is something you have to paste into RStudio and run yourself. The AI tools in Session 7 and 8 <em>can</em> run code. We will still insist on Mode B. The artifact is still the script, not the session.</p>
+</section>
+<section id="why-mode-b-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-mode-b-matters">Why Mode B matters</h3>
+<p>Five reasons.</p>
+<p>First, <strong>reproducibility.</strong> Another researcher, including your future self, can rerun an R script. They cannot rerun a chat session.</p>
+<p>Second, <strong>auditability.</strong> A reviewer can read your script and understand what you did. They cannot audit an LLM’s internal reasoning, because there is no such thing to audit.</p>
+<p>Third, <strong>debuggability.</strong> When the result looks wrong, you can read the code line by line. In Mode A, there is nothing to read.</p>
+<p>Fourth, <strong>toolchain independence.</strong> If you switch from Claude to ChatGPT, your R script still works. In Mode A, your result was produced by a specific model at a specific time, and cannot be regenerated.</p>
+<p>Fifth, <strong>the Git workflow.</strong> Code fits into Git commits. Chat logs do not. Every Mode B interaction becomes a diff you can accept, reject, or revert. This is the point where Session 4-5 and Session 6-7-8 connect.</p>
+</section>
+</section>
+<section id="live-demo" class="level2">
+<h2 class="anchored" data-anchor-id="live-demo">Live demo: chat writes a scraper, chat fails</h2>
+<p>We now do, on the projector, exactly the task you will do on your own laptop. The task is deliberately small and the failure modes are instructive.</p>
+<section id="the-task" class="level3">
+<h3 class="anchored" data-anchor-id="the-task">The task</h3>
+<p>Scrape the Cornell Dyson Applied Economics and Management PhD placement page into a tibble with columns <code>name</code>, <code>year</code>, and <code>placement</code>. This is the simplest version of the exercise that will carry through Sessions 7 and 8.</p>
+<p>The page we target is <a href="https://dyson.cornell.edu/programs/graduate/placements/">Career Outcomes: MPS, MS, &amp; PhD in Applied Economics</a> at <code>https://dyson.cornell.edu/programs/graduate/placements/</code>. Open it in a browser now. Scroll through. Notice that placements are grouped by year, and each entry contains a name and a destination. The job-market candidates for the current cycle live at a separate page, <a href="https://dyson.cornell.edu/programs/graduate/phd-job-market/">PhD Job Market Candidates</a>, which we ignore for this exercise.</p>
+</section>
+<section id="the-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="the-prompt">The prompt</h3>
+<p>A student prompt, typed live:</p>
+<blockquote class="blockquote">
+<p>“Write an R script that scrapes the Cornell Dyson PhD placement page at <code>https://dyson.cornell.edu/programs/graduate/placements/</code> and returns a tibble with columns <code>name</code>, <code>year</code>, and <code>placement</code>. Use <code>rvest</code>. Save the result to <code>data/placements_dyson.csv</code>.”</p>
+</blockquote>
+<p>Simple, direct, under-specified. This is representative of how researchers actually prompt when they are trying to get unstuck.</p>
+</section>
+<section id="what-the-model-returns" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-model-returns">What the model returns</h3>
+<p>The model returns an R script. Read it on the projector before running it. A typical first-draft response:</p>
 <ul>
-<li>Verify every output before committing.</li>
-<li>Use AI as a first draft, not a final answer.</li>
-<li>Prompt engineering basics: be specific, provide context, ask for explanations.</li>
-<li>Treat AI suggestions with the same skepticism you would apply to a well-meaning but unfamiliar RA.</li>
+<li>Loads <code>rvest</code> and <code>dplyr</code>.</li>
+<li>Reads the HTML with <code>read_html()</code>.</li>
+<li>Extracts nodes with a CSS selector the model <em>guessed</em> from the URL (it did not load the page).</li>
+<li>Parses the results into a tibble.</li>
+<li>Writes a CSV.</li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>We do not show a fixed version of the script here. The demo is live precisely because the output varies. Two points we always make on the board, regardless of what the model produces:</p>
+<ol type="1">
+<li>The model did not load the page. Its selector is a guess from prior web structures, not from the actual HTML.</li>
+<li>The model will present the code with confidence. That confidence is not evidence of correctness.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="three-likely-failure-modes" class="level3">
+<h3 class="anchored" data-anchor-id="three-likely-failure-modes">Three likely failure modes</h3>
+<p>Any of the following will surface; we use whichever one comes up first.</p>
+<p><strong>Wrong selector.</strong> The CSS selector returns nodes, but not the nodes we want. The row count may match by accident, but the content is off by one category or one section. This is the worst failure because it is silent: the script runs without error and produces a CSV. Only a row-by-row check against the live page catches it.</p>
+<p><strong>Hallucinated function argument.</strong> The model uses <code>html_nodes()</code> with an argument name that was deprecated in <code>rvest</code> 1.0.0. The call errors out. You read the error, discover the API changed, and either upgrade your mental model or paste the error back to the model. This is the easy kind of failure because R tells you something is wrong.</p>
+<p><strong>Fabricated citation in the preamble.</strong> The model’s opening prose refers to a paper or blog post that does not exist. If you do not test this, you do not notice. If you do (paste the title into Scholar), you learn not to trust the preamble any more than the code.</p>
+</section>
+<section id="the-verification-reflex" class="level3">
+<h3 class="anchored" data-anchor-id="the-verification-reflex">The verification reflex</h3>
+<p>Every time you run AI-generated code, you apply the same five checks. We call this the <strong>verification reflex</strong>. It will recur in every session of this module.</p>
+<ol type="1">
+<li><strong>Does the script run end-to-end without errors?</strong> Run it. Do not paper over errors with silent fixes unless you understand them.</li>
+<li><strong>Does the row count match the live page?</strong> Open the browser, count visible entries in the section you scraped. Compare.</li>
+<li><strong>Can you explain every line of the script?</strong> Not “I trust the model.” You should be able to say what each line does and why.</li>
+<li><strong>Is the <code>.R</code> file committed to your repo?</strong> If not, it is not a research artifact.</li>
+<li><strong>Is the output data file either committed or explicitly gitignored?</strong> No ambiguity.</li>
+</ol>
+<p>If any of these fails, do not commit until it passes. Build this habit now. It compounds across your research life.</p>
+</section>
+</section>
+<section id="hands-on-exercise" class="level2 exercise">
+<h2 class="exercise anchored" data-anchor-id="hands-on-exercise">Hands-on exercise: scrape with chat</h2>
+<p><strong>Time: ~20 minutes. Work in a new folder inside your course repo.</strong></p>
+<p>You are going to do the same <em>kind</em> of task the instructor demonstrated, but on a <strong>different department’s placement page</strong>. We reserve the Cornell Dyson page for Wednesday’s Cowork exercise so it stays fresh. Spreading the class across different pages also makes the Gallery more interesting: each HTML structure breaks in its own way.</p>
+<p>The point is not to produce a perfect scraper. The point is to run the verification reflex and feel, first-hand, where chat is helpful and where it is not.</p>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
+<p>Prepare a clean working directory inside your course Git repo.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github/my-research</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> session6/data</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> session6</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Work inside your own research repo from Sessions 4-5 (<code>~/github/my-research</code> if you followed the Session 4 naming; substitute your actual folder name otherwise). On Wednesday we will spin up a separate repo for the agentic tools. <code>git status</code> should show <code>session6/</code> as an untracked directory. You will commit after you have something worth committing.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Open your course repo as an RStudio Project. In the <strong>Files</strong> pane, create a new folder named <code>session6</code>, then a subfolder <code>data/</code> inside it. Work inside <code>session6/</code> for the rest of the exercise.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Open your course repo folder in VS Code. In the Explorer sidebar, create a new folder <code>session6</code>, and a subfolder <code>data</code> inside it. Work inside <code>session6/</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pick-a-department" class="level3">
+<h3 class="anchored" data-anchor-id="pick-a-department">Pick a department</h3>
+<p>Claim one department from the list below. Try to spread evenly across the room: if three people near you are already doing Berkeley, pick something else. All seven pages are applied-economics PhD programs with a public placement record.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Department</th>
+<th>Page</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>UC Berkeley ARE</td>
+<td><a href="https://are.berkeley.edu/job-candidates/past-placements" class="uri">https://are.berkeley.edu/job-candidates/past-placements</a></td>
+</tr>
+<tr class="even">
+<td>UC Davis ARE</td>
+<td><a href="https://are.ucdavis.edu/phd/past-placements/" class="uri">https://are.ucdavis.edu/phd/past-placements/</a></td>
+</tr>
+<tr class="odd">
+<td>Minnesota Applied Economics</td>
+<td><a href="https://apec.umn.edu/graduate/placement-recent-graduates" class="uri">https://apec.umn.edu/graduate/placement-recent-graduates</a></td>
+</tr>
+<tr class="even">
+<td>Wisconsin AAE</td>
+<td><a href="https://aae.wisc.edu/grad/placement/" class="uri">https://aae.wisc.edu/grad/placement/</a></td>
+</tr>
+<tr class="odd">
+<td>Maryland AREC</td>
+<td><a href="https://www.arec.umd.edu/graduate/recent-placements" class="uri">https://www.arec.umd.edu/graduate/recent-placements</a></td>
+</tr>
+<tr class="even">
+<td>Michigan State AFRE</td>
+<td><a href="https://www.canr.msu.edu/afre/graduate/recent_placements" class="uri">https://www.canr.msu.edu/afre/graduate/recent_placements</a></td>
+</tr>
+<tr class="odd">
+<td>Purdue Ag Econ</td>
+<td><a href="https://ag.purdue.edu/department/agecon/graduate_program/career_placement.html" class="uri">https://ag.purdue.edu/department/agecon/graduate_program/career_placement.html</a></td>
+</tr>
+</tbody>
+</table>
+<p>Before you prompt the model, open the page in your browser. Scroll through. Identify how the placements are structured (a table? a repeating block with a header year and a list of names? a drop-down by year?). You will need to recognize success or failure when the script runs.</p>
+</section>
+<section id="the-task-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-task-1">The task</h3>
+<p>Write <code>session6/scrape_&lt;dept&gt;_chat.R</code> that produces <code>session6/data/placements_&lt;dept&gt;.csv</code> with columns <code>name</code>, <code>year</code>, and <code>placement</code>. Use a short department tag in the filename: <code>berkeley</code>, <code>davis</code>, <code>minnesota</code>, <code>wisconsin</code>, <code>maryland</code>, <code>msu</code>, <code>purdue</code>.</p>
+</section>
+<section id="the-rules" class="level3">
+<h3 class="anchored" data-anchor-id="the-rules">The rules</h3>
+<p>These rules are what make this a Mode B exercise rather than a Mode A one.</p>
+<ol type="1">
+<li>The final artifact is an R script, not pasted data. Even if your chat session renders a table, the research output is the <code>.R</code> file.</li>
+<li>You must be able to explain every line of the script. If you cannot, rewrite that line or ask the model to explain it until you can.</li>
+<li>Commit the script before you leave class, even if it does not work. A failed attempt committed with a note in the README is more useful than no record of having tried.</li>
+<li>Apply the verification reflex (above). Document what passed and what failed in the commit message or in a short <code>session6/NOTES.md</code>.</li>
+</ol>
+</section>
+<section id="prompts-to-try" class="level3">
+<h3 class="anchored" data-anchor-id="prompts-to-try">Prompts to try</h3>
+<p>Start with a short prompt. If it fails, iterate. Try all three styles if time permits.</p>
+<ul>
+<li><strong>Basic:</strong> “Write an R script that scrapes <code>&lt;URL&gt;</code> and saves a CSV with columns <code>name</code>, <code>year</code>, <code>placement</code>.”</li>
+<li><strong>With page structure hints:</strong> paste in a snippet of the page HTML (view source in your browser and copy 20-30 relevant lines) and ask the model to target that structure.</li>
+<li><strong>With explicit Mode B framing:</strong> “Write an R script. Do not paste the scraped data into this conversation. The R script is the artifact. Use <code>rvest</code>. Comment every section.”</li>
+</ul>
+<p>Note which prompt produced better code. The comparison is the lesson.</p>
+</section>
+<section id="commit-your-work" class="level3">
+<h3 class="anchored" data-anchor-id="commit-your-work">Commit your work</h3>
+<p>When your script works (or when you decide you have spent enough time on it), commit it. Replace <code>&lt;dept&gt;</code> below with your tag.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Terminal</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">VS Code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add session6/scrape_<span class="op">&lt;</span>dept<span class="op">&gt;</span>_chat.R</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Decide what to do with the CSV:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   commit it (transparent, small)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   or gitignore it (if it is large or sensitive)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># For this exercise, commit it.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add session6/data/placements_<span class="op">&lt;</span>dept<span class="op">&gt;</span>.csv</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Session 6: chat-drafted scraper for &lt;dept&gt; placements"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Git pane (top-right) → check the boxes next to your <code>scrape_&lt;dept&gt;_chat.R</code> and the matching CSV → click <strong>Commit</strong> → message “Session 6: chat-drafted scraper for <dept> placements” → <strong>Commit</strong>.</dept></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Source Control panel → stage both files with the <code>+</code> icon → type the same message → press <code>Cmd+Enter</code> (Mac) or <code>Ctrl+Enter</code> (Windows).</p>
+</div>
+</div>
+</div>
+<p>If your script did not work, still commit it with a message that says so:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add session6/scrape_<span class="op">&lt;</span>dept<span class="op">&gt;</span>_chat.R session6/NOTES.md</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Session 6: chat-drafted scraper; script errors, see NOTES.md"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A committed failure is research evidence. A lost failure is not.</p>
+</section>
+</section>
+<section id="gallery" class="level2">
+<h2 class="anchored" data-anchor-id="gallery">Gallery (~5 min in class)</h2>
+<p>Two or three volunteers project their script and talk through what worked and what failed. Focus on:</p>
+<ul>
+<li>Which prompt style did they use?</li>
+<li>What did the verification reflex catch?</li>
+<li>If they tried two chat tools, how did the output differ?</li>
+</ul>
+<p>The point is not to compare tools by their rendering or by subjective feel, but by how each pushed or failed to push the student toward Mode B.</p>
+</section>
+<section id="debrief" class="level2">
+<h2 class="anchored" data-anchor-id="debrief">Debrief and bridge to Session 7</h2>
+<section id="what-we-learned" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-learned">What we learned</h3>
+<p>Chat is a probabilistic pattern-completer with a copy-paste interface. It is useful for drafting, explaining, and translating. It is unreliable for citations, for numerical claims, and for anything that depends on seeing your actual data. It forces Mode B as a byproduct of its limitations, and that is a feature you should preserve in the more powerful tools we look at next.</p>
+<p>The verification reflex is not a chat-specific habit. It is the AI-research habit. We will repeat it in Sessions 7 and 8 until it is automatic.</p>
+</section>
+<section id="the-ceiling-of-chat" class="level3">
+<h3 class="anchored" data-anchor-id="the-ceiling-of-chat">The ceiling of chat</h3>
+<p>What you hit today was the ceiling of a tool that cannot see your files or run your code. You worked around it by pasting in HTML snippets and copying scripts back and forth. That workflow has a cost in time and a cost in errors (you forgot to paste the new column, the model lost context after the tenth exchange).</p>
+<p>The next two sessions lift that ceiling.</p>
+<ul>
+<li><strong>Session 7 (Wednesday):</strong> Cowork. Same model, same chat interface, but it can see the files in a folder you designate and run code on your machine. We all target the Cornell Dyson page together, which becomes a 10-minute task. New risks appear.</li>
+<li><strong>Session 8 (next Monday):</strong> Claude Code. A terminal-native agent that is tightly coupled to Git and to multi-file projects. We scale the scraping exercise to five departments and add a classification step.</li>
 </ul>
 </section>
-<section id="hands-on-exercise" class="level3">
-<h3 class="anchored" data-anchor-id="hands-on-exercise">Hands-on exercise (~15 min)</h3>
-<ul>
-<li>Students use an LLM to write an R script for a simple task.</li>
-<li>Compare outputs across tools.</li>
-<li>Commit the result to their Git repo.</li>
-</ul>
+<section id="the-three-modes-table" class="level3">
+<h3 class="anchored" data-anchor-id="the-three-modes-table">The three-modes table</h3>
+<p>Keep this in your head for the next two sessions.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Example tool</th>
+<th>Context</th>
+<th>Action</th>
+<th>Best at</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Chat</strong></td>
+<td>Claude.ai, ChatGPT</td>
+<td>Manual paste</td>
+<td>Text only</td>
+<td>First drafts, explanations</td>
+</tr>
+<tr class="even">
+<td><strong>Agentic desktop</strong></td>
+<td>Cowork</td>
+<td>Auto from folder</td>
+<td>File + code</td>
+<td>Exploratory work with files</td>
+</tr>
+<tr class="odd">
+<td><strong>Code-native agent</strong></td>
+<td>Claude Code</td>
+<td>Auto from repo</td>
+<td>Files + code + git</td>
+<td>Project-level work</td>
+</tr>
+</tbody>
+</table>
+<p>Today you used mode 1. Wednesday you use mode 2. Next Monday you use mode 3. Each step trades some friction for some risk, and the discipline that keeps you safe is the same across all three: Mode B, commit before, commit after, verify everything.</p>
 </section>
-<section id="wrap-up" class="level3">
-<h3 class="anchored" data-anchor-id="wrap-up">Wrap-up (~5 min)</h3>
-<ul>
-<li>Preview of Session 7: journal disclosure policies and ethical scenarios.</li>
-</ul>
+</section>
+<section id="for-wednesday" class="level2">
+<h2 class="anchored" data-anchor-id="for-wednesday">For Wednesday (Session 7)</h2>
+<ol type="1">
+<li><p><strong>Install Cowork</strong> if you do not already have it. Cowork is currently a feature of the Claude desktop app, in research preview. Download the desktop app, sign in, and enable Cowork mode. If you hit install issues we will troubleshoot in the first ten minutes of class.</p></li>
+<li><p><strong>Create a dedicated repo for the AI module.</strong> The Cowork and Claude Code exercises go into a separate repo, <code>aem7010-ai</code>, kept apart from your <code>my-research</code> repo so the agent’s file access stays narrow. Do this before class; it takes about five minutes and saves class time.</p>
+<p><strong>On GitHub.</strong> Go to <a href="https://github.com/new" class="uri">https://github.com/new</a>. Name: <code>aem7010-ai</code>. Public. Leave “Add a README”, “Add .gitignore”, and “Choose a license” unchecked. Click <strong>Create repository</strong>. Copy the SSH URL from the quick-setup block.</p>
+<p><strong>On your laptop.</strong></p>
+<p>::: {.panel-tabset}</p>
+<p>## Terminal</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/github</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> aem7010-ai <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> aem7010-ai</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="at">-b</span> main</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# AEM 7010 AI module"</span> <span class="op">&gt;</span> README.md</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">".Rhistory\n.RData\n.Ruserdata\n.Rproj.user/\n.DS_Store\n"</span> <span class="op">&gt;</span> .gitignore</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add README.md .gitignore</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initialize AI module repo"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:YOURNAME/aem7010-ai.git</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace <code>YOURNAME</code> with your GitHub handle. If the <code>git push</code> fails because SSH is not set up on this machine, use the HTTPS URL from the same quick-setup block on GitHub (<code>https://github.com/YOURNAME/aem7010-ai.git</code>) in place of the SSH URL.</p>
+<p>## RStudio</p>
+<p><strong>File → New Project → New Directory → New Project.</strong> Name <code>aem7010-ai</code>, parent <code>~/github/</code>, tick <strong>Create a git repository</strong>. In the Files pane, create <code>README.md</code> and <code>.gitignore</code> with the content shown in the Terminal tab. Stage and commit from the Git pane. Then open <strong>Tools → Terminal → New Terminal</strong> and run the <code>git remote add</code> and <code>git push -u origin main</code> lines.</p>
+<p>## VS Code</p>
+<p>Open <code>~/github/</code> as a folder. New folder <code>aem7010-ai</code>, then open it as a workspace. In the integrated terminal, run the commands from the Terminal tab.</p>
+<p>:::</p>
+<p>Refresh the GitHub page. You should see <code>README.md</code> and <code>.gitignore</code>. If you cannot finish this before class, flag it in the first ten minutes Wednesday.</p></li>
+<li><p><strong>Bring a laptop with working R, RStudio, and Git.</strong> We confirmed the setup in Sessions 4 and 5.</p></li>
+<li><p><strong>Think about</strong> one research task in your own work that you would want an AI to do if it could see your files. Bring it to class. We will discuss these briefly in the opening block.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reading that is useful but optional
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you want a longer treatment of why LLMs hallucinate, Stephen Wolfram’s 2023 essay <a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/"><em>What Is ChatGPT Doing… and Why Does It Work?</em></a> is a readable non-technical explanation. For the academic integrity angle, the Nature and Science AI-disclosure policies (both updated 2023-2024) are short and worth reading before any paper submission.</p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
