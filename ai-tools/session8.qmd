@@ -1,0 +1,46 @@
+---
+title: "Session 8: AI Tools III"
+subtitle: "Code-native agents (Claude Code) at research scale"
+---
+
+::: {.callout-note}
+## This session is under development
+The detailed walkthrough will be added before **May 4, 2026**. The outline below mirrors the planned 75-minute structure. This session closes the running exercise started in [Session 6](session6.qmd) and continued in [Session 7](session7.qmd).
+:::
+
+## Claude Code: a code-native agent (~15 min) {#claude-code-intro}
+
+- The third mode: an agent that lives in your terminal and works directly against a project directory.
+- What changes from Cowork: the repository is the primary interface. The agent reads and writes files, runs commands, and commits through git, all inside a single working tree.
+- Why this matters for research. The reproducible artifact is the repo itself: code, `renv.lock`, commits, and a log of what the agent did.
+- Mode B is enforced by design here. The session is ephemeral. The code and the commits remain.
+- Setup check: everyone has Claude Code installed from the Session 7 homework and can reach a project folder with git initialized.
+
+## Scaffolding a multi-department scraper (~25 min) {#scaffold}
+
+- Target: five department placement pages, selected from the pre-vetted list used in Sessions 6 and 7.
+- Goal output: one tidy `placements_all.csv` with columns `department`, `name`, `year`, `placement`, `source_url`.
+- Live demo: one prompt to scaffold the project (`R/` folder, one scraper per department, a shared `combine.R`, a top-level `run_all.R`).
+- Students mirror the scaffold on their own laptops. Each commits after the scaffold is in place.
+- What to watch for: the agent inventing a department that is not in the list, silently changing the CSV schema between scrapers, dropping `source_url`.
+
+## Classification: rule-based and LLM-based (~20 min) {#classification}
+
+- The new column: `placement_type` with values `academic`, `non_academic`, `postdoc`, `unknown`.
+- First pass: a rule-based classifier in R based on keyword matching ("Assistant Professor", "Postdoctoral", "Federal Reserve", etc.). Students read the rules and can defend each one.
+- Second pass: an LLM classifier for the rows the rules leave as `unknown`. One API call per row, cached to disk.
+- Disclosure practice: the prompt, the model, and the date are recorded in the script. The cache file is committed. A reviewer can rerun and get the same numbers.
+- Verification: hand-label twenty random rows and compare.
+
+## Analysis and descriptive write-up (~10 min) {#analysis}
+
+- Simple tabulations: counts by `department` and `placement_type`; share academic by year; ten most common institutions.
+- One figure: academic share by department, with a clear caveat about sample size and page coverage.
+- One paragraph of text, written by the student, summarizing what the data show. Not written by the agent.
+
+## Synthesis and course wrap (~5 min) {#synthesis}
+
+- The three-modes table, now filled in with what each mode cost and what it delivered.
+- One rule that carries forward: keep the code, discard the session. Mode B wins because it is the only mode that survives peer review.
+- Final commit, final push, final tag. The repo is the record.
+- Course feedback and next steps for independent practice.

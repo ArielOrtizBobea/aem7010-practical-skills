@@ -4,7 +4,7 @@ project:
 
 website:
   title: "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>"
-  description: "AEM 7010: Doing Applied Economics Research. Practical Skills. Sessions 4–7."
+  description: "AEM 7010: Doing Applied Economics Research. Practical Skills. Sessions 4–8."
   sidebar:
     logo: images/cornell_seal_simple_web_b31b1b.svg
     title: "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>"
@@ -100,10 +100,50 @@ website:
             href: version-control/cheatsheet.qmd
       - section: "AI Tools"
         contents:
-          - text: "Session 6: AI Foundations"
+          - text: "Session 6: AI Tools I (chat)"
             href: ai-tools/session6.qmd
-          - text: "Session 7: AI in Research Practice"
+          - text: "Where we are in the course"
+            href: ai-tools/session6.qmd#where-we-are-in-the-course
+          - text: "A mental model of LLMs"
+            href: ai-tools/session6.qmd#a-mental-model-of-llms
+          - text: "Chat as a category"
+            href: ai-tools/session6.qmd#chat-as-a-category
+          - text: "— Mode A vs Mode B"
+            href: ai-tools/session6.qmd#mode-a-vs-mode-b
+          - text: "Live demo: chat fails"
+            href: ai-tools/session6.qmd#live-demo
+          - text: "Exercise: scrape with chat"
+            href: ai-tools/session6.qmd#hands-on-exercise
+          - text: "Gallery"
+            href: ai-tools/session6.qmd#gallery
+          - text: "Debrief"
+            href: ai-tools/session6.qmd#debrief
+          - text: "For Wednesday"
+            href: ai-tools/session6.qmd#for-wednesday
+          - text: "Session 7: AI Tools II (Cowork)"
             href: ai-tools/session7.qmd
+          - text: "Recap and safety brief"
+            href: ai-tools/session7.qmd#recap-and-safety
+          - text: "Cowork as a category"
+            href: ai-tools/session7.qmd#cowork-as-a-category
+          - text: "Guided scrape: Dyson placements"
+            href: ai-tools/session7.qmd#guided-scrape
+          - text: "Stress test: add a field"
+            href: ai-tools/session7.qmd#stress-test
+          - text: "Debrief"
+            href: ai-tools/session7.qmd#debrief
+          - text: "Session 8: AI Tools III (Claude Code)"
+            href: ai-tools/session8.qmd
+          - text: "Claude Code intro"
+            href: ai-tools/session8.qmd#claude-code-intro
+          - text: "Scaffolding the scraper"
+            href: ai-tools/session8.qmd#scaffold
+          - text: "Classification: rules + LLM"
+            href: ai-tools/session8.qmd#classification
+          - text: "Analysis and write-up"
+            href: ai-tools/session8.qmd#analysis
+          - text: "Synthesis and course wrap"
+            href: ai-tools/session8.qmd#synthesis
   page-footer:
     left: "Prof. Ariel Ortiz-Bobea — Cornell Dyson School"
     right: "Built with [Quarto](https://quarto.org)"

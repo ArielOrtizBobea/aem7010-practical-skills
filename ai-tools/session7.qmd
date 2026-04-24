@@ -1,46 +1,49 @@
 ---
-title: "Session 7: AI in Research Practice"
-subtitle: "Disclosure, replication, and ethical use of AI tools in economics research"
+title: "Session 7: AI Tools II"
+subtitle: "Agentic AI on your desktop (Cowork)"
 ---
 
 ::: {.callout-note}
 ## This session is under development
-Content for this session will be added before **April 29, 2026**. The outline below reflects the planned structure.
+The detailed walkthrough will be added before **April 29, 2026**. The outline below mirrors the planned 75-minute structure. The running exercise (scraping the Cornell Dyson PhD placement page with Cowork) picks up from [Session 6](session6.qmd) and continues into [Session 8](session8.qmd).
 :::
 
-## Planned content
+## Recap and safety brief (~10 min) {#recap-and-safety}
 
-### AI for academic writing (~15 min) {#ai-for-academic-writing}
+- Mode A vs Mode B, carried over from Session 6.
+- What changes with Cowork: it can see your files, run code on your machine, and modify files on disk.
+- Git is the safety net. Every exercise starts with a clean commit and ends with another.
+- Cowork permissions walk-through: which folder is shared, how to see what the agent has done, how to stop a session.
+- Three-minute setup check on the floor.
 
-- Using LLMs to draft, edit, and restructure prose.
-- Limitations: generic phrasing, hallucinated citations, loss of voice.
-- Demo: paste a rough paragraph, ask for revision, compare.
+## Cowork as a category {#cowork-as-a-category}
 
-### AI for literature review and discovery (~15 min) {#ai-for-literature-review}
+- What Cowork is: chat plus file access plus code execution.
+- Current examples in the category: Cowork, ChatGPT with desktop integration, Gemini in Workspace. The category name ("agentic desktop AI") matters more than the product name.
+- The shift from chat: context becomes automatic, action happens in your environment, audit trail has three sources (session log, file changes, git diff).
+- Mode B discipline still applies. The artifact is the R script, not the session.
+- What Cowork is good at: multi-step tasks with intermediate state, debugging with full context, code that uses your actual data shape.
+- What Cowork is bad at: anything that cannot be verified by reading the output, production pipelines, and work where the hidden reasoning ends up in your paper.
 
-- Tools for searching and summarizing papers: Semantic Scholar, Elicit, Connected Papers, Consensus.
-- Demo: find papers on a topic, generate a summary table.
-- Caveat: always verify the citations exist.
+## Guided scrape of Cornell Dyson placements (~30 min) {#guided-scrape}
 
-### Journal and university policies (~10 min) {#journal-policies}
+- Target: [Cornell Dyson PhD placements page](https://dyson.cornell.edu/programs/graduate/placements/).
+- Goal output: `placements_dyson.csv` with columns `name`, `year`, `placement`, `source_url`.
+- A shared prompt handout, including explicit Mode B enforcement.
+- Instructor live demo first, then students repeat on their laptops.
+- Verification checklist, repeated from Session 6.
+- Commit point: everyone commits before moving on.
 
-- AEA, Nature, Science, PNAS disclosure requirements.
-- Cornell's academic integrity policies as they apply to AI use.
-- Your responsibility as the author: AI-generated content does not transfer authorship responsibility.
+## Stress test: add a field (~10 min) {#stress-test}
 
-### Research transparency in the AI era (~10 min) {#research-transparency}
+- Ask Cowork to modify the working script to add one of: `is_postdoc`, `country`, or `placement_sector`.
+- What to watch for: silent row loss, silent row gain, column reordering that breaks downstream code.
+- Two students share what broke. Instructor writes the pattern on the board.
 
-- How to document AI use in your research workflow.
-- Logging prompts and outputs as part of a replication package.
-- Reproducibility challenges when AI tools change over time.
-- Connection to [Sessions 4–5](../version-control/session5.qmd#tags-for-reproducibility): tagged Git releases as replication snapshots that include AI-assisted code.
+## Debrief and preview of Session 8 {#debrief}
 
-### Discussion and practical exercise (~20 min) {#discussion-exercise}
-
-- Ethical scenarios: When is AI use appropriate? When does it cross a line?
-- Cases: using AI to write a referee report, generate code for a replication package, draft an abstract.
-
-### Wrap-up (~5 min) {#wrap-up}
-
-- Synthesis of the module.
-- Key takeaways for working with AI in research over your career.
+- What worked, what did not. Highlight verification catches.
+- Why this was manageable: one page, one department, clean HTML.
+- Why Session 8 will be different: four more departments, four more HTML structures, classification of each placement.
+- Three-modes table, now with a lived experience for mode 2.
+- For Monday: install Claude Code (instructions posted), push today's repo to GitHub, think about which applied econ departments you would scrape if you could.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Session 7: AI Tools II – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Practical Skills: Git, GitHub &amp; AI&lt;/span&gt;</title>
+<title>Session 8: AI Tools III – &lt;span class='course-code'&gt;AEM 7010&lt;/span&gt;&lt;span class='course-title'&gt;Practical Skills: Git, GitHub &amp; AI&lt;/span&gt;</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session7.html">Session 7: AI in Research Practice</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session8.html">Session 8: AI Tools III (Claude Code)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -446,8 +446,74 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ai-tools/session7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Session 7: AI in Research Practice</span></a>
+  <a href="../ai-tools/session7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 7: AI Tools II (Cowork)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#recap-and-safety" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Recap and safety brief</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#cowork-as-a-category" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cowork as a category</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#guided-scrape" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guided scrape: Dyson placements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#stress-test" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stress test: add a field</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session7.html#debrief" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Debrief</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Session 8: AI Tools III (Claude Code)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#claude-code-intro" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Claude Code intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#scaffold" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scaffolding the scraper</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#classification" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classification: rules + LLM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#analysis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analysis and write-up</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../ai-tools/session8.html#synthesis" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthesis and course wrap</span></a>
   </div>
 </li>
       </ul>
@@ -461,10 +527,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session7.html">Session 7: AI in Research Practice</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ai-tools/session6.html">AI Tools</a></li><li class="breadcrumb-item"><a href="../ai-tools/session8.html">Session 8: AI Tools III (Claude Code)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Session 7: AI Tools II</h1>
-<p class="subtitle lead">Agentic AI on your desktop (Cowork)</p>
+<h1 class="title">Session 8: AI Tools III</h1>
+<p class="subtitle lead">Code-native agents (Claude Code) at research scale</p>
 </div>
 
 
@@ -491,57 +557,54 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The detailed walkthrough will be added before <strong>April 29, 2026</strong>. The outline below mirrors the planned 75-minute structure. The running exercise (scraping the Cornell Dyson PhD placement page with Cowork) picks up from <a href="../ai-tools/session6.html">Session 6</a> and continues into <a href="session8.qmd">Session 8</a>.</p>
+<p>The detailed walkthrough will be added before <strong>May 4, 2026</strong>. The outline below mirrors the planned 75-minute structure. This session closes the running exercise started in <a href="../ai-tools/session6.html">Session 6</a> and continued in <a href="../ai-tools/session7.html">Session 7</a>.</p>
 </div>
 </div>
-<section id="recap-and-safety" class="level2">
-<h2 class="anchored" data-anchor-id="recap-and-safety">Recap and safety brief (~10 min)</h2>
+<section id="claude-code-intro" class="level2">
+<h2 class="anchored" data-anchor-id="claude-code-intro">Claude Code: a code-native agent (~15 min)</h2>
 <ul>
-<li>Mode A vs Mode B, carried over from Session 6.</li>
-<li>What changes with Cowork: it can see your files, run code on your machine, and modify files on disk.</li>
-<li>Git is the safety net. Every exercise starts with a clean commit and ends with another.</li>
-<li>Cowork permissions walk-through: which folder is shared, how to see what the agent has done, how to stop a session.</li>
-<li>Three-minute setup check on the floor.</li>
+<li>The third mode: an agent that lives in your terminal and works directly against a project directory.</li>
+<li>What changes from Cowork: the repository is the primary interface. The agent reads and writes files, runs commands, and commits through git, all inside a single working tree.</li>
+<li>Why this matters for research. The reproducible artifact is the repo itself: code, <code>renv.lock</code>, commits, and a log of what the agent did.</li>
+<li>Mode B is enforced by design here. The session is ephemeral. The code and the commits remain.</li>
+<li>Setup check: everyone has Claude Code installed from the Session 7 homework and can reach a project folder with git initialized.</li>
 </ul>
 </section>
-<section id="cowork-as-a-category" class="level2">
-<h2 class="anchored" data-anchor-id="cowork-as-a-category">Cowork as a category</h2>
+<section id="scaffold" class="level2">
+<h2 class="anchored" data-anchor-id="scaffold">Scaffolding a multi-department scraper (~25 min)</h2>
 <ul>
-<li>What Cowork is: chat plus file access plus code execution.</li>
-<li>Current examples in the category: Cowork, ChatGPT with desktop integration, Gemini in Workspace. The category name (“agentic desktop AI”) matters more than the product name.</li>
-<li>The shift from chat: context becomes automatic, action happens in your environment, audit trail has three sources (session log, file changes, git diff).</li>
-<li>Mode B discipline still applies. The artifact is the R script, not the session.</li>
-<li>What Cowork is good at: multi-step tasks with intermediate state, debugging with full context, code that uses your actual data shape.</li>
-<li>What Cowork is bad at: anything that cannot be verified by reading the output, production pipelines, and work where the hidden reasoning ends up in your paper.</li>
+<li>Target: five department placement pages, selected from the pre-vetted list used in Sessions 6 and 7.</li>
+<li>Goal output: one tidy <code>placements_all.csv</code> with columns <code>department</code>, <code>name</code>, <code>year</code>, <code>placement</code>, <code>source_url</code>.</li>
+<li>Live demo: one prompt to scaffold the project (<code>R/</code> folder, one scraper per department, a shared <code>combine.R</code>, a top-level <code>run_all.R</code>).</li>
+<li>Students mirror the scaffold on their own laptops. Each commits after the scaffold is in place.</li>
+<li>What to watch for: the agent inventing a department that is not in the list, silently changing the CSV schema between scrapers, dropping <code>source_url</code>.</li>
 </ul>
 </section>
-<section id="guided-scrape" class="level2">
-<h2 class="anchored" data-anchor-id="guided-scrape">Guided scrape of Cornell Dyson placements (~30 min)</h2>
+<section id="classification" class="level2">
+<h2 class="anchored" data-anchor-id="classification">Classification: rule-based and LLM-based (~20 min)</h2>
 <ul>
-<li>Target: <a href="https://dyson.cornell.edu/programs/graduate/placements/">Cornell Dyson PhD placements page</a>.</li>
-<li>Goal output: <code>placements_dyson.csv</code> with columns <code>name</code>, <code>year</code>, <code>placement</code>, <code>source_url</code>.</li>
-<li>A shared prompt handout, including explicit Mode B enforcement.</li>
-<li>Instructor live demo first, then students repeat on their laptops.</li>
-<li>Verification checklist, repeated from Session 6.</li>
-<li>Commit point: everyone commits before moving on.</li>
+<li>The new column: <code>placement_type</code> with values <code>academic</code>, <code>non_academic</code>, <code>postdoc</code>, <code>unknown</code>.</li>
+<li>First pass: a rule-based classifier in R based on keyword matching (“Assistant Professor”, “Postdoctoral”, “Federal Reserve”, etc.). Students read the rules and can defend each one.</li>
+<li>Second pass: an LLM classifier for the rows the rules leave as <code>unknown</code>. One API call per row, cached to disk.</li>
+<li>Disclosure practice: the prompt, the model, and the date are recorded in the script. The cache file is committed. A reviewer can rerun and get the same numbers.</li>
+<li>Verification: hand-label twenty random rows and compare.</li>
 </ul>
 </section>
-<section id="stress-test" class="level2">
-<h2 class="anchored" data-anchor-id="stress-test">Stress test: add a field (~10 min)</h2>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis and descriptive write-up (~10 min)</h2>
 <ul>
-<li>Ask Cowork to modify the working script to add one of: <code>is_postdoc</code>, <code>country</code>, or <code>placement_sector</code>.</li>
-<li>What to watch for: silent row loss, silent row gain, column reordering that breaks downstream code.</li>
-<li>Two students share what broke. Instructor writes the pattern on the board.</li>
+<li>Simple tabulations: counts by <code>department</code> and <code>placement_type</code>; share academic by year; ten most common institutions.</li>
+<li>One figure: academic share by department, with a clear caveat about sample size and page coverage.</li>
+<li>One paragraph of text, written by the student, summarizing what the data show. Not written by the agent.</li>
 </ul>
 </section>
-<section id="debrief" class="level2">
-<h2 class="anchored" data-anchor-id="debrief">Debrief and preview of Session 8</h2>
+<section id="synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis">Synthesis and course wrap (~5 min)</h2>
 <ul>
-<li>What worked, what did not. Highlight verification catches.</li>
-<li>Why this was manageable: one page, one department, clean HTML.</li>
-<li>Why Session 8 will be different: four more departments, four more HTML structures, classification of each placement.</li>
-<li>Three-modes table, now with a lived experience for mode 2.</li>
-<li>For Monday: install Claude Code (instructions posted), push today’s repo to GitHub, think about which applied econ departments you would scrape if you could.</li>
+<li>The three-modes table, now filled in with what each mode cost and what it delivered.</li>
+<li>One rule that carries forward: keep the code, discard the session. Mode B wins because it is the only mode that survives peer review.</li>
+<li>Final commit, final push, final tag. The repo is the record.</li>
+<li>Course feedback and next steps for independent practice.</li>
 </ul>
 
 

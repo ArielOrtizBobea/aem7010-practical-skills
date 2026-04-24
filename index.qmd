@@ -5,16 +5,16 @@ subtitle: "AEM 7010: Doing Applied Economics Research<br>Prof. Ariel Ortiz-Bobea
 
 ## About this site
 
-This site covers **sessions 4–7** of AEM 7010. Sessions 1–3 (introduction and reproducibility with Lars Vilhuber) and session 8 (Cornell resources) are taught separately and are not included here.
+This site covers **sessions 4–8** of AEM 7010. Sessions 1–3 (introduction and reproducibility with Lars Vilhuber) are taught separately and are not included here.
 
 ## What you will learn
 
 | Module | Sessions | Topics |
 |--------|----------|--------|
 | **Version Control** | 4–5 | Git fundamentals, GitHub, branches, pull requests, tags, collaboration |
-| **AI Tools**        | 6–7 | Coding assistants, research workflows, disclosure, verification |
+| **AI Tools**        | 6–8 | Chat, agentic desktop (Cowork), code-native agents (Claude Code), verification |
 
-By the end of these four sessions you will be able to:
+By the end of these five sessions you will be able to:
 
 - Track changes to your R scripts and research code using Git
 - Back up your work on GitHub and collaborate with co-authors through pull requests
@@ -28,9 +28,11 @@ By the end of these four sessions you will be able to:
 
 **Session 5: GitHub & Collaboration.** Connect to GitHub, push and pull, create branches, open pull requests, and tag releases for reproducibility.
 
-**Session 6: AI Foundations.** The landscape of AI coding assistants, how they work, and a live demo of AI-assisted R coding.
+**Session 6: AI Tools I (Chat).** A mental model of LLMs. Mode A vs Mode B discipline. Live demo of a chat-driven scrape of Cornell Dyson placements, then a hands-on exercise where each student scrapes a different department.
 
-**Session 7: AI in Research Practice.** Journal and disclosure policies, documenting AI use in replication packages, and ethical scenarios.
+**Session 7: AI Tools II (Cowork).** Agentic desktop AI that can see your files and run code. Guided scrape of the Dyson page with Cowork, stress test on a modified field, verification checklist.
+
+**Session 8: AI Tools III (Claude Code).** A code-native agent inside a git project. Scaffold a five-department scraper, add a rule-based plus LLM-based classifier, produce a descriptive write-up of PhD placements in applied economics.
 
 ## Before You Begin
 
