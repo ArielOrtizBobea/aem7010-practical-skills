@@ -14,6 +14,16 @@ website:
     contents:
       - text: "Preliminaries"
         href: index.qmd
+      - section: "Introduction"
+        contents:
+          - text: "Session 1: Trends in Economic Research"
+            href: intro/session1.qmd
+      - section: "Reproducibility"
+        contents:
+          - text: "Session 2: Reproducibility"
+            href: reproducibility/session2.qmd
+          - text: "Session 3: Reproducibility, continued"
+            href: reproducibility/session3.qmd
       - section: "Version Control"
         contents:
           - text: "Session 4: Git Fundamentals"

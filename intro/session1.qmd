@@ -1,0 +1,20 @@
+---
+title: "Session 1: Trends in Economic Research"
+subtitle: "Introduction and course logistics"
+---
+
+::: {.callout-note appearance="simple"}
+**Materials for this session are being prepared for the companion site.** This page will expand before the end of the semester.
+:::
+
+## Where this session fits
+
+The opening session sets the frame for the rest of the course. Three short threads:
+
+- Broad trends reshaping applied economics research: reproducibility expectations from journals, the data revolution, and the rise of AI tools.
+- What this course covers, and what it does not.
+- Logistics: schedule, expectations, how the eight sessions connect.
+
+## Slides
+
+Slides for this session will be posted here once cleaned up.

@@ -1,0 +1,23 @@
+---
+title: "Session 3: Reproducibility, Continued"
+subtitle: "Replication packages in practice (with Lars Vilhuber)"
+---
+
+::: {.callout-note appearance="simple"}
+**Materials for this session are being prepared for the companion site.**
+:::
+
+## Where this session fits
+
+The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.
+
+Topics expected to be covered:
+
+- The anatomy of a well-structured replication package.
+- Restricted data: what to disclose, what to stub.
+- Computational environment: `renv`, Docker, containers.
+- Common reasons replication packages fail review.
+
+## Materials
+
+Slides and references will be linked here after the session.
