@@ -7,6 +7,8 @@ subtitle: "Tracking your own work"
 **Slides for this session:** [View the slide deck](slides/session4.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below; the walkthrough on this page is the substantive material.
 :::
 
+{{< include ../_pdf-tip.qmd >}}
+
 ## Why Version Control?
 
 Version control is a systematic record of how your code changes. It matters in three situations every applied economist now faces.

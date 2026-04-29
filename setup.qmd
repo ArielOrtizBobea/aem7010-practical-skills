@@ -5,8 +5,7 @@ subtitle: "Everything you need installed across the eight sessions"
 
 This page is the master install checklist for the course. The sections below are roughly in the order you will need them. Use the dated boxes at the top of each section to know how far ahead you must complete it.
 
-::: {.callout-tip appearance="simple"}
-## Installation deadlines at a glance
+## Overview
 
 | Tool                                    | Needed by             |
 |-----------------------------------------|-----------------------|
@@ -15,7 +14,8 @@ This page is the master install checklist for the course. The sections below are
 | Claude account at claude.com            | Session 6 (Apr 27)    |
 | Cowork desktop app                      | Session 7 (Apr 29)    |
 | Node.js, Claude Code CLI                | Session 8 (May 4)     |
-:::
+
+The numbered sections below walk through each tool in turn. Each one notes which sessions it is used in and how to verify the install worked.
 
 ## 1. Git
 

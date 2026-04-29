@@ -7,6 +7,8 @@ subtitle: "Code-native agents (Claude Code) at research scale"
 **Slides for this session:** [View the slide deck](slides/session8.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below. The walkthrough on this page is the substantive material and the reference you will come back to.
 :::
 
+{{< include ../_pdf-tip.qmd >}}
+
 <!--
 Instructor pre-flight checklist for this session lives at ai-tools/seeds/README.md.
 That file is in the repo but not part of the rendered Quarto site. Edit it there.

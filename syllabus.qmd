@@ -11,11 +11,11 @@ The official course syllabus PDF will be linked here.
 
 AEM 7010 introduces practical skills for doing applied economics research. The course covers four areas across eight 75-minute sessions: trends in economic research, reproducibility, version control with Git and GitHub, and AI tools for coding.
 
-This site documents the second half of the course. Sessions 1 to 3 are listed on the [schedule](schedule.qmd) and link out to materials hosted by the relevant instructors.
+This site documents the last quarter of the class. Sessions 1 to 3 are listed on the [schedule](schedule.qmd) and link out to materials hosted by the relevant instructors.
 
 ## Logistics
 
-- **Term**: Spring 2026, second half.
+- **Term**: Spring 2026, last quarter of the class.
 - **Meeting times**: Mondays and Wednesdays, 75-minute sessions.
 - **First meeting**: Wednesday, April 8, 2026.
 - **Last meeting**: Monday, May 4, 2026.

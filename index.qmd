@@ -1,19 +1,28 @@
 ---
-title: "AEM 7010: Doing Applied Economics Research: Practical Skills"
+title: "Home"
+subtitle: "The big picture about this course"
 toc: false
 ---
 
 ::: {.course-meta}
-**Spring 2026** &nbsp;·&nbsp; April 8 to May 4 &nbsp;·&nbsp; Monday & Wednesday, 8:40 to 9:55 am &nbsp;·&nbsp; Warren 137
+**Spring 2026** &nbsp;·&nbsp; Monday & Wednesday, 8:40 to 9:55 am &nbsp;·&nbsp; Warren 137 &nbsp;·&nbsp; 3 credits, S/U
 
-**Instructor:** [Prof. Ariel Ortiz-Bobea](https://arielortizbobea.github.io) (sessions 1, 4 to 8) &nbsp;·&nbsp; ao332@cornell.edu &nbsp;·&nbsp; **Office hours:** Wednesdays 2 to 4 pm
+**Co-instructors:** [Chris Barrett](https://barrett.dyson.cornell.edu/), [Heather Schofield](https://heatherschofield.net/), [Ariel Ortiz-Bobea](https://arielortizbobea.github.io) &nbsp;·&nbsp; **Co-requisite:** ECON 6090 &nbsp;·&nbsp; **Open to:** Ph.D. students
 
-**Guest instructor:** [Lars Vilhuber](https://www.ilr.cornell.edu/people/lars-vilhuber), AEA Data Editor (sessions 2 and 3)
+This site documents my portion of the course (April 8 to May 4). My contact: ao332@cornell.edu &nbsp;·&nbsp; **Office hours:** Wednesdays 2 to 4 pm. &nbsp; Guest instructor for sessions 2 and 3: [Lars Vilhuber](https://www.ilr.cornell.edu/people/lars-vilhuber), AEA Data Editor.
 :::
 
 ## About this course
 
-AEM 7010 is a graduate course on practical research skills, team-taught by three instructors. My section covers trends in empirical economics research, reproducibility, version control with Git, and effective use of AI tools, with a focus on working with secondary data. This site documents my eight sessions across four weeks, from April 8 to May 4.
+> This course provides exposure to a wide variety of basic skills necessary for conducting high-quality research in applied economics. This includes defining a research question, primary and secondary data collection, principles of academic writing and presentation, research ethics, basic coding and data management, as well as project management. This course is meant to help students transition from coursework to the independent research they undertake starting at the end of the first year of the Ph.D. program. Some of the topics (e.g., coding) are only covered at an overview level with the expectation that those requiring a deeper knowledge will take further coursework.
+>
+> *Source: [Cornell Class Roster, AEM 7010, Spring 2026](https://classes.cornell.edu/browse/roster/SP26/class/AEM/7010).*
+
+See the official syllabus for which instructor leads each block.
+
+## About my portion of the course
+
+My eight sessions span four weeks, from April 8 to May 4. They cover trends in empirical economics research, reproducibility, version control with Git, and effective use of AI tools, with a focus on working with secondary data.
 
 Topics fall into four blocks:
 
@@ -24,7 +33,7 @@ Topics fall into four blocks:
 
 ## What you will be able to do
 
-By the end of these sessions you will be able to:
+By the end of these eight sessions you will be able to:
 
 - Build and document reproducible research workflows.
 - Track changes to your R scripts and research code using Git.

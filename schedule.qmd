@@ -16,11 +16,6 @@ The course meets twice a week: Mondays and Wednesdays.
 | 7  | Wed, Apr 29    | AI Tools II: Cowork                         | Ariel Ortiz-Bobea       | [Session 7](ai-tools/session7.qmd)                            |
 | 8  | Mon, May 4     | AI Tools III: Claude Code                   | Ariel Ortiz-Bobea       | [Session 8](ai-tools/session8.qmd)                            |
 
-::: {.callout-note appearance="simple"}
-## Two course halves
-Sessions 1 to 3 are taught by [Lars Vilhuber](https://www.ilr.cornell.edu/people/lars-vilhuber) and Prof. Ortiz-Bobea, and cover trends in economic research and reproducibility. Materials for those three sessions live on a separate site and will be linked above when available. Sessions 4 to 8 are documented on this site.
-:::
-
 ## Before each session
 
 Each session has a short *Before class* note at the top of its page. Read it the day before. The first one to check is for [Session 4](version-control/session4.qmd), which assumes you have completed the [Setup](setup.qmd) page.

@@ -7,6 +7,8 @@ subtitle: "How LLMs work, and the limits of chat"
 **Slides for this session:** [View the slide deck](slides/session6.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below. The walkthrough on this page is the substantive material and the reference you will come back to.
 :::
 
+{{< include ../_pdf-tip.qmd >}}
+
 ## Where we are in the course {#where-we-are-in-the-course}
 
 Sessions 6, 7, and 8 cover AI tools for applied economics research. They are sequenced on purpose.

@@ -8,8 +8,8 @@ website:
   favicon: images/favicon.ico
   navbar:
     background: light
-    logo: images/cornell-seal-red.svg
-    title: "AEM 7010: Doing Applied Economics Research: Practical Skills"
+    logo: images/cornell_seal_simple_web_b31b1b.svg
+    title: "<span class='nav-title-code'>AEM 7010</span><span class='nav-title-subtitle'>Doing Applied Economics Research: Practical Skills</span>"
     search: true
     right:
       - text: "Home"

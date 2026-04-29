@@ -7,6 +7,8 @@ subtitle: "Agentic desktop AI (Cowork): from empty folder to GitHub"
 **Slides for this session:** [View the slide deck](slides/session7.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below. The walkthrough on this page is the substantive material and the reference you will come back to.
 :::
 
+{{< include ../_pdf-tip.qmd >}}
+
 ::: {.callout-note appearance="minimal"}
 **Instructor pre-flight (the weekend before class).** Open the [Dyson placements page](https://dyson.cornell.edu/programs/graduate/placements/) in a browser and confirm it still renders the same 4-column PhD table. Run `ai-tools/scrape_dyson_cowork.R` from a fresh R session. Check that it produces a `data/placements_dyson.csv` with 80 or more rows. If the selector has broken, patch the XPath noted in the script header before class.
 :::

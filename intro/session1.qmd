@@ -15,3 +15,5 @@ The opening session sets the frame for the rest of the course. Three short threa
 ## Slides
 
 - [Web slides](slides/session1.qmd) (Reveal.js, click through in your browser)
+
+{{< include ../_pdf-tip.qmd >}}

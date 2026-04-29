@@ -7,6 +7,8 @@ subtitle: "Working with remotes and teams"
 **Slides for this session:** [View the slide deck](slides/session5.qmd) (opens in your browser; press `F` for fullscreen). The slides are a lean anchor to the concepts below; the walkthrough on this page is the substantive material.
 :::
 
+{{< include ../_pdf-tip.qmd >}}
+
 ## Quick Recap
 
 In Session 4 we learned the core local Git workflow:
