@@ -759,7 +759,7 @@
     "href": "reproducibility/session2.html",
     "title": "Session 2: Reproducibility",
     "section": "",
-    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.\nTopics expected to be covered:\n\nWhy reproducibility is a research-integrity issue, not a box-check.\nWhat top journals now require (AEA, REStud, JPE).\nopenICPSR and the replication-package workflow.",
+    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -770,7 +770,7 @@
     "href": "reproducibility/session2.html#where-this-session-fits",
     "title": "Session 2: Reproducibility",
     "section": "",
-    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.\nTopics expected to be covered:\n\nWhy reproducibility is a research-integrity issue, not a box-check.\nWhat top journals now require (AEA, REStud, JPE).\nopenICPSR and the replication-package workflow.",
+    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -781,7 +781,7 @@
     "href": "reproducibility/session2.html#materials",
     "title": "Session 2: Reproducibility",
     "section": "Materials",
-    "text": "Materials\nThe session uses Lars’s Tutorial on Reproducibility, 2026. Start at the landing page below; it is the orchestrator for the multi-day tutorial and the right entry point for the conceptual material in this session.\n\nPrimary: Tutorial on Reproducibility, 2026 (landing page)\nBonus: Self-checking reproducibility, a short companion on auditing your own replication package before submission.\n\nSlides and additional references will be linked here after the session.",
+    "text": "Materials\nThe session uses Lars’s Tutorial on Reproducibility, 2026. Start at the landing page below; it is the orchestrator for the multi-day tutorial and the right entry point for the conceptual material in this session.\n\nPrimary: Tutorial on Reproducibility, 2026 (landing page)",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -1521,7 +1521,7 @@
     "href": "reproducibility/session3.html",
     "title": "Session 3: Reproducibility, Continued",
     "section": "",
-    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.\nTopics expected to be covered:\n\nThe anatomy of a well-structured replication package.\nRestricted data: what to disclose, what to stub.\nComputational environment: renv, Docker, containers.\nCommon reasons replication packages fail review.",
+    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
@@ -1532,7 +1532,7 @@
     "href": "reproducibility/session3.html#where-this-session-fits",
     "title": "Session 3: Reproducibility, Continued",
     "section": "",
-    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.\nTopics expected to be covered:\n\nThe anatomy of a well-structured replication package.\nRestricted data: what to disclose, what to stub.\nComputational environment: renv, Docker, containers.\nCommon reasons replication packages fail review.",
+    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
@@ -1543,7 +1543,7 @@
     "href": "reproducibility/session3.html#materials",
     "title": "Session 3: Reproducibility, Continued",
     "section": "Materials",
-    "text": "Materials\nThe session works through a hands-on example of building a deposit-ready replication package. Start at the linked anchor below; it drops you directly at the example-of-deposit slide in Lars’s day-1 tutorial.\n\nPrimary: Day-1 tutorial: example of deposit\nReference: Tutorial on Reproducibility, 2026 (landing page) for the broader course materials.\nBonus: Self-checking reproducibility for auditing your own replication package before submission.\n\nSlides and additional references will be linked here after the session.",
+    "text": "Materials\nThe session works through a hands-on example of building a deposit-ready replication package. Start at the linked anchor below; it drops you directly at the example-of-deposit slide in Lars’s day-1 tutorial.\n\nPrimary: Day-1 tutorial: example of deposit\nBonus: Self-checking reproducibility for auditing your own replication package before submission.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
