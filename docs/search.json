@@ -1,5 +1,124 @@
 [
   {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The course meets twice a week: Mondays and Wednesdays."
+  },
+  {
+    "objectID": "schedule.html#before-each-session",
+    "href": "schedule.html#before-each-session",
+    "title": "Schedule",
+    "section": "Before each session",
+    "text": "Before each session\nEach session has a short Before class note at the top of its page. Read it the day before. The first one to check is for Session 4, which assumes you have completed the Setup page."
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "This page is the master install checklist for the course. The sections below are roughly in the order you will need them. Use the dated boxes at the top of each section to know how far ahead you must complete it."
+  },
+  {
+    "objectID": "setup.html#git",
+    "href": "setup.html#git",
+    "title": "Setup",
+    "section": "1. Git",
+    "text": "1. Git\nNeeded for sessions 4 to 8.\n\nMac: brew install git if you have Homebrew. Otherwise download from git-scm.com.\nWindows: download the installer from git-scm.com. Git Bash is installed alongside.\nLinux: use your distribution’s package manager.\n\nVerify the install in a terminal:\ngit --version\nYou should see something like git version 2.39.0.\n\n\n\n\n\n\nNoteWhat is Homebrew?\n\n\n\nHomebrew is the standard macOS package manager. Think of it as an app store for command-line tools. If you do not already have it, run the one-line install command from brew.sh. If you prefer to skip Homebrew, use the direct download from git-scm.com instead."
+  },
+  {
+    "objectID": "setup.html#a-terminal",
+    "href": "setup.html#a-terminal",
+    "title": "Setup",
+    "section": "2. A terminal",
+    "text": "2. A terminal\nNeeded for sessions 4 to 8.\n\nMac: open the Terminal app (search for “Terminal” in Spotlight).\nWindows: open Git Bash (installed with Git in step 1).\nLinux: any terminal emulator your distribution ships with.\n\nWe type Git commands and run shell scripts here. There is nothing to install beyond what step 1 already gave you."
+  },
+  {
+    "objectID": "setup.html#r",
+    "href": "setup.html#r",
+    "title": "Setup",
+    "section": "3. R",
+    "text": "3. R\nNeeded for sessions 4 to 8.\nR is the engine for every code example on this site. Free and open source.\n\nDownload the installer for your platform from cran.r-project.org.\nInstall with the default options."
+  },
+  {
+    "objectID": "setup.html#rstudio",
+    "href": "setup.html#rstudio",
+    "title": "Setup",
+    "section": "4. RStudio",
+    "text": "4. RStudio\nRecommended for sessions 4 to 5.\nRStudio is the standard IDE for applied economics research in R. If you already use it for coursework, you are set. Otherwise, download the desktop app from posit.co/download/rstudio-desktop."
+  },
+  {
+    "objectID": "setup.html#the-wooldridge-r-package",
+    "href": "setup.html#the-wooldridge-r-package",
+    "title": "Setup",
+    "section": "5. The wooldridge R package",
+    "text": "5. The wooldridge R package\nNeeded for sessions 4 to 5.\nThis package gives you the classic datasets from Jeffrey Wooldridge’s Introductory Econometrics textbook (wage1, wage2, and many others) that we use in exercises. In R or RStudio, run:\ninstall.packages(\"wooldridge\")"
+  },
+  {
+    "objectID": "setup.html#vs-code",
+    "href": "setup.html#vs-code",
+    "title": "Setup",
+    "section": "6. VS Code",
+    "text": "6. VS Code\nRecommended for sessions 6 to 8 (and useful from session 4 onward).\nVS Code is a general-purpose code editor that has become the most widely used tool in software and data work. Sessions 6 to 8 assume you have it available alongside the AI tools.\n\nDownload from code.visualstudio.com.\nInstall with the default options.\n\nI encourage you to install all three editors (R, RStudio, VS Code). R is the engine. RStudio is ideal for R-centric work. VS Code is ideal for everything else: Python, shell scripts, LaTeX, Quarto, Markdown, configuration files, and AI coding assistants."
+  },
+  {
+    "objectID": "setup.html#github-account",
+    "href": "setup.html#github-account",
+    "title": "Setup",
+    "section": "7. GitHub account",
+    "text": "7. GitHub account\nNeeded for session 5 onward.\n\nCreate a free account at github.com.\nUse an email address you plan to keep after graduation. You can later mark it as private in GitHub settings."
+  },
+  {
+    "objectID": "setup.html#tell-git-who-you-are",
+    "href": "setup.html#tell-git-who-you-are",
+    "title": "Setup",
+    "section": "8. Tell Git who you are",
+    "text": "8. Tell Git who you are\nNeeded for session 5 onward. Do this once on your machine.\nIn a terminal:\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@cornell.edu\"\ngit config --global init.defaultBranch main\nUse the same email here as the one on your GitHub account, or use the noreply address GitHub provides under Settings -&gt; Emails -&gt; Keep my email addresses private."
+  },
+  {
+    "objectID": "setup.html#connect-vs-code-or-your-terminal-to-github",
+    "href": "setup.html#connect-vs-code-or-your-terminal-to-github",
+    "title": "Setup",
+    "section": "9. Connect VS Code (or your terminal) to GitHub",
+    "text": "9. Connect VS Code (or your terminal) to GitHub\nNeeded for session 5 onward.\nYou have two ways to authenticate when you push and pull. Pick one.\nSSH keys (recommended for long-term work). Generate a key, add it to your GitHub account, and you will not be prompted for a password again. We will walk through this in Session 5. The official guide is GitHub’s SSH key documentation.\nHTTPS plus the GitHub CLI. Install the GitHub CLI, then run gh auth login once. This caches credentials for future pushes. Easier on Windows.\nVS Code: install the GitHub Pull Requests extension if you want to manage PRs from inside the editor. Optional."
+  },
+  {
+    "objectID": "setup.html#claude-account-claude.com",
+    "href": "setup.html#claude-account-claude.com",
+    "title": "Setup",
+    "section": "10. Claude account (claude.com)",
+    "text": "10. Claude account (claude.com)\nNeeded for sessions 6 to 8.\n\nCreate a free account at claude.com.\nThe browser interface at claude.ai is what we use in session 6.\nThe same account works for the Cowork desktop app (session 7) and Claude Code (session 8). The free tier is enough for the in-class exercises."
+  },
+  {
+    "objectID": "setup.html#cowork-desktop-app",
+    "href": "setup.html#cowork-desktop-app",
+    "title": "Setup",
+    "section": "11. Cowork desktop app",
+    "text": "11. Cowork desktop app\nNeeded for session 7.\nCowork is the Claude desktop app with the Cowork mode feature enabled. It can see a folder on your machine and run code in a sandboxed shell.\n\nDownload the desktop app from claude.com/download.\nSign in with your Claude account.\nOpen the app’s settings and confirm Cowork mode is available.\n\nBring any install issues to the first ten minutes of session 7; that time is reserved for troubleshooting."
+  },
+  {
+    "objectID": "setup.html#node.js-and-claude-code",
+    "href": "setup.html#node.js-and-claude-code",
+    "title": "Setup",
+    "section": "12. Node.js and Claude Code",
+    "text": "12. Node.js and Claude Code\nNeeded for session 8.\nClaude Code is a code-native agent that runs in your terminal inside a git project.\nInstall Node.js. Claude Code is distributed as an npm package, so you need Node.js (which ships with npm).\n\nMac: brew install node or download from nodejs.org.\nWindows: download the installer from nodejs.org.\n\nVerify in a terminal:\nnode --version\nnpm --version\nInstall Claude Code:\nnpm install -g @anthropic-ai/claude-code\nclaude --version\nThe first time you run claude, it opens a browser window to log you in with your Claude account.\nFor platform-specific notes and troubleshooting, see the official guide: docs.claude.com/en/docs/claude-code/setup."
+  },
+  {
+    "objectID": "setup.html#r-packages-for-the-ai-sessions",
+    "href": "setup.html#r-packages-for-the-ai-sessions",
+    "title": "Setup",
+    "section": "13. R packages for the AI sessions",
+    "text": "13. R packages for the AI sessions\nNeeded for session 8.\nIn R or RStudio, run once before session 8:\ninstall.packages(c(\"tidyverse\", \"rvest\", \"readr\", \"ellmer\"))\nellmer is recent and unlikely to be already installed. The others may already be there from sessions 4 to 5."
+  },
+  {
+    "objectID": "setup.html#troubleshooting",
+    "href": "setup.html#troubleshooting",
+    "title": "Setup",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\nClass time is short. The first ten minutes of any session can absorb install issues, but only if you flag them on arrival. If you are stuck before class, email me with: the exact command you ran, the exact error message, and your operating system."
+  },
+  {
     "objectID": "ai-tools/session8.html",
     "href": "ai-tools/session8.html",
     "title": "Session 8: AI Tools III",
@@ -666,99 +785,63 @@
     "href": "version-control/cheatsheet.html",
     "title": "Git & GitHub Cheat Sheet",
     "section": "",
-    "text": "Command\nWhat it does\n\n\n\n\ngit config --global user.name \"Name\"\nSet your name for commits\n\n\ngit config --global user.email \"email\"\nSet your email for commits\n\n\ngit init\nCreate a new repository in the current folder\n\n\ngit clone &lt;url&gt;\nDownload a remote repository to your computer",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Command\nWhat it does\n\n\n\n\ngit config --global user.name \"Name\"\nSet your name for commits\n\n\ngit config --global user.email \"email\"\nSet your email for commits\n\n\ngit init\nCreate a new repository in the current folder\n\n\ngit clone &lt;url&gt;\nDownload a remote repository to your computer"
   },
   {
     "objectID": "version-control/cheatsheet.html#setup",
     "href": "version-control/cheatsheet.html#setup",
     "title": "Git & GitHub Cheat Sheet",
     "section": "",
-    "text": "Command\nWhat it does\n\n\n\n\ngit config --global user.name \"Name\"\nSet your name for commits\n\n\ngit config --global user.email \"email\"\nSet your email for commits\n\n\ngit init\nCreate a new repository in the current folder\n\n\ngit clone &lt;url&gt;\nDownload a remote repository to your computer",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Command\nWhat it does\n\n\n\n\ngit config --global user.name \"Name\"\nSet your name for commits\n\n\ngit config --global user.email \"email\"\nSet your email for commits\n\n\ngit init\nCreate a new repository in the current folder\n\n\ngit clone &lt;url&gt;\nDownload a remote repository to your computer"
   },
   {
     "objectID": "version-control/cheatsheet.html#daily-workflow",
     "href": "version-control/cheatsheet.html#daily-workflow",
     "title": "Git & GitHub Cheat Sheet",
     "section": "Daily Workflow",
-    "text": "Daily Workflow\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit status\nShow which files are modified, staged, or untracked\n\n\ngit add &lt;file&gt;\nStage a file for the next commit\n\n\ngit add .\nStage all changed files\n\n\ngit commit -m \"message\"\nSave a snapshot with a descriptive message\n\n\ngit diff\nShow unstaged changes\n\n\ngit diff --staged\nShow staged changes (what will be committed)\n\n\ngit log --oneline\nView commit history (compact)\n\n\ngit log\nView commit history (detailed)",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Daily Workflow\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit status\nShow which files are modified, staged, or untracked\n\n\ngit add &lt;file&gt;\nStage a file for the next commit\n\n\ngit add .\nStage all changed files\n\n\ngit commit -m \"message\"\nSave a snapshot with a descriptive message\n\n\ngit diff\nShow unstaged changes\n\n\ngit diff --staged\nShow staged changes (what will be committed)\n\n\ngit log --oneline\nView commit history (compact)\n\n\ngit log\nView commit history (detailed)"
   },
   {
     "objectID": "version-control/cheatsheet.html#undoing-things",
     "href": "version-control/cheatsheet.html#undoing-things",
     "title": "Git & GitHub Cheat Sheet",
     "section": "Undoing Things",
-    "text": "Undoing Things\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit restore --staged &lt;file&gt;\nUnstage a file (keep edits)\n\n\ngit restore &lt;file&gt;\nDiscard edits, revert to last commit (destructive)\n\n\ngit reset --soft HEAD~1\nUndo last commit (keep files staged)",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Undoing Things\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit restore --staged &lt;file&gt;\nUnstage a file (keep edits)\n\n\ngit restore &lt;file&gt;\nDiscard edits, revert to last commit (destructive)\n\n\ngit reset --soft HEAD~1\nUndo last commit (keep files staged)"
   },
   {
     "objectID": "version-control/cheatsheet.html#remotes-github",
     "href": "version-control/cheatsheet.html#remotes-github",
     "title": "Git & GitHub Cheat Sheet",
     "section": "Remotes (GitHub)",
-    "text": "Remotes (GitHub)\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit remote add origin &lt;url&gt;\nLink local repo to GitHub\n\n\ngit push -u origin main\nPush commits to GitHub (first time)\n\n\ngit push\nPush commits (after -u is set)\n\n\ngit pull origin main\nDownload new commits from GitHub",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Remotes (GitHub)\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit remote add origin &lt;url&gt;\nLink local repo to GitHub\n\n\ngit push -u origin main\nPush commits to GitHub (first time)\n\n\ngit push\nPush commits (after -u is set)\n\n\ngit pull origin main\nDownload new commits from GitHub"
   },
   {
     "objectID": "version-control/cheatsheet.html#branches",
     "href": "version-control/cheatsheet.html#branches",
     "title": "Git & GitHub Cheat Sheet",
     "section": "Branches",
-    "text": "Branches\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit branch &lt;name&gt;\nCreate a new branch\n\n\ngit checkout &lt;branch&gt;\nSwitch to a branch\n\n\ngit checkout -b &lt;name&gt;\nCreate and switch in one step\n\n\ngit merge &lt;branch&gt;\nMerge a branch into the current branch\n\n\ngit branch -d &lt;name&gt;\nDelete a branch (after merging)",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Branches\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit branch &lt;name&gt;\nCreate a new branch\n\n\ngit checkout &lt;branch&gt;\nSwitch to a branch\n\n\ngit checkout -b &lt;name&gt;\nCreate and switch in one step\n\n\ngit merge &lt;branch&gt;\nMerge a branch into the current branch\n\n\ngit branch -d &lt;name&gt;\nDelete a branch (after merging)"
   },
   {
     "objectID": "version-control/cheatsheet.html#tags-reproducibility",
     "href": "version-control/cheatsheet.html#tags-reproducibility",
     "title": "Git & GitHub Cheat Sheet",
     "section": "Tags (Reproducibility)",
-    "text": "Tags (Reproducibility)\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit tag -a v1.0 -m \"msg\"\nCreate an annotated tag\n\n\ngit push --tags\nPush all tags to GitHub\n\n\ngit checkout v1.0\nCheck out a specific tagged version",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "Tags (Reproducibility)\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit tag -a v1.0 -m \"msg\"\nCreate an annotated tag\n\n\ngit push --tags\nPush all tags to GitHub\n\n\ngit checkout v1.0\nCheck out a specific tagged version"
   },
   {
     "objectID": "version-control/cheatsheet.html#ssh-setup-one-time",
     "href": "version-control/cheatsheet.html#ssh-setup-one-time",
     "title": "Git & GitHub Cheat Sheet",
     "section": "SSH Setup (One-Time)",
-    "text": "SSH Setup (One-Time)\n# Generate key\nssh-keygen -t ed25519 -C \"you@email.com\"\n\n# Start agent and add key\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519\n\n# Copy public key (paste into GitHub Settings &gt; SSH Keys)\ncat ~/.ssh/id_ed25519.pub\n\n# Test connection\nssh -T git@github.com",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": "SSH Setup (One-Time)\n# Generate key\nssh-keygen -t ed25519 -C \"you@email.com\"\n\n# Start agent and add key\neval \"$(ssh-agent -s)\"\nssh-add ~/.ssh/id_ed25519\n\n# Copy public key (paste into GitHub Settings &gt; SSH Keys)\ncat ~/.ssh/id_ed25519.pub\n\n# Test connection\nssh -T git@github.com"
   },
   {
     "objectID": "version-control/cheatsheet.html#gitignore-template-for-r-projects",
     "href": "version-control/cheatsheet.html#gitignore-template-for-r-projects",
     "title": "Git & GitHub Cheat Sheet",
     "section": ".gitignore Template for R Projects",
-    "text": ".gitignore Template for R Projects\n# Data files\n*.csv\n*.dta\n*.rds\n*.xlsx\ndata/\n\n# R artifacts\n.Rhistory\n.RData\n.Rproj.user/\n\n# Output (can be regenerated)\n*.pdf\n*.html\noutput/\n\n# System files\n.DS_Store\nThumbs.db",
-    "crumbs": [
-      "Version Control",
-      "Git cheat sheet"
-    ]
+    "text": ".gitignore Template for R Projects\n# Data files\n*.csv\n*.dta\n*.rds\n*.xlsx\ndata/\n\n# R artifacts\n.Rhistory\n.RData\n.Rproj.user/\n\n# Output (can be regenerated)\n*.pdf\n*.html\noutput/\n\n# System files\n.DS_Store\nThumbs.db"
   },
   {
     "objectID": "version-control/slides/session5.html#quick-recap-where-we-left-off",
@@ -1077,6 +1160,146 @@
     ]
   },
   {
+    "objectID": "intro/slides/session1.html#outline",
+    "href": "intro/slides/session1.html#outline",
+    "title": "Introduction",
+    "section": "Outline",
+    "text": "Outline\n§ Roadmap\n\nIntroduction\nWhat is secondary data?\nTrends in economic research\nIdentifying suitable datasets\nPreparing next sessions"
+  },
+  {
+    "objectID": "intro/slides/session1.html#a-bit-about-me",
+    "href": "intro/slides/session1.html#a-bit-about-me",
+    "title": "Introduction",
+    "section": "A bit about me",
+    "text": "A bit about me\n§ Section 1: Introduction\n\n\n\nProf. Ariel Ortiz-Bobea at Dyson and Brooks Schools. Joined Cornell in 2014.\nResearch focus on how people cope with environmental change. Emphasis on how climate change affects the economy, particularly agriculture.\nResearch group working on environmental and agricultural issues."
+  },
+  {
+    "objectID": "intro/slides/session1.html#overview",
+    "href": "intro/slides/session1.html#overview",
+    "title": "Introduction",
+    "section": "Overview",
+    "text": "Overview\n§ Section 1: Introduction\n\nApril 8 (W): Introduction (this lecture)\nApril 13 (M): Reproducibility 1 (with Lars Vilhuber, AEA data editor)\nApril 15 (W): Reproducibility 2 (with Lars)\nApril 20 (M): Version control 1 (install Git and create GitHub.com account)\nApril 22 (W): Version control 2\nApril 27 (M): AI tools 1 (install claude.ai and subscribe to Pro if possible)\nApril 29 (W): AI tools 2\nMay 4 (M): Computing and data resources at Cornell (optional)"
+  },
+  {
+    "objectID": "intro/slides/session1.html#learning-outcomes",
+    "href": "intro/slides/session1.html#learning-outcomes",
+    "title": "Introduction",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n§ Section 1: Introduction\n\nFamiliarity with trends in applied economics research (Session 1)\nUnderstanding of reproducibility standards (Sessions 2-3)\nHands-on version control with Git (Sessions 4-5)\nBenefits and risks of AI tools (Sessions 6-7)\nData and computing resources at Cornell (Session 8)"
+  },
+  {
+    "objectID": "intro/slides/session1.html#definition",
+    "href": "intro/slides/session1.html#definition",
+    "title": "Introduction",
+    "section": "Definition",
+    "text": "Definition\n§ Section 2: Secondary data\n\nSecondary data is collected, processed, and made available by someone other than the researcher(s) conducting a particular study.\nContrasts with primary data that is collected by researchers for the purpose of a particular study.\nPrimary data becomes secondary data when reused.\nDistinction is important for your audience and readers. Generally more details about data gathering in papers based on primary data.\nNote that what you obtain from scraping or processing existing information is still considered secondary data."
+  },
+  {
+    "objectID": "intro/slides/session1.html#typology",
+    "href": "intro/slides/session1.html#typology",
+    "title": "Introduction",
+    "section": "Typology",
+    "text": "Typology\n§ Section 2: Secondary data\n\nWho collects it? (government, private entity)\nHow is it collected? (survey, interviews, administrative records, remote sensing, scraping, cell phone tower pings, etc.)\nHow much data is collected? (census, subsample)\nWhat is the format? (structured, unstructured)\nWhat is the domain? (economic, health, education, natural)"
+  },
+  {
+    "objectID": "intro/slides/session1.html#hamermesh-2025-six-decades-of-economics-publishing",
+    "href": "intro/slides/session1.html#hamermesh-2025-six-decades-of-economics-publishing",
+    "title": "Introduction",
+    "section": "Hamermesh (2025): Six decades of economics publishing",
+    "text": "Hamermesh (2025): Six decades of economics publishing\n§ Section 3: Trends\n\n“The Demographic and Research Styles of Economics Writing: 2025 Update to Six Decades of Top Economics Publishing: Who and How?”\nDaniel S. Hamermesh, Journal of Economic Literature 51(1).\n\nThree leading general economics journals from the 1960s through the 2020s. The study tracks levels and trends in author demographics, methodologies, and patterns of coauthorship.\n\nAverage author age has risen steadily. Female authorship has risen sharply. Number of authors per paper has risen steadily. Pronounced shift to articles using newly generated data."
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-1-more-empirical",
+    "href": "intro/slides/session1.html#trend-1-more-empirical",
+    "title": "Introduction",
+    "section": "Trend #1: More empirical",
+    "text": "Trend #1: More empirical\n§ Trend #1"
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-2-bigger-teams",
+    "href": "intro/slides/session1.html#trend-2-bigger-teams",
+    "title": "Introduction",
+    "section": "Trend #2: Bigger teams",
+    "text": "Trend #2: Bigger teams\n§ Trend #2"
+  },
+  {
+    "objectID": "intro/slides/session1.html#einav-and-levin-2014-economics-in-the-age-of-big-data",
+    "href": "intro/slides/session1.html#einav-and-levin-2014-economics-in-the-age-of-big-data",
+    "title": "Introduction",
+    "section": "Einav and Levin (2014): Economics in the age of big data",
+    "text": "Einav and Levin (2014): Economics in the age of big data\n§ Section 3: Trends\n\n“Economics in the age of big data.”\nLiran Einav and Jonathan Levin, Science 346(6210), 7 Nov 2014. DOI: 10.1126/science.1243089.\n\n\nThe quality and quantity of data on economic activity are expanding rapidly. Empirical research increasingly relies on newly available large-scale administrative data or private sector data that often is obtained through collaboration with private firms."
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-3-the-rise-of-complete-restricted-and-private-datasets",
+    "href": "intro/slides/session1.html#trend-3-the-rise-of-complete-restricted-and-private-datasets",
+    "title": "Introduction",
+    "section": "Trend #3: The rise of “complete” restricted and private datasets",
+    "text": "Trend #3: The rise of “complete” restricted and private datasets\n§ Trend #3\n\n\n\ne.g. the Social Security Administration, the Internal Revenue Service, and the Centers for Medicare and Medicaid.\nBut also private companies collaborating with researchers (Ebay, Uber, etc.)."
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-4-traditional-econometric-methods-still-dominate",
+    "href": "intro/slides/session1.html#trend-4-traditional-econometric-methods-still-dominate",
+    "title": "Introduction",
+    "section": "Trend #4: Traditional econometric methods still dominate",
+    "text": "Trend #4: Traditional econometric methods still dominate\n§ Trend #4\n\\[y_i = \\alpha + \\beta x_i + z_i'\\gamma + \\varepsilon_i\\]\n\nFocus on a few parameters of interest, rather than on model fit (like in Data Science and Machine Learning)."
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-5-combining-unique-and-less-structured-data",
+    "href": "intro/slides/session1.html#trend-5-combining-unique-and-less-structured-data",
+    "title": "Introduction",
+    "section": "Trend #5: Combining unique and less structured data",
+    "text": "Trend #5: Combining unique and less structured data\n§ Trend #5\n\n\n\nExpanding the use of traditional “complete” datasets to enhance analysis.\nExample: combine Medicare data with wind direction to instrument for downwind pollution exposure.\n\n\nDeryugina, Heutel, Miller, Molitor, and Reif (2019). “The Mortality and Medical Costs of Air Pollution: Evidence from Changes in Wind Direction.” American Economic Review 109(12): 4178-4219."
+  },
+  {
+    "objectID": "intro/slides/session1.html#wind-direction-as-an-instrument",
+    "href": "intro/slides/session1.html#wind-direction-as-an-instrument",
+    "title": "Introduction",
+    "section": "Wind direction as an instrument",
+    "text": "Wind direction as an instrument\n§ Trend #5"
+  },
+  {
+    "objectID": "intro/slides/session1.html#trend-6-rapidly-rising-use-of-ai-tools",
+    "href": "intro/slides/session1.html#trend-6-rapidly-rising-use-of-ai-tools",
+    "title": "Introduction",
+    "section": "Trend #6: Rapidly rising use of AI tools",
+    "text": "Trend #6: Rapidly rising use of AI tools\n§ Trend #6\n\n\n\nChatGPT launched in November of 2022.\nProfession scrambling to adjust to write policies (for papers, reviewers, etc.)."
+  },
+  {
+    "objectID": "intro/slides/session1.html#what-is-a-suitable-dataset",
+    "href": "intro/slides/session1.html#what-is-a-suitable-dataset",
+    "title": "Introduction",
+    "section": "What is a “suitable” dataset?",
+    "text": "What is a “suitable” dataset?\n§ Section 4: Suitable datasets\n\nA dataset that meets necessary conditions for you to analyze the data with a particular set of methods in a rigorous way.\nNote that suitability depends on the methods.\n\nThreats to suitability:\n\nNot the right temporal resolution (e.g. you need monthly, not annual)\nNot the right level of aggregation (e.g. you need individual not county)\nNot the right outcome (e.g. you need actual consumption, not reported)\nNot the right quality (e.g. too much missing data in ways that are difficult to model)\nNot enough observations (individuals or time periods)"
+  },
+  {
+    "objectID": "intro/slides/session1.html#from-question-to-data-or-from-data-to-question",
+    "href": "intro/slides/session1.html#from-question-to-data-or-from-data-to-question",
+    "title": "Introduction",
+    "section": "From question to data, or from data to question?",
+    "text": "From question to data, or from data to question?\n§ Section 4: Suitable datasets\n\n\nFrom question to data\n\nResearch ideas often come before the data.\nNext steps:\n\nWhat data would allow you to credibly answer this question?\nDoes this “ideal” data exist? If not, do imperfections of the data still allow you to answer the question? Are the caveats too large?\n\n\n\nFrom data to question\n\nSometimes the data comes first.\nNext steps:\n\nWhat interesting research questions can you answer credibly with these data?\nHas the data been used before? There is arguably a premium to being the first to ask a good question relative to answering a question with marginally better data or tools.\nCan I combine these data with other data to answer a novel question?"
+  },
+  {
+    "objectID": "intro/slides/session1.html#quick-check-in",
+    "href": "intro/slides/session1.html#quick-check-in",
+    "title": "Introduction",
+    "section": "Quick check-in",
+    "text": "Quick check-in\n§ Section 5: Discussion\n\nIf your laptop died today, could someone reproduce your project?\nHow do you share code with coauthors?\nHave you used AI tools in your research?\n\n\nThese are the questions that motivate everything we cover from session 2 onward."
+  },
+  {
+    "objectID": "intro/slides/session1.html#next-2-sessions-on-reproducibility",
+    "href": "intro/slides/session1.html#next-2-sessions-on-reproducibility",
+    "title": "Introduction",
+    "section": "Next 2 sessions on reproducibility",
+    "text": "Next 2 sessions on reproducibility\n§ Section 5: Preparing next sessions\n\n\n\nConducted by Lars Vilhuber, AEA Data Editor and Senior Research Associate in the Economics Department at Cornell.\nCoding assignment:\n\nLink: https://forms.gle/qB9TFvGs8fGE6dPU9\nComplete by Monday April 13.\n24 hours to complete.\nWork by yourself, with the language of your choice."
+  },
+  {
+    "objectID": "intro/slides/session1.html#whats-next",
+    "href": "intro/slides/session1.html#whats-next",
+    "title": "Introduction",
+    "section": "What’s next",
+    "text": "What’s next\n§ Wrap up\n\nMonday Apr 13 and Wednesday Apr 15: Reproducibility with Lars.\nMonday Apr 20: Git fundamentals (laptop required, see the Setup page).\nOffice hours: Wednesdays 2 to 4 pm.\n\n\nQuestions? See the course website or email me at ao332@cornell.edu."
+  },
+  {
     "objectID": "version-control/session4.html",
     "href": "version-control/session4.html",
     "title": "Session 4: Git Fundamentals",
@@ -1327,39 +1550,32 @@
     "text": "Spring 2026  ·  April 8 to May 4  ·  Monday & Wednesday, 8:40 to 9:55 am  ·  Warren 137\nInstructor: Prof. Ariel Ortiz-Bobea (sessions 1, 4 to 8)  ·  ao332@cornell.edu  ·  Office hours: Wednesdays 2 to 4 pm\nGuest instructor: Lars Vilhuber, AEA Data Editor (sessions 2 and 3)"
   },
   {
-    "objectID": "index.html#about-this-site",
-    "href": "index.html#about-this-site",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "",
-    "text": "This site covers sessions 4–8 of AEM 7010. Sessions 1–3 (introduction and reproducibility with Lars Vilhuber) are taught separately and are not included here."
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
+    "section": "About this course",
+    "text": "About this course\nAEM 7010 is a graduate course on practical research skills, team-taught by three instructors. My section covers trends in empirical economics research, reproducibility, version control with Git, and effective use of AI tools, with a focus on working with secondary data. This site documents my eight sessions across four weeks, from April 8 to May 4.\nTopics fall into four blocks:\n\nTrends in economic research. Where the field is heading on reproducibility, data, and AI.\nReproducibility. Replication packages, restricted data, computational environments. Taught with Lars Vilhuber.\nVersion control. Git on your own machine. GitHub for collaboration and submission tags.\nAI tools for research. A working mental model of LLMs. Three rungs of AI coding: chat, agentic desktop, code-native."
   },
   {
-    "objectID": "index.html#what-you-will-learn",
-    "href": "index.html#what-you-will-learn",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "What you will learn",
-    "text": "What you will learn\nBy the end of these eight sessions you will be able to:\n\nBuild and document reproducible research workflows.\nTrack changes to your R scripts and research code using Git.\nBack up your work on GitHub and collaborate with co-authors through pull requests.\nTag specific versions of your code for paper submissions and replication packages.\nUse AI coding assistants responsibly in research, with verification.\nDocument and disclose AI use in a way that meets journal and replication standards."
+    "objectID": "index.html#what-you-will-be-able-to-do",
+    "href": "index.html#what-you-will-be-able-to-do",
+    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
+    "section": "What you will be able to do",
+    "text": "What you will be able to do\nBy the end of these sessions you will be able to:\n\nBuild and document reproducible research workflows.\nTrack changes to your R scripts and research code using Git.\nBack up your work on GitHub and collaborate with co-authors through pull requests.\nTag specific versions of your code for paper submissions and replication packages.\nUse AI coding assistants responsibly in research, with verification.\nDocument and disclose AI use in a way that meets journal and replication standards."
   },
   {
-    "objectID": "index.html#sessions",
-    "href": "index.html#sessions",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "Sessions",
-    "text": "Sessions\nSession 4: Git Fundamentals. The core Git workflow on your own computer: init, add, commit, log, diff, .gitignore, and undoing mistakes.\nSession 5: GitHub & Collaboration. Connect to GitHub, push and pull, create branches, open pull requests, and tag releases for reproducibility.\nSession 6: AI Tools I (Chat). A mental model of LLMs. Mode A vs Mode B discipline. Live demo of a chat-driven scrape of Cornell Dyson placements, then a hands-on exercise where each student scrapes a different department.\nSession 7: AI Tools II (Cowork). Agentic desktop AI that can see your files and run code. Guided scrape of the Dyson page with Cowork, stress test on a modified field, verification checklist.\nSession 8: AI Tools III (Claude Code). A code-native agent inside a git project. Scaffold a five-department scraper, add a rule-based plus LLM-based classifier, produce a descriptive write-up of PhD placements in applied economics."
+    "objectID": "index.html#start-here",
+    "href": "index.html#start-here",
+    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
+    "section": "Start here",
+    "text": "Start here\n\n\n\n\n\n\n\nSkim the schedule to see the eight sessions and their dates.\nComplete the setup steps before Session 4 on Monday, April 20.\nEach session page has a short Before class note. Read it the day before."
   },
   {
-    "objectID": "index.html#before-you-begin",
-    "href": "index.html#before-you-begin",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "Before You Begin",
-    "text": "Before You Begin\nPlease complete the following before Session 4.\n\nInstall Git on your laptop\n\nMac: brew install git (if you have Homebrew) or download from git-scm.com\nWindows: download the installer from git-scm.com\n\nOpen a terminal\n\nMac: open the Terminal app (search for “Terminal” in Spotlight)\nWindows: open Git Bash (installed with Git)\n\nVerify the installation by running:\n\ngit --version\nYou should see something like git version 2.39.0.\n\nInstall R and an editor or IDE. Sessions 4–5 show three ways to use Git: Terminal, RStudio, and VS Code. You will follow the Terminal in class, but having an editor also set up lets you try the GUI alternatives at home. Sessions 6–7 assume you have both editors available for the AI-coding demos.\n\nR is required for every code example in this site and for the wooldridge package. Download the installer for your platform from cran.r-project.org. Free and open source.\nRStudio is the standard IDE for applied economics research in R. If you already use it for coursework, you are set. Otherwise, download from posit.co/download/rstudio-desktop.\nVS Code is a general-purpose code editor that has become the most widely used tool in software and data work. Download from code.visualstudio.com.\n\nI encourage you to install all three. R is the engine. RStudio is ideal for R-centric work. VS Code is ideal for everything else: Python, shell scripts, LaTeX, Quarto, Markdown, editing configuration files, and working with AI coding assistants.\nInstall the wooldridge R package so the tutorial’s data examples work without any downloads. In R or RStudio, run:\ninstall.packages(\"wooldridge\")\nThis gives you the classic datasets from Jeffrey Wooldridge’s Introductory Econometrics textbook (wage1, wage2, and many others) that we use throughout the exercises.\n\nBefore Session 5, also create a free GitHub account at github.com.\n\n\n\n\n\n\nNoteWhat is Homebrew?\n\n\n\nHomebrew is the standard macOS package manager. Think of it as an app store for command-line tools. If you do not already have it, run the one-line install command from brew.sh. If you prefer to skip Homebrew, use the direct download from git-scm.com instead."
-  },
-  {
-    "objectID": "index.html#companion-materials",
-    "href": "index.html#companion-materials",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "Companion Materials",
-    "text": "Companion Materials\n\nSession 4 slides (web-based, click through in your browser)\nSession 5 slides (PowerPoint, being migrated)\nExercise R scripts"
+    "objectID": "index.html#the-eight-sessions",
+    "href": "index.html#the-eight-sessions",
+    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
+    "section": "The eight sessions",
+    "text": "The eight sessions\n\nTrends in Economic Research. Reproducibility expectations, the data revolution, and the rise of AI tools.\nReproducibility I (with Lars Vilhuber). Why reproducibility is a research-integrity issue. What top journals require.\nReproducibility II (with Lars Vilhuber). Replication packages in practice. Restricted data, computational environments.\nGit Fundamentals. The core Git workflow on your own computer.\nGitHub & Collaboration. Push, pull, branches, pull requests, tags for replication packages.\nAI Tools I (Chat). A mental model of LLMs. Live demo of a chat-driven scrape, then a hands-on exercise.\nAI Tools II (Cowork). Agentic desktop AI that can see your files and run code. Verification checklist.\nAI Tools III (Claude Code). A code-native agent inside a git project. Subagents, scaffolding, and a small replication package."
   },
   {
     "objectID": "ai-tools/session7.html",
@@ -1669,86 +1885,9 @@
   {
     "objectID": "ai-tools/seeds/fact-checker.html",
     "href": "ai-tools/seeds/fact-checker.html",
-    "title": "<span class='course-code'>AEM 7010</span><span class='course-title'>Practical Skills: Git, GitHub &amp; AI</span>",
+    "title": "AEM 7010",
     "section": "",
     "text": "You are a fact-checker for descriptive reports built from CSV data.\nYour job: read a markdown report and verify that every numeric claim in the prose appears in the report’s tables, figure captions, or notes section, OR can be recomputed from the data file the report cites.\nWorkflow:\n\nRead the markdown report the user names. Extract every numeric claim from the prose paragraphs (any sentence containing a digit). Ignore numbers in section headings.\nFor each numeric claim, decide which of the following applies:\n\nPASS: the number appears verbatim in a table, a figure caption, or the notes section of the report.\nROUNDED: the prose number is a rounded version of a number that appears elsewhere in the report. Acceptable if the rounding is honest (e.g., “about 60 percent” for 57.3 percent). Report what was rounded and to what.\nFAIL: the prose number does not appear in or follow from the report or the cited data file. Show the prose claim and what the data actually says.\n\nFor any claim that requires recomputation from the CSV (e.g., a count, a share, a year range), use Bash to run a small script that reads the CSV and computes the value. Compare to the prose. PASS or FAIL accordingly.\nAfter checking every claim, end with a one-line summary: how many claims you checked, how many PASS, how many ROUNDED, and how many FAIL.\n\nConstraints:\n\nYou are read-only. Do not edit any file. Do not run any script that writes to disk.\nIf a numeric claim is ambiguous (e.g., “many”, “several”, “most”), skip it. Your scope is digits.\nBe conservative. When in doubt between ROUNDED and FAIL, mark FAIL and explain. The user will adjudicate.\n\nThe user is responsible for acting on your report. Do not propose edits, do not modify files, do not invoke other agents. Read the report, run the checks, return the result."
-  },
-  {
-    "objectID": "index.html#the-eight-sessions",
-    "href": "index.html#the-eight-sessions",
-    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
-    "section": "The eight sessions",
-    "text": "The eight sessions\n\nTrends in Economic Research. Reproducibility expectations, the data revolution, and the rise of AI tools.\nReproducibility I (with Lars Vilhuber). Why reproducibility is a research-integrity issue. What top journals require.\nReproducibility II (with Lars Vilhuber). Replication packages in practice. Restricted data, computational environments.\nGit Fundamentals. The core Git workflow on your own computer.\nGitHub & Collaboration. Push, pull, branches, pull requests, tags for replication packages.\nAI Tools I (Chat). A mental model of LLMs. Live demo of a chat-driven scrape, then a hands-on exercise.\nAI Tools II (Cowork). Agentic desktop AI that can see your files and run code. Verification checklist.\nAI Tools III (Claude Code). A code-native agent inside a git project. Subagents, scaffolding, and a small replication package."
-  },
-  {
-    "objectID": "index.html#where-to-go-next",
-    "href": "index.html#where-to-go-next",
-    "title": "Practical Skills: Git, GitHub & AI",
-    "section": "Where to go next",
-    "text": "Where to go next\n\nSchedule for dates and topics.\nSetup to install Git, R, and an editor.\nSyllabus for course logistics.\nResources for cheat sheets and reference links."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "The course meets twice a week: Mondays and Wednesdays."
-  },
-  {
-    "objectID": "schedule.html#before-each-session",
-    "href": "schedule.html#before-each-session",
-    "title": "Schedule",
-    "section": "Before each session",
-    "text": "Before each session\nEach session has a short Before class note at the top of its page. Read it the day before. The first one to check is for Session 4, which assumes you have completed the Setup page."
-  },
-  {
-    "objectID": "setup.html",
-    "href": "setup.html",
-    "title": "Setup",
-    "section": "",
-    "text": "This page is the master install checklist for the course. The sections below are roughly in the order you will need them. Use the dated boxes at the top of each section to know how far ahead you must complete it."
-  },
-  {
-    "objectID": "setup.html#install-git",
-    "href": "setup.html#install-git",
-    "title": "Setup",
-    "section": "1. Install Git",
-    "text": "1. Install Git\n\nMac: brew install git (if you have Homebrew) or download from git-scm.com.\nWindows: download the installer from git-scm.com.\n\n\n\n\n\n\n\nNoteWhat is Homebrew?\n\n\n\nHomebrew is the standard macOS package manager. Think of it as an app store for command-line tools. If you do not already have it, run the one-line install command from brew.sh. If you prefer to skip Homebrew, use the direct download from git-scm.com instead."
-  },
-  {
-    "objectID": "setup.html#open-a-terminal",
-    "href": "setup.html#open-a-terminal",
-    "title": "Setup",
-    "section": "2. Open a terminal",
-    "text": "2. Open a terminal\n\nMac: open the Terminal app (search for “Terminal” in Spotlight).\nWindows: open Git Bash (installed with Git)."
-  },
-  {
-    "objectID": "setup.html#verify-the-installation",
-    "href": "setup.html#verify-the-installation",
-    "title": "Setup",
-    "section": "3. Verify the installation",
-    "text": "3. Verify the installation\ngit --version\nYou should see something like git version 2.39.0."
-  },
-  {
-    "objectID": "setup.html#install-r-and-an-editor",
-    "href": "setup.html#install-r-and-an-editor",
-    "title": "Setup",
-    "section": "4. Install R and an editor",
-    "text": "4. Install R and an editor\nSessions 4 and 5 show three ways to use Git: terminal, RStudio, and VS Code. You will follow the terminal in class. Having an editor also set up lets you try the GUI alternatives at home. Sessions 6 and 7 assume you have both editors available for the AI-coding demos.\n\nR is required for every code example in this site and for the wooldridge package. Download the installer for your platform from cran.r-project.org. Free and open source.\nRStudio is the standard IDE for applied economics research in R. If you already use it for coursework, you are set. Otherwise, download from posit.co/download/rstudio-desktop.\nVS Code is a general-purpose code editor that has become the most widely used tool in software and data work. Download from code.visualstudio.com.\n\nI encourage you to install all three. R is the engine. RStudio is ideal for R-centric work. VS Code is ideal for everything else: Python, shell scripts, LaTeX, Quarto, Markdown, editing configuration files, and working with AI coding assistants."
-  },
-  {
-    "objectID": "setup.html#install-the-wooldridge-r-package",
-    "href": "setup.html#install-the-wooldridge-r-package",
-    "title": "Setup",
-    "section": "5. Install the wooldridge R package",
-    "text": "5. Install the wooldridge R package\nThis makes the tutorial’s data examples work without any downloads. In R or RStudio, run:\ninstall.packages(\"wooldridge\")\nThis gives you the classic datasets from Jeffrey Wooldridge’s Introductory Econometrics textbook (wage1, wage2, and many others) that we use throughout the exercises."
-  },
-  {
-    "objectID": "setup.html#create-a-free-github-account-before-session-5",
-    "href": "setup.html#create-a-free-github-account-before-session-5",
-    "title": "Setup",
-    "section": "6. Create a free GitHub account (before Session 5)",
-    "text": "6. Create a free GitHub account (before Session 5)\nBefore Session 5 on Wednesday, April 22, also create a free GitHub account at github.com. Use an email address you plan to keep after graduation. We will configure SSH keys and your local Git identity in class."
   },
   {
     "objectID": "syllabus.html",
@@ -1814,139 +1953,6 @@
     "text": "References\n\nPro Git book, free, comprehensive, by Scott Chacon and Ben Straub.\nHappy Git and GitHub for the useR, Jenny Bryan’s tutorial pitched at R users.\nQuarto documentation for the publishing system that builds this site.\nWooldridge R package for the classic textbook datasets used in our examples."
   },
   {
-    "objectID": "resources.html#cornell-specific",
-    "href": "resources.html#cornell-specific",
-    "title": "Resources",
-    "section": "Cornell-specific",
-    "text": "Cornell-specific\n\nCornell Statistical Consulting Unit.\nCornell University Library research data services.\nCISER, Cornell Institute for Social and Economic Research for restricted-data services.\nCornell Center for Advanced Computing for HPC and cloud resources."
-  },
-  {
-    "objectID": "index.html#about-this-course",
-    "href": "index.html#about-this-course",
-    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
-    "section": "About this course",
-    "text": "About this course\nAEM 7010 is a graduate course on practical research skills, team-taught by three instructors. My section covers trends in empirical economics research, reproducibility, version control with Git, and effective use of AI tools, with a focus on working with secondary data. This site documents my eight sessions across four weeks, from April 8 to May 4.\nTopics fall into four blocks:\n\nTrends in economic research. Where the field is heading on reproducibility, data, and AI.\nReproducibility. Replication packages, restricted data, computational environments. Taught with Lars Vilhuber.\nVersion control. Git on your own machine. GitHub for collaboration and submission tags.\nAI tools for research. A working mental model of LLMs. Three rungs of AI coding: chat, agentic desktop, code-native."
-  },
-  {
-    "objectID": "index.html#what-you-will-be-able-to-do",
-    "href": "index.html#what-you-will-be-able-to-do",
-    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
-    "section": "What you will be able to do",
-    "text": "What you will be able to do\nBy the end of these sessions you will be able to:\n\nBuild and document reproducible research workflows.\nTrack changes to your R scripts and research code using Git.\nBack up your work on GitHub and collaborate with co-authors through pull requests.\nTag specific versions of your code for paper submissions and replication packages.\nUse AI coding assistants responsibly in research, with verification.\nDocument and disclose AI use in a way that meets journal and replication standards."
-  },
-  {
-    "objectID": "index.html#start-here",
-    "href": "index.html#start-here",
-    "title": "AEM 7010: Doing Applied Economics Research: Practical Skills",
-    "section": "Start here",
-    "text": "Start here\n\n\n\n\n\n\n\nSkim the schedule to see the eight sessions and their dates.\nComplete the setup steps before Session 4 on Monday, April 20.\nEach session page has a short Before class note. Read it the day before."
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "AEM 7010",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThe structure of this site borrows ideas from Todd Gerarden’s AEM 2850 course site, itself built on Andrew Heiss’s widely used Quarto course-website template. The reproducibility module is taught with Lars Vilhuber, AEA Data Editor and Executive Director of the Labor Dynamics Institute at Cornell."
-  },
-  {
-    "objectID": "setup.html#git",
-    "href": "setup.html#git",
-    "title": "Setup",
-    "section": "1. Git",
-    "text": "1. Git\nNeeded for sessions 4 to 8.\n\nMac: brew install git if you have Homebrew. Otherwise download from git-scm.com.\nWindows: download the installer from git-scm.com. Git Bash is installed alongside.\nLinux: use your distribution’s package manager.\n\nVerify the install in a terminal:\ngit --version\nYou should see something like git version 2.39.0.\n\n\n\n\n\n\nNoteWhat is Homebrew?\n\n\n\nHomebrew is the standard macOS package manager. Think of it as an app store for command-line tools. If you do not already have it, run the one-line install command from brew.sh. If you prefer to skip Homebrew, use the direct download from git-scm.com instead."
-  },
-  {
-    "objectID": "setup.html#a-terminal",
-    "href": "setup.html#a-terminal",
-    "title": "Setup",
-    "section": "2. A terminal",
-    "text": "2. A terminal\nNeeded for sessions 4 to 8.\n\nMac: open the Terminal app (search for “Terminal” in Spotlight).\nWindows: open Git Bash (installed with Git in step 1).\nLinux: any terminal emulator your distribution ships with.\n\nWe type Git commands and run shell scripts here. There is nothing to install beyond what step 1 already gave you."
-  },
-  {
-    "objectID": "setup.html#r",
-    "href": "setup.html#r",
-    "title": "Setup",
-    "section": "3. R",
-    "text": "3. R\nNeeded for sessions 4 to 8.\nR is the engine for every code example on this site. Free and open source.\n\nDownload the installer for your platform from cran.r-project.org.\nInstall with the default options."
-  },
-  {
-    "objectID": "setup.html#rstudio",
-    "href": "setup.html#rstudio",
-    "title": "Setup",
-    "section": "4. RStudio",
-    "text": "4. RStudio\nRecommended for sessions 4 to 5.\nRStudio is the standard IDE for applied economics research in R. If you already use it for coursework, you are set. Otherwise, download the desktop app from posit.co/download/rstudio-desktop."
-  },
-  {
-    "objectID": "setup.html#the-wooldridge-r-package",
-    "href": "setup.html#the-wooldridge-r-package",
-    "title": "Setup",
-    "section": "5. The wooldridge R package",
-    "text": "5. The wooldridge R package\nNeeded for sessions 4 to 5.\nThis package gives you the classic datasets from Jeffrey Wooldridge’s Introductory Econometrics textbook (wage1, wage2, and many others) that we use in exercises. In R or RStudio, run:\ninstall.packages(\"wooldridge\")"
-  },
-  {
-    "objectID": "setup.html#vs-code",
-    "href": "setup.html#vs-code",
-    "title": "Setup",
-    "section": "6. VS Code",
-    "text": "6. VS Code\nRecommended for sessions 6 to 8 (and useful from session 4 onward).\nVS Code is a general-purpose code editor that has become the most widely used tool in software and data work. Sessions 6 to 8 assume you have it available alongside the AI tools.\n\nDownload from code.visualstudio.com.\nInstall with the default options.\n\nI encourage you to install all three editors (R, RStudio, VS Code). R is the engine. RStudio is ideal for R-centric work. VS Code is ideal for everything else: Python, shell scripts, LaTeX, Quarto, Markdown, configuration files, and AI coding assistants."
-  },
-  {
-    "objectID": "setup.html#github-account",
-    "href": "setup.html#github-account",
-    "title": "Setup",
-    "section": "7. GitHub account",
-    "text": "7. GitHub account\nNeeded for session 5 onward.\n\nCreate a free account at github.com.\nUse an email address you plan to keep after graduation. You can later mark it as private in GitHub settings."
-  },
-  {
-    "objectID": "setup.html#tell-git-who-you-are",
-    "href": "setup.html#tell-git-who-you-are",
-    "title": "Setup",
-    "section": "8. Tell Git who you are",
-    "text": "8. Tell Git who you are\nNeeded for session 5 onward. Do this once on your machine.\nIn a terminal:\ngit config --global user.name \"Your Full Name\"\ngit config --global user.email \"you@cornell.edu\"\ngit config --global init.defaultBranch main\nUse the same email here as the one on your GitHub account, or use the noreply address GitHub provides under Settings -&gt; Emails -&gt; Keep my email addresses private."
-  },
-  {
-    "objectID": "setup.html#connect-vs-code-or-your-terminal-to-github",
-    "href": "setup.html#connect-vs-code-or-your-terminal-to-github",
-    "title": "Setup",
-    "section": "9. Connect VS Code (or your terminal) to GitHub",
-    "text": "9. Connect VS Code (or your terminal) to GitHub\nNeeded for session 5 onward.\nYou have two ways to authenticate when you push and pull. Pick one.\nSSH keys (recommended for long-term work). Generate a key, add it to your GitHub account, and you will not be prompted for a password again. We will walk through this in Session 5. The official guide is GitHub’s SSH key documentation.\nHTTPS plus the GitHub CLI. Install the GitHub CLI, then run gh auth login once. This caches credentials for future pushes. Easier on Windows.\nVS Code: install the GitHub Pull Requests extension if you want to manage PRs from inside the editor. Optional."
-  },
-  {
-    "objectID": "setup.html#claude-account-claude.com",
-    "href": "setup.html#claude-account-claude.com",
-    "title": "Setup",
-    "section": "10. Claude account (claude.com)",
-    "text": "10. Claude account (claude.com)\nNeeded for sessions 6 to 8.\n\nCreate a free account at claude.com.\nThe browser interface at claude.ai is what we use in session 6.\nThe same account works for the Cowork desktop app (session 7) and Claude Code (session 8). The free tier is enough for the in-class exercises."
-  },
-  {
-    "objectID": "setup.html#cowork-desktop-app",
-    "href": "setup.html#cowork-desktop-app",
-    "title": "Setup",
-    "section": "11. Cowork desktop app",
-    "text": "11. Cowork desktop app\nNeeded for session 7.\nCowork is the Claude desktop app with the Cowork mode feature enabled. It can see a folder on your machine and run code in a sandboxed shell.\n\nDownload the desktop app from claude.com/download.\nSign in with your Claude account.\nOpen the app’s settings and confirm Cowork mode is available.\n\nBring any install issues to the first ten minutes of session 7; that time is reserved for troubleshooting."
-  },
-  {
-    "objectID": "setup.html#node.js-and-claude-code",
-    "href": "setup.html#node.js-and-claude-code",
-    "title": "Setup",
-    "section": "12. Node.js and Claude Code",
-    "text": "12. Node.js and Claude Code\nNeeded for session 8.\nClaude Code is a code-native agent that runs in your terminal inside a git project.\nInstall Node.js. Claude Code is distributed as an npm package, so you need Node.js (which ships with npm).\n\nMac: brew install node or download from nodejs.org.\nWindows: download the installer from nodejs.org.\n\nVerify in a terminal:\nnode --version\nnpm --version\nInstall Claude Code:\nnpm install -g @anthropic-ai/claude-code\nclaude --version\nThe first time you run claude, it opens a browser window to log you in with your Claude account.\nFor platform-specific notes and troubleshooting, see the official guide: docs.claude.com/en/docs/claude-code/setup."
-  },
-  {
-    "objectID": "setup.html#r-packages-for-the-ai-sessions",
-    "href": "setup.html#r-packages-for-the-ai-sessions",
-    "title": "Setup",
-    "section": "13. R packages for the AI sessions",
-    "text": "13. R packages for the AI sessions\nNeeded for session 8.\nIn R or RStudio, run once before session 8:\ninstall.packages(c(\"tidyverse\", \"rvest\", \"readr\", \"ellmer\"))\nellmer is recent and unlikely to be already installed. The others may already be there from sessions 4 to 5."
-  },
-  {
-    "objectID": "setup.html#troubleshooting",
-    "href": "setup.html#troubleshooting",
-    "title": "Setup",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\nClass time is short. The first ten minutes of any session can absorb install issues, but only if you flag them on arrival. If you are stuck before class, email me with: the exact command you ran, the exact error message, and your operating system."
-  },
-  {
     "objectID": "resources.html#free-anthropic-courses-on-claude-and-ai",
     "href": "resources.html#free-anthropic-courses-on-claude-and-ai",
     "title": "Resources",
@@ -1954,143 +1960,10 @@
     "text": "Free Anthropic courses on Claude and AI\nThese four self-paced courses are hosted on Anthropic’s Skilljar platform. All are free and offer a certificate of completion. They complement Sessions 6 to 8 well, but the AI Fluency course is worth taking before Session 6 if you have time.\n\nAI Fluency: Framework and Foundations. Practical AI literacy course developed with academic partners (UCC, Ringling College). Introduces the 4D framework (Delegation, Description, Discernment, Diligence) for using AI effectively, ethically, and safely. About 1.1 hours of video plus exercises. Tool-agnostic.\nClaude 101. Foundations for using Claude in everyday work. Five modules across Chat, Cowork, Code, Projects, Artifacts, Skills, and Connectors. Aimed at every knowledge worker, not only developers. Good starting point if you have never used Claude.\nIntroduction to Claude Cowork. Hands-on introduction to Cowork mode, the desktop app that can read and edit your files and run code. Covers the task loop, plugins and skills, file workflows, and how to steer multi-step work responsibly. Direct companion to Session 7.\nClaude Code 101. Aimed at people new to AI coding agents. Walks through installation and the Explore-Plan-Code-Commit workflow Claude Code uses. Direct companion to Session 8. Hands-on exercises require a Claude Pro/Max plan or a valid API key."
   },
   {
-    "objectID": "intro/slides/session1.html#outline",
-    "href": "intro/slides/session1.html#outline",
-    "title": "Introduction",
-    "section": "Outline",
-    "text": "Outline\n§ Roadmap\n\nIntroduction\nWhat is secondary data?\nTrends in economic research\nIdentifying suitable datasets\nPreparing next sessions"
-  },
-  {
-    "objectID": "intro/slides/session1.html#a-bit-about-me",
-    "href": "intro/slides/session1.html#a-bit-about-me",
-    "title": "Introduction",
-    "section": "A bit about me",
-    "text": "A bit about me\n§ Section 1: Introduction\n\n\n\nProf. Ariel Ortiz-Bobea at Dyson and Brooks Schools. Joined Cornell in 2014.\nResearch focus on how people cope with environmental change. Emphasis on how climate change affects the economy, particularly agriculture.\nResearch group working on environmental and agricultural issues."
-  },
-  {
-    "objectID": "intro/slides/session1.html#overview",
-    "href": "intro/slides/session1.html#overview",
-    "title": "Introduction",
-    "section": "Overview",
-    "text": "Overview\n§ Section 1: Introduction\n\nApril 8 (W): Introduction (this lecture)\nApril 13 (M): Reproducibility 1 (with Lars Vilhuber, AEA data editor)\nApril 15 (W): Reproducibility 2 (with Lars)\nApril 20 (M): Version control 1 (install Git and create GitHub.com account)\nApril 22 (W): Version control 2\nApril 27 (M): AI tools 1 (install claude.ai and subscribe to Pro if possible)\nApril 29 (W): AI tools 2\nMay 4 (M): Computing and data resources at Cornell (optional)"
-  },
-  {
-    "objectID": "intro/slides/session1.html#learning-outcomes",
-    "href": "intro/slides/session1.html#learning-outcomes",
-    "title": "Introduction",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n§ Section 1: Introduction\n\nFamiliarity with trends in applied economics research (Session 1)\nUnderstanding of reproducibility standards (Sessions 2-3)\nHands-on version control with Git (Sessions 4-5)\nBenefits and risks of AI tools (Sessions 6-7)\nData and computing resources at Cornell (Session 8)"
-  },
-  {
-    "objectID": "intro/slides/session1.html#definition",
-    "href": "intro/slides/session1.html#definition",
-    "title": "Introduction",
-    "section": "Definition",
-    "text": "Definition\n§ Section 2: Secondary data\n\nSecondary data is collected, processed, and made available by someone other than the researcher(s) conducting a particular study.\nContrasts with primary data that is collected by researchers for the purpose of a particular study.\nPrimary data becomes secondary data when reused.\nDistinction is important for your audience and readers. Generally more details about data gathering in papers based on primary data.\nNote that what you obtain from scraping or processing existing information is still considered secondary data."
-  },
-  {
-    "objectID": "intro/slides/session1.html#typology",
-    "href": "intro/slides/session1.html#typology",
-    "title": "Introduction",
-    "section": "Typology",
-    "text": "Typology\n§ Section 2: Secondary data\n\nWho collects it? (government, private entity)\nHow is it collected? (survey, interviews, administrative records, remote sensing, scraping, cell phone tower pings, etc.)\nHow much data is collected? (census, subsample)\nWhat is the format? (structured, unstructured)\nWhat is the domain? (economic, health, education, natural)"
-  },
-  {
-    "objectID": "intro/slides/session1.html#hamermesh-2025-six-decades-of-economics-publishing",
-    "href": "intro/slides/session1.html#hamermesh-2025-six-decades-of-economics-publishing",
-    "title": "Introduction",
-    "section": "Hamermesh (2025): Six decades of economics publishing",
-    "text": "Hamermesh (2025): Six decades of economics publishing\n§ Section 3: Trends\n\n“The Demographic and Research Styles of Economics Writing: 2025 Update to Six Decades of Top Economics Publishing: Who and How?”\nDaniel S. Hamermesh, Journal of Economic Literature 51(1).\n\nThree leading general economics journals from the 1960s through the 2020s. The study tracks levels and trends in author demographics, methodologies, and patterns of coauthorship.\n\nAverage author age has risen steadily. Female authorship has risen sharply. Number of authors per paper has risen steadily. Pronounced shift to articles using newly generated data."
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-1-more-empirical",
-    "href": "intro/slides/session1.html#trend-1-more-empirical",
-    "title": "Introduction",
-    "section": "Trend #1: More empirical",
-    "text": "Trend #1: More empirical\n§ Trend #1"
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-2-bigger-teams",
-    "href": "intro/slides/session1.html#trend-2-bigger-teams",
-    "title": "Introduction",
-    "section": "Trend #2: Bigger teams",
-    "text": "Trend #2: Bigger teams\n§ Trend #2"
-  },
-  {
-    "objectID": "intro/slides/session1.html#einav-and-levin-2014-economics-in-the-age-of-big-data",
-    "href": "intro/slides/session1.html#einav-and-levin-2014-economics-in-the-age-of-big-data",
-    "title": "Introduction",
-    "section": "Einav and Levin (2014): Economics in the age of big data",
-    "text": "Einav and Levin (2014): Economics in the age of big data\n§ Section 3: Trends\n\n“Economics in the age of big data.”\nLiran Einav and Jonathan Levin, Science 346(6210), 7 Nov 2014. DOI: 10.1126/science.1243089.\n\n\nThe quality and quantity of data on economic activity are expanding rapidly. Empirical research increasingly relies on newly available large-scale administrative data or private sector data that often is obtained through collaboration with private firms."
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-3-the-rise-of-complete-restricted-and-private-datasets",
-    "href": "intro/slides/session1.html#trend-3-the-rise-of-complete-restricted-and-private-datasets",
-    "title": "Introduction",
-    "section": "Trend #3: The rise of “complete” restricted and private datasets",
-    "text": "Trend #3: The rise of “complete” restricted and private datasets\n§ Trend #3\n\n\n\ne.g. the Social Security Administration, the Internal Revenue Service, and the Centers for Medicare and Medicaid.\nBut also private companies collaborating with researchers (Ebay, Uber, etc.)."
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-4-traditional-econometric-methods-still-dominate",
-    "href": "intro/slides/session1.html#trend-4-traditional-econometric-methods-still-dominate",
-    "title": "Introduction",
-    "section": "Trend #4: Traditional econometric methods still dominate",
-    "text": "Trend #4: Traditional econometric methods still dominate\n§ Trend #4\n\\[y_i = \\alpha + \\beta x_i + z_i'\\gamma + \\varepsilon_i\\]\n\nFocus on a few parameters of interest, rather than on model fit (like in Data Science and Machine Learning)."
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-5-combining-unique-and-less-structured-data",
-    "href": "intro/slides/session1.html#trend-5-combining-unique-and-less-structured-data",
-    "title": "Introduction",
-    "section": "Trend #5: Combining unique and less structured data",
-    "text": "Trend #5: Combining unique and less structured data\n§ Trend #5\n\n\n\nExpanding the use of traditional “complete” datasets to enhance analysis.\nExample: combine Medicare data with wind direction to instrument for downwind pollution exposure.\n\n\nDeryugina, Heutel, Miller, Molitor, and Reif (2019). “The Mortality and Medical Costs of Air Pollution: Evidence from Changes in Wind Direction.” American Economic Review 109(12): 4178-4219."
-  },
-  {
-    "objectID": "intro/slides/session1.html#wind-direction-as-an-instrument",
-    "href": "intro/slides/session1.html#wind-direction-as-an-instrument",
-    "title": "Introduction",
-    "section": "Wind direction as an instrument",
-    "text": "Wind direction as an instrument\n§ Trend #5"
-  },
-  {
-    "objectID": "intro/slides/session1.html#trend-6-rapidly-rising-use-of-ai-tools",
-    "href": "intro/slides/session1.html#trend-6-rapidly-rising-use-of-ai-tools",
-    "title": "Introduction",
-    "section": "Trend #6: Rapidly rising use of AI tools",
-    "text": "Trend #6: Rapidly rising use of AI tools\n§ Trend #6\n\n\n\nChatGPT launched in November of 2022.\nProfession scrambling to adjust to write policies (for papers, reviewers, etc.)."
-  },
-  {
-    "objectID": "intro/slides/session1.html#what-is-a-suitable-dataset",
-    "href": "intro/slides/session1.html#what-is-a-suitable-dataset",
-    "title": "Introduction",
-    "section": "What is a “suitable” dataset?",
-    "text": "What is a “suitable” dataset?\n§ Section 4: Suitable datasets\n\nA dataset that meets necessary conditions for you to analyze the data with a particular set of methods in a rigorous way.\nNote that suitability depends on the methods.\n\nThreats to suitability:\n\nNot the right temporal resolution (e.g. you need monthly, not annual)\nNot the right level of aggregation (e.g. you need individual not county)\nNot the right outcome (e.g. you need actual consumption, not reported)\nNot the right quality (e.g. too much missing data in ways that are difficult to model)\nNot enough observations (individuals or time periods)"
-  },
-  {
-    "objectID": "intro/slides/session1.html#from-question-to-data-or-from-data-to-question",
-    "href": "intro/slides/session1.html#from-question-to-data-or-from-data-to-question",
-    "title": "Introduction",
-    "section": "From question to data, or from data to question?",
-    "text": "From question to data, or from data to question?\n§ Section 4: Suitable datasets\n\n\nFrom question to data\n\nResearch ideas often come before the data.\nNext steps:\n\nWhat data would allow you to credibly answer this question?\nDoes this “ideal” data exist? If not, do imperfections of the data still allow you to answer the question? Are the caveats too large?\n\n\n\nFrom data to question\n\nSometimes the data comes first.\nNext steps:\n\nWhat interesting research questions can you answer credibly with these data?\nHas the data been used before? There is arguably a premium to being the first to ask a good question relative to answering a question with marginally better data or tools.\nCan I combine these data with other data to answer a novel question?"
-  },
-  {
-    "objectID": "intro/slides/session1.html#quick-check-in",
-    "href": "intro/slides/session1.html#quick-check-in",
-    "title": "Introduction",
-    "section": "Quick check-in",
-    "text": "Quick check-in\n§ Section 5: Discussion\n\nIf your laptop died today, could someone reproduce your project?\nHow do you share code with coauthors?\nHave you used AI tools in your research?\n\n\nThese are the questions that motivate everything we cover from session 2 onward."
-  },
-  {
-    "objectID": "intro/slides/session1.html#next-2-sessions-on-reproducibility",
-    "href": "intro/slides/session1.html#next-2-sessions-on-reproducibility",
-    "title": "Introduction",
-    "section": "Next 2 sessions on reproducibility",
-    "text": "Next 2 sessions on reproducibility\n§ Section 5: Preparing next sessions\n\n\n\nConducted by Lars Vilhuber, AEA Data Editor and Senior Research Associate in the Economics Department at Cornell.\nCoding assignment:\n\nLink: https://forms.gle/qB9TFvGs8fGE6dPU9\nComplete by Monday April 13.\n24 hours to complete.\nWork by yourself, with the language of your choice."
-  },
-  {
-    "objectID": "intro/slides/session1.html#whats-next",
-    "href": "intro/slides/session1.html#whats-next",
-    "title": "Introduction",
-    "section": "What’s next",
-    "text": "What’s next\n§ Wrap up\n\nMonday Apr 13 and Wednesday Apr 15: Reproducibility with Lars.\nMonday Apr 20: Git fundamentals (laptop required, see the Setup page).\nOffice hours: Wednesdays 2 to 4 pm.\n\n\nQuestions? See the course website or email me at ao332@cornell.edu."
+    "objectID": "resources.html#cornell-specific",
+    "href": "resources.html#cornell-specific",
+    "title": "Resources",
+    "section": "Cornell-specific",
+    "text": "Cornell-specific\n\nCornell Statistical Consulting Unit.\nCornell University Library research data services.\nCISER, Cornell Institute for Social and Economic Research for restricted-data services.\nCornell Center for Advanced Computing for HPC and cloud resources."
   }
 ]
