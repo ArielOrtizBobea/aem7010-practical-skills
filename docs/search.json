@@ -759,7 +759,7 @@
     "href": "reproducibility/session2.html",
     "title": "Session 2: Reproducibility",
     "section": "",
-    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.\nTopics expected to be covered:\n\nWhy reproducibility is a research-integrity issue, not a box-check.\nWhat top journals now require (AEA, REStud, JPE).\nopenICPSR and the replication-package workflow.",
+    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -770,7 +770,7 @@
     "href": "reproducibility/session2.html#where-this-session-fits",
     "title": "Session 2: Reproducibility",
     "section": "",
-    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.\nTopics expected to be covered:\n\nWhy reproducibility is a research-integrity issue, not a box-check.\nWhat top journals now require (AEA, REStud, JPE).\nopenICPSR and the replication-package workflow.",
+    "text": "Guest-led by Lars Vilhuber, AEA Data Editor. This first reproducibility session opens the block and sets up vocabulary and expectations.",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -781,7 +781,7 @@
     "href": "reproducibility/session2.html#materials",
     "title": "Session 2: Reproducibility",
     "section": "Materials",
-    "text": "Materials\nThe session uses Lars’s Tutorial on Reproducibility, 2026. Start at the landing page below; it is the orchestrator for the multi-day tutorial and the right entry point for the conceptual material in this session.\n\nPrimary: Tutorial on Reproducibility, 2026 (landing page)\nBonus: Self-checking reproducibility, a short companion on auditing your own replication package before submission.\n\nSlides and additional references will be linked here after the session.",
+    "text": "Materials\nThe session uses Lars’s Tutorial on Reproducibility, 2026. Start at the landing page below; it is the orchestrator for the multi-day tutorial and the right entry point for the conceptual material in this session.\n\nPrimary: Tutorial on Reproducibility, 2026 (landing page)",
     "crumbs": [
       "Home",
       "2. Reproducibility I"
@@ -1521,7 +1521,7 @@
     "href": "reproducibility/session3.html",
     "title": "Session 3: Reproducibility, Continued",
     "section": "",
-    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.\nTopics expected to be covered:\n\nThe anatomy of a well-structured replication package.\nRestricted data: what to disclose, what to stub.\nComputational environment: renv, Docker, containers.\nCommon reasons replication packages fail review.",
+    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
@@ -1532,7 +1532,7 @@
     "href": "reproducibility/session3.html#where-this-session-fits",
     "title": "Session 3: Reproducibility, Continued",
     "section": "",
-    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.\nTopics expected to be covered:\n\nThe anatomy of a well-structured replication package.\nRestricted data: what to disclose, what to stub.\nComputational environment: renv, Docker, containers.\nCommon reasons replication packages fail review.",
+    "text": "The second reproducibility session continues with Lars Vilhuber. We move from principles to practice: building a replication package, handling data that cannot be posted, documenting computational environments.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
@@ -1543,7 +1543,7 @@
     "href": "reproducibility/session3.html#materials",
     "title": "Session 3: Reproducibility, Continued",
     "section": "Materials",
-    "text": "Materials\nThe session works through a hands-on example of building a deposit-ready replication package. Start at the linked anchor below; it drops you directly at the example-of-deposit slide in Lars’s day-1 tutorial.\n\nPrimary: Day-1 tutorial: example of deposit\nReference: Tutorial on Reproducibility, 2026 (landing page) for the broader course materials.\nBonus: Self-checking reproducibility for auditing your own replication package before submission.\n\nSlides and additional references will be linked here after the session.",
+    "text": "Materials\nThe session works through a hands-on example of building a deposit-ready replication package. Start at the linked anchor below; it drops you directly at the example-of-deposit slide in Lars’s day-1 tutorial.\n\nPrimary: Day-1 tutorial: example of deposit\nBonus: Self-checking reproducibility for auditing your own replication package before submission.",
     "crumbs": [
       "Home",
       "3. Reproducibility II"
@@ -1561,7 +1561,7 @@
     "href": "index.html#about-this-course",
     "title": "Home",
     "section": "About this course",
-    "text": "About this course\n\nThis course provides exposure to a wide variety of basic skills necessary for conducting high-quality research in applied economics. This includes defining a research question, primary and secondary data collection, principles of academic writing and presentation, research ethics, basic coding and data management, as well as project management. This course is meant to help students transition from coursework to the independent research they undertake starting at the end of the first year of the Ph.D. program. Some of the topics (e.g., coding) are only covered at an overview level with the expectation that those requiring a deeper knowledge will take further coursework.\nSource: Cornell Class Roster, AEM 7010, Spring 2026.\n\nThe course is team-taught by three instructors across the semester. Each instructor leads a block:\n\nChris Barrett: the opening block on framing research questions and writing.\nHeather Schofield: the middle block on research ethics and project management.\nAriel Ortiz-Bobea: the closing block on data, coding, and reproducibility (this site)."
+    "text": "About this course\n\nThis course provides exposure to a wide variety of basic skills necessary for conducting high-quality research in applied economics. This includes defining a research question, primary and secondary data collection, principles of academic writing and presentation, research ethics, basic coding and data management, as well as project management. This course is meant to help students transition from coursework to the independent research they undertake starting at the end of the first year of the Ph.D. program. Some of the topics (e.g., coding) are only covered at an overview level with the expectation that those requiring a deeper knowledge will take further coursework.\nSource: Cornell Class Roster, AEM 7010, Spring 2026.\n\nSee the official syllabus for which instructor leads each block."
   },
   {
     "objectID": "index.html#about-my-portion-of-the-course",
@@ -1915,14 +1915,14 @@
     "href": "syllabus.html#course-summary",
     "title": "Syllabus",
     "section": "Course summary",
-    "text": "Course summary\nAEM 7010 introduces practical skills for doing applied economics research. The course covers four areas across eight 75-minute sessions: trends in economic research, reproducibility, version control with Git and GitHub, and AI tools for coding.\nThis site documents the second half of the course. Sessions 1 to 3 are listed on the schedule and link out to materials hosted by the relevant instructors."
+    "text": "Course summary\nAEM 7010 introduces practical skills for doing applied economics research. The course covers four areas across eight 75-minute sessions: trends in economic research, reproducibility, version control with Git and GitHub, and AI tools for coding.\nThis site documents the last quarter of the class. Sessions 1 to 3 are listed on the schedule and link out to materials hosted by the relevant instructors."
   },
   {
     "objectID": "syllabus.html#logistics",
     "href": "syllabus.html#logistics",
     "title": "Syllabus",
     "section": "Logistics",
-    "text": "Logistics\n\nTerm: Spring 2026, second half.\nMeeting times: Mondays and Wednesdays, 75-minute sessions.\nFirst meeting: Wednesday, April 8, 2026.\nLast meeting: Monday, May 4, 2026.\nInstructors: Prof. Ariel Ortiz-Bobea (sessions 1, 4 to 8). Lars Vilhuber, AEA Data Editor (sessions 2 and 3)."
+    "text": "Logistics\n\nTerm: Spring 2026, last quarter of the class.\nMeeting times: Mondays and Wednesdays, 75-minute sessions.\nFirst meeting: Wednesday, April 8, 2026.\nLast meeting: Monday, May 4, 2026.\nInstructors: Prof. Ariel Ortiz-Bobea (sessions 1, 4 to 8). Lars Vilhuber, AEA Data Editor (sessions 2 and 3)."
   },
   {
     "objectID": "syllabus.html#grading-and-expectations",
